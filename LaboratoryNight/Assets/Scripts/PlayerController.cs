@@ -2,7 +2,8 @@
 using System.Collections;
 
 [RequireComponent (typeof (CharacterController))]
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour 
+{
 
     private float rotationSpeed = 15;
 	private float walkSpeed = 10;
@@ -13,11 +14,13 @@ public class PlayerController : MonoBehaviour {
 	private CharacterController controller;
 
 
-	void Start () {
+	void Start () 
+    {
 		controller = GetComponent<CharacterController>();
 	}
 
-	void Update () {
+	void Update () 
+    {
 
         ApplyMovement();
         ApplyRotation();

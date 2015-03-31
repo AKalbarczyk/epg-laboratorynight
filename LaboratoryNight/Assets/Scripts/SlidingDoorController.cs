@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SlidingDoorController : MonoBehaviour {
 
-
+   
     private bool isDoorOpening = false;
     private bool isDoorClosing = false;
 
@@ -19,7 +19,7 @@ public class SlidingDoorController : MonoBehaviour {
 
 	void Update () {
 
-        if (isDoorOpening)
+        if (isDoorOpening )
         {
             transform.position = Vector3.Lerp(transform.position, upPosition, 0.02f);
         }
@@ -54,4 +54,6 @@ public class SlidingDoorController : MonoBehaviour {
             }
         }
     }
+
+
 }
