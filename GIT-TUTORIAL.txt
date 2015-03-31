@@ -3,7 +3,12 @@ podlaczenie sie do zdalnego repo: git remote add origin <repo_url>
 
 ----
 
-pobieranie (jak SVN Update): git pull --rebase origin master
+pobieranie (jak SVN Update): git pull origin master (jak nie idzie: git pull --rebase origin master)
 dodawanie do kontroli wersji: git add -A (NIE DODAWAÆ Library/metadata)
 commit: git commit -m "<tresc commita>"
 wgrywanie commita na repo (jak SVN Commit): git push origin master 
+
+----
+
+sprawdzenie adresu remote'a: git remote -v
+sprawdzenie repo remote'a: git remote origin -v
