@@ -35,10 +35,7 @@ public class SpotPlayer : MonoBehaviour {
 		Destroy(shot, 0.3f);
 		
 		GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
-		Destroy(flash, 0.3f);
-		
-
-		
+		Destroy(flash, 0.3f);	
 		
 	}
 }

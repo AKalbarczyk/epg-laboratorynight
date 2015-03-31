@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\TurnAtPlayer.cs" />
      <Compile Include="Assets\Scripts\WeaponController.cs" />
      <Compile Include="Assets\Scripts\spotPlayer.cs" />
+     <Compile Include="Assets\ShootAtPlayer.cs" />
      <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\test_PlayerController.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
