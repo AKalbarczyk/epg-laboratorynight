@@ -1,0 +1,14 @@
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Assembly-CSharp.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\UnityEditor.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\UnityEngine.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\UnityEngine.UI.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Mono.Cecil.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Unity.DataContract.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Unity.CecilTools.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\obj\Debug\Assembly-CSharp.dll
+D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\obj\Debug\Assembly-CSharp.pdb
