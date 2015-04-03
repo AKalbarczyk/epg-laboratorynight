@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GravGun.js" />
      <Compile Include="Assets\Image Effects\ColorCorrectionCurves.js" />
      <Compile Include="Assets\Image Effects\PostEffectsBase.js" />
      <Compile Include="Assets\Image Effects\Vignetting.js" />
