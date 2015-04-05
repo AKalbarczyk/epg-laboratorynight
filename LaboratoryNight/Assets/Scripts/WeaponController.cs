@@ -20,7 +20,7 @@ public class WeaponController : MonoBehaviour {
     private bool isObjectPickedUp = false;
     private bool isObjectGoingToPlayer = false;
 
-    private float gravityGunRange = 10;
+    private float gravityGunRange = 15;
     private Rigidbody caughtRigidbody;
     private GameObject caughtObject;
     private Transform caughtRigidbodyTransformParent;
@@ -40,6 +40,12 @@ public class WeaponController : MonoBehaviour {
 	
 	void Update () 
     {
+
+        if (isObjectGoingToPlayer)
+        {
+            StartCoroutine("DisableObjectGoingToPlayer");
+            caughtObject.transform.position = Vector3.Lerp(caughtObject.transform.position, transform.position + transform.forward * OBJECT_HOLD_OFFSET, Time.deltaTime * 5f);
+        }
 
         if (isPullObjMoving)
         {
@@ -94,6 +100,16 @@ public class WeaponController : MonoBehaviour {
         GravityGunCatch();
 
 	}
+
+    private IEnumerator DisableObjectGoingToPlayer()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (isObjectGoingToPlayer)
+        {
+            isObjectGoingToPlayer = false;
+        }
+    }
 
     private IEnumerator DisablePullObjMoving()
     {
@@ -179,13 +195,15 @@ public class WeaponController : MonoBehaviour {
                     if (hit.rigidbody) //did RaycastHit hit any rigidbody? (TODO: narrow down to rigidbodies tagged with Movable)
                     {
 
+                        
+
                         isObjectPickedUp = true;
                         caughtRigidbody = hit.rigidbody;
                         caughtRigidbody.isKinematic = true;
                         caughtObject = caughtRigidbody.gameObject;
 
-                        caughtRigidbodyTransformParent = caughtRigidbody.transform.parent;
-                        caughtObject.transform.position = transform.position + transform.forward * OBJECT_HOLD_OFFSET;
+                        //caughtRigidbodyTransformParent = caughtRigidbody.transform.parent;
+                        //caughtObject.transform.position = transform.position + transform.forward * OBJECT_HOLD_OFFSET;
                         isObjectGoingToPlayer = true;
                         caughtObject.transform.parent = this.transform;
 
@@ -223,7 +241,7 @@ public class WeaponController : MonoBehaviour {
 
     private void InitGravityCatchEffect()
     {
-        gravityCatchEffectObj = Instantiate(gravityCatchEffect, caughtObject.transform.position, transform.rotation) as GameObject;
+        gravityCatchEffectObj = Instantiate(gravityCatchEffect, transform.position + transform.forward * OBJECT_HOLD_OFFSET, transform.rotation) as GameObject;
         gravityCatchEffectObj.transform.parent = transform;
     }
 
