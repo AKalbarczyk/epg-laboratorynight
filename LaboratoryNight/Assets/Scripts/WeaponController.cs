@@ -208,6 +208,7 @@ public class WeaponController : MonoBehaviour {
                         caughtObject.transform.parent = this.transform;
 
                         InitGravityCatchEffect();
+
                     }
                 }
 
@@ -234,6 +235,7 @@ public class WeaponController : MonoBehaviour {
                     caughtRigidbody.AddForce(transform.forward * 50f, ForceMode.Impulse);
                     caughtRigidbody = null;
                     isObjectPickedUp = false;
+
                 }
             }
         }
