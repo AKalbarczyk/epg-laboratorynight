@@ -21,13 +21,12 @@ public class RocketController : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
+            Camera.main.SendMessage("CamShake");
             col.gameObject.SendMessage("TakeDamage", DAMAGE);
-
+    
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
             Destroy(this.gameObject, 0.1f);
-
-            //more player logic (health etc.)
 
         }
 
