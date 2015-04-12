@@ -63,6 +63,10 @@
      <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\ControlGUIScript.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\MoreButtonScript.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\MoveCameraScript.cs" />
      <Compile Include="Assets\OpenDoor.cs" />
      <Compile Include="Assets\OpenLockedDoor.cs" />
      <Compile Include="Assets\Pathfinding\Scenes\Scripts\AI.cs" />
@@ -94,6 +98,7 @@
      <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GravityShotController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealthController.cs" />
      <Compile Include="Assets\Scripts\Punch.cs" />
      <Compile Include="Assets\Scripts\RandomFloorBotMovement.cs" />
      <Compile Include="Assets\Scripts\RocketController.cs" />
@@ -222,6 +227,7 @@
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\GradientGUIBars\ReadMe\AboutFonts.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />

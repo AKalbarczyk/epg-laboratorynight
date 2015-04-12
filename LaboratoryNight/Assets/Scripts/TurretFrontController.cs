@@ -21,7 +21,7 @@ public class TurretFrontController : MonoBehaviour {
     {
         while (true)
         {
-            GameObject obj = Instantiate(rocket, transform.position, Quaternion.identity) as GameObject;
+            GameObject obj = Instantiate(rocket, transform.position, transform.rotation) as GameObject;
             GameObject efxObj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
             Destroy(efxObj, 0.3f);
 
