@@ -11,3 +11,16 @@ D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\Temp\bin\Debug\Unity.C
 D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
 D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.dll
 D:\POLgameX-Dropbox client\trunk\Projects\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\UnityEngine.UI.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\Unity.SerializationLogic.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\Unity.DataContract.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\Unity.CecilTools.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.pdb

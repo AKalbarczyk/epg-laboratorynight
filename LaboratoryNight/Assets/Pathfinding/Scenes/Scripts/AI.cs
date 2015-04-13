@@ -2,10 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class AI : Pathfinding {
-    //Animations
-    public Animator animatedEntity;
-    private string[] animClipNameGroup;
-    public int walkType;
+
    
     //AI
     public Transform player;
@@ -17,17 +14,7 @@ public class AI : Pathfinding {
 	void Start () 
     {
        AIList = GameObject.FindGameObjectsWithTag("Enemy");      
-       walkType = 3;
-     //  animatedEntity = GameObject.Find("Robot Kyle").transform.GetComponent<Animator>();
-
-       animClipNameGroup = new string[] {
-			"Basic_Run_01",
-			"Basic_Run_02",
-			"Basic_Run_03",
-			"Basic_Walk_01",
-			"Basic_Walk_02",
-			"Etc_Walk_Zombi_01"
-		};
+  
 
 	}
 	
@@ -35,16 +22,14 @@ public class AI : Pathfinding {
     {
         
         if (Vector3.Distance(player.position, transform.position) < 40F && !moving)
-        {
-         
-         //  animatedEntity.Play(animClipNameGroup[walkType]);
+        {  
             if (newPath)
             {
                 StartCoroutine(NewPath());
             }
             moving = true;
         }
-        else if (Vector3.Distance(player.position, transform.position) < 2F)
+        else if (Vector3.Distance(player.position, transform.position) < 4F)
         {
             //Stop!
         }
