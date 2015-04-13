@@ -21,7 +21,7 @@ public class RobotGunController : MonoBehaviour
     {
         // Debug.Log(player.transform);
         dist = Vector3.Distance(player.position, transform.position);
-        Debug.Log(transform.position + " || " + player.transform + " || " + dist + " || " + startShooting);
+      //  Debug.Log(transform.position + " || " + player.transform + " || " + dist + " || " + startShooting);
 
         if (dist < 15F && !startShooting)
         {

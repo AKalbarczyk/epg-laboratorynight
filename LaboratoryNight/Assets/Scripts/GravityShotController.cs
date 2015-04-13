@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class GravityShotController : MonoBehaviour {
+    private const float DAMAGE = 0.1f;
+    public GameObject explosion;
 
 	void Start () 
     {
@@ -24,6 +26,14 @@ public class GravityShotController : MonoBehaviour {
             StartCoroutine("DisableGravity", r);
             r.AddForce(Vector3.up * 1.2f + transform.forward * 7f, ForceMode.Impulse);
             
+        }
+        if (col.gameObject.tag == "Enemy")
+        {            
+            col.gameObject.SendMessage("TakeDamage", DAMAGE);
+            GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+            Destroy(efx, 0.5f);
+            Destroy(this.gameObject, 0.1f);
+
         }
     }
 
