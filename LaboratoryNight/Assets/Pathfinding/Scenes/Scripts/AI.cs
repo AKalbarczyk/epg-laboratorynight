@@ -29,7 +29,7 @@ public class AI : Pathfinding {
             }
             moving = true;
         }
-        else if (Vector3.Distance(player.position, transform.position) < 4F)
+        else if (Vector3.Distance(player.position, transform.position) < 6F)
         {
             //Stop!
         }

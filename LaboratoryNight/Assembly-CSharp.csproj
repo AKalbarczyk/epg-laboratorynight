@@ -93,6 +93,7 @@
      <Compile Include="Assets\Pathfinding\Scripts\WaypointListNode.cs" />
      <Compile Include="Assets\Pathfinding\Scripts\WaypointNode.cs" />
      <Compile Include="Assets\Pathfinding\Scripts\WaypointPathfinder.cs" />
+     <Compile Include="Assets\RobotGunController.cs" />
      <Compile Include="Assets\Scripts\AudioOffset.cs" />
      <Compile Include="Assets\Scripts\CaptureNormals.cs" />
      <Compile Include="Assets\Scripts\CursorController.cs" />

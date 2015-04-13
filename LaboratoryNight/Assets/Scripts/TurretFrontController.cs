@@ -5,21 +5,37 @@ public class TurretFrontController : MonoBehaviour {
 
     public GameObject rocket;
     public GameObject efx;
-
+    private Transform player;
+    float dist;
+    bool startShooting = false;
 	void Start () 
     {
-        StartCoroutine("ShootRocket");
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+       
+        dist = 100F;
+       //StartCoroutine("ShootRocket");
+       
+        
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
-
+       // Debug.Log(player.transform);
+        dist = Vector3.Distance(player.position, transform.position);
+        Debug.Log(transform.position + " || " + player.transform + " || " + dist + " || " + startShooting);
+        
+        if (dist < 15F && !startShooting)
+        {
+            startShooting = true;
+            StartCoroutine("ShootRocket");
+        }
 	}
 
     private IEnumerator ShootRocket()
     {
-        while (true)
+        
+        while (startShooting)
         {
             GameObject obj = Instantiate(rocket, transform.position, transform.rotation) as GameObject;
             GameObject efxObj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
