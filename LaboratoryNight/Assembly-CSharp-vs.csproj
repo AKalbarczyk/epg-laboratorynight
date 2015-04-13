@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\PlayerHealthController.cs" />
      <Compile Include="Assets\Scripts\Punch.cs" />
      <Compile Include="Assets\Scripts\RandomFloorBotMovement.cs" />
+     <Compile Include="Assets\Scripts\RobotHealth.cs" />
      <Compile Include="Assets\Scripts\RocketController.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\ScrollingUVs.cs" />

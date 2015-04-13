@@ -39,6 +39,15 @@ public class RocketController : MonoBehaviour {
             Destroy(this.gameObject, 0.1f);
         }
 
+        else if (col.gameObject.tag == "Enemy")
+        {
+            col.gameObject.SendMessage("TakeDamage", DAMAGE + 0.2f);
+
+            GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+            Destroy(efx, 0.5f);
+            Destroy(this.gameObject, 0.1f);
+        }
+
     }
 
 }
