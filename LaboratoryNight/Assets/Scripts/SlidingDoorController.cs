@@ -19,9 +19,9 @@ public class SlidingDoorController : MonoBehaviour {
 
 	void Update () {
 
-        if (isDoorOpening )
+        if (isDoorOpening)
         {
-            transform.position = Vector3.Lerp(transform.position, upPosition, 0.02f);
+            transform.position = Vector3.Lerp(transform.position, upPosition, Time.deltaTime * 4f);
         }
 
         if (isDoorClosing)
@@ -33,7 +33,7 @@ public class SlidingDoorController : MonoBehaviour {
 
 	void OnTriggerEnter (Collider target)
 	{
-        if (target.gameObject.tag == "Player")
+        if (target.gameObject.tag == "Player" || target.gameObject.tag == "Enemy")
         {
             if (!isDoorOpening)
             {
@@ -45,7 +45,7 @@ public class SlidingDoorController : MonoBehaviour {
 
     void OnTriggerExit (Collider target)
     {
-        if (target.gameObject.tag == "Player") 
+        if (target.gameObject.tag == "Player" || target.gameObject.tag == "Enemy") 
         {
             if (!isDoorClosing)
             {

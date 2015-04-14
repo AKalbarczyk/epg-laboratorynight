@@ -6,10 +6,16 @@ public class RobotHealth : MonoBehaviour {
     private float health;
     private Rigidbody rigidbody;
     private bool canBeHit = true;
+
+    public GameObject explosion;
+
+    private Transform player;
+
 	void Start () 
     {
         health = 1;
         rigidbody = gameObject.GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	// Update is called once per frame
@@ -20,11 +26,13 @@ public class RobotHealth : MonoBehaviour {
 
     void TakeDamage(float damage)
     {
-        Debug.Log("Robot health: " + health);
         this.health -= damage;
+        Debug.Log("Robot health: " + health);
 
         if (this.health <= 0)
         {
+            GameObject efx = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
+            Destroy(efx, 0.4f);
             Destroy(this.gameObject);
         }
     }
@@ -37,19 +45,30 @@ public class RobotHealth : MonoBehaviour {
             {
                 StartCoroutine("CannotBeHit");
                 TakeDamage(0.3f);
-                rigidbody.AddForce(col.gameObject.transform.forward * 3f, ForceMode.Impulse);
+                rigidbody.AddForce(col.gameObject.transform.forward * 5f, ForceMode.Impulse);
+
+                StartCoroutine("RemoveForces");
             }
         }
     }
 
     private IEnumerator CannotBeHit()
     {
-        if (this.canBeHit)
-        {
+       
             this.canBeHit = false;
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.5f);
             this.canBeHit = true;
-        }
+        
+    }
+
+    private IEnumerator RemoveForces()
+    {
+        Debug.Log("RemoveForces called");
+
+        yield return new WaitForSeconds(1f);
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
+        transform.LookAt(player);
     }
 
 }

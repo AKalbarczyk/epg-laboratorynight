@@ -59,7 +59,7 @@ public class WeaponController : MonoBehaviour {
             {
                 foreach (Collider c in colsTrappedInPull)
                 {
-                    if (c && pullObj && c.gameObject.tag == "Movable")
+                    if (c && pullObj && (c.gameObject.tag == "Movable" || c.gameObject.tag == "Enemy"))
                     {
                         c.gameObject.transform.position = Vector3.Lerp(c.gameObject.transform.position, pullObj.transform.position, 0.07f);
                     }
@@ -69,7 +69,7 @@ public class WeaponController : MonoBehaviour {
 
         CheckWeaponMode();
 
-        if (Input.GetAxisRaw("Fire1") != 0)
+        if (Input.GetAxisRaw("Fire2") != 0)
         {
             if (!isShooting)
             {
@@ -187,7 +187,7 @@ public class WeaponController : MonoBehaviour {
     {
         if (!isObjectPickedUp)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.forward, out hit, gravityGunRange, layerMask))
@@ -223,7 +223,7 @@ public class WeaponController : MonoBehaviour {
         }
         else //object picked up, ready to throw
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse0))
             {
                 if (caughtRigidbody) //just in case...
                 {
@@ -275,7 +275,8 @@ public class WeaponController : MonoBehaviour {
    private IEnumerator GravityGunEffect(GameObject shot)
    {
        yield return new WaitForSeconds(0.32f);
-       shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * WEAPON_FORCE, ForceMode.Impulse);
+       if (shot)
+        shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * WEAPON_FORCE, ForceMode.Impulse);
    }
 
    private IEnumerator GravityGunWait()

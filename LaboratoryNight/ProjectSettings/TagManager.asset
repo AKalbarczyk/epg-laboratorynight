@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Movable
+  - NotWalkable
+  - Fire
+  - Floor
   layers:
   - Default
   - TransparentFX

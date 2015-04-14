@@ -23,7 +23,6 @@ public class TurretFrontController : MonoBehaviour {
     {
        // Debug.Log(player.transform);
         dist = Vector3.Distance(player.position, transform.position);
-        Debug.Log(transform.position + " || " + player.transform + " || " + dist + " || " + startShooting);
         
         if (dist < 15F && !startShooting)
         {
@@ -51,7 +50,8 @@ public class TurretFrontController : MonoBehaviour {
     private IEnumerator AccelerateRocket(GameObject obj)
     {
         yield return new WaitForSeconds(0.4f);
-        obj.GetComponent<Rigidbody>().AddForce(transform.forward * 40f, ForceMode.Impulse);
+        if (obj)
+            obj.GetComponent<Rigidbody>().AddForce(transform.forward * 40f, ForceMode.Impulse);
     }
 
 }

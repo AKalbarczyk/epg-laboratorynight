@@ -20,6 +20,7 @@ public class PlayerHealthController : MonoBehaviour {
     {
         this.health -= damage;
         healthBar.SetNewValue(this.health);
+        Camera.main.SendMessage("CamShake");
     }
 
     void GainHealth(float health)
