@@ -5,11 +5,26 @@ public class MoveTo : MonoBehaviour {
 
     Transform goal;
     NavMeshAgent agent;
+    float dist;
+    bool noticePlayer = false;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         goal = GameObject.FindGameObjectWithTag("Player").transform;
-        StartCoroutine("MoveToPlayer");
+        dist = 100f;        
+    }
+
+    void Update()
+    {
+        if (!noticePlayer)        
+            dist = Vector3.Distance(goal.position, transform.position);                      
+        
+
+        if (dist < 15F && !noticePlayer)
+        {
+            noticePlayer = true;
+            StartCoroutine("MoveToPlayer");
+        }
     }
 
     IEnumerator MoveToPlayer()
@@ -21,8 +36,5 @@ public class MoveTo : MonoBehaviour {
         }
     }
 
-    void Update()
-    {
-
-    }
+    
 }

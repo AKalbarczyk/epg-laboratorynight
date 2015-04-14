@@ -12,14 +12,14 @@ public class RobotGunController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
         dist = 100F;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        dist = Vector3.Distance(player.position, transform.position);
+        if(!startShooting)
+            dist = Vector3.Distance(player.position, transform.position);
 
         if (dist < 15F && !startShooting)
         {

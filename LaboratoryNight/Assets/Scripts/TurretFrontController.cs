@@ -22,7 +22,8 @@ public class TurretFrontController : MonoBehaviour {
 	void Update () 
     {
        // Debug.Log(player.transform);
-        dist = Vector3.Distance(player.position, transform.position);
+        if(!startShooting)
+            dist = Vector3.Distance(player.position, transform.position);
         
         if (dist < 15F && !startShooting)
         {
