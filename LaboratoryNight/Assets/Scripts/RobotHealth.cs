@@ -8,6 +8,7 @@ public class RobotHealth : MonoBehaviour {
     private bool canBeHit = true;
 
     public GameObject explosion;
+    public GameObject onHit;
 
     private Transform player;
 
@@ -41,14 +42,15 @@ public class RobotHealth : MonoBehaviour {
     {
         if (col.gameObject.tag == "Movable")
         {
-            if (canBeHit)
-            {
-                StartCoroutine("CannotBeHit");
-                TakeDamage(0.3f);
+           // if (canBeHit)
+          //  {
+               // StartCoroutine("CannotBeHit");
+                TakeDamage(0.6f);
+                GameObject efx = Instantiate(onHit, transform.position + (transform.up *2), transform.rotation) as GameObject;
+                Destroy(efx, 0.4f);
                 rigidbody.AddForce(col.gameObject.transform.forward * 5f, ForceMode.Impulse);
-
                 StartCoroutine("RemoveForces");
-            }
+          //  }
         }
     }
 

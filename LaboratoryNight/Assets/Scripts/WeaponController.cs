@@ -178,6 +178,9 @@ public class WeaponController : MonoBehaviour {
         for (int i = 1; i < SHOCKWAVE_COUNT; i++)
         {
             shockwaveObj = Instantiate(shockwaveEffect, initPosition + forward * i * 7, Quaternion.identity) as GameObject; //Vector3.forward behaves strange
+        /*zmiana*/       shockwaveObj.GetComponent<Rigidbody>().AddForce(forward * (WEAPON_FORCE - 100), ForceMode.Impulse);
+        
+            StartCoroutine("GravityGunEffect", shockwaveObj);
             Destroy(shockwaveObj, 0.4f);
             yield return new WaitForSeconds(0.2f);
 
@@ -267,7 +270,8 @@ public class WeaponController : MonoBehaviour {
        Transform shotTranform = transform;
        GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;
        shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * (WEAPON_FORCE - 100), ForceMode.Impulse);
-       StartCoroutine("GravityGunEffect", shot);
+       
+      StartCoroutine("GravityGunEffect", shot);
        
        Destroy(shot, 1.2f);
    }
@@ -276,7 +280,7 @@ public class WeaponController : MonoBehaviour {
    {
        yield return new WaitForSeconds(0.32f);
        if (shot)
-        shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * WEAPON_FORCE, ForceMode.Impulse);
+         shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * WEAPON_FORCE, ForceMode.Impulse);
    }
 
    private IEnumerator GravityGunWait()

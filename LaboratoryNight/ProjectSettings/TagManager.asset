@@ -9,6 +9,7 @@ TagManager:
   - NotWalkable
   - Fire
   - Floor
+  - Wall
   layers:
   - Default
   - TransparentFX

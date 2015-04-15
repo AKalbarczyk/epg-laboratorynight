@@ -26,5 +26,9 @@ public class RobotBulletController : MonoBehaviour {
             Destroy(efx, 0.4f);
             Destroy(this.gameObject, 0.1f);
         }
+        if (col.gameObject.tag == "NotWalkable" || col.gameObject.tag == "Wall")
+        {
+            Destroy(this.gameObject, 0.01f);
+        }
     }
 }
