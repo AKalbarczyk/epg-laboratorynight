@@ -24,7 +24,7 @@ public class WeaponController : MonoBehaviour {
     private Rigidbody caughtRigidbody;
     private GameObject caughtObject;
     private Transform caughtRigidbodyTransformParent;
-    private const float OBJECT_HOLD_OFFSET = 5f;
+    private const float OBJECT_HOLD_OFFSET = 3f;
    
     private int gravityGunShootCount = 0;
     private const int MAX_GRAVITY_GUN_SHOOT_COUNT = 10;
@@ -59,7 +59,7 @@ public class WeaponController : MonoBehaviour {
             {
                 foreach (Collider c in colsTrappedInPull)
                 {
-                    if (c && pullObj && (c.gameObject.tag == "Movable" || c.gameObject.tag == "Enemy"))
+                    if (c && pullObj && c.gameObject.tag == "Movable")
                     {
                         c.gameObject.transform.position = Vector3.Lerp(c.gameObject.transform.position, pullObj.transform.position, 0.07f);
                     }
@@ -196,9 +196,7 @@ public class WeaponController : MonoBehaviour {
                 if (Physics.Raycast(transform.position, transform.forward, out hit, gravityGunRange, layerMask))
                 {
                     if (hit.rigidbody) //did RaycastHit hit any rigidbody? (TODO: narrow down to rigidbodies tagged with Movable)
-                    {
-
-                        
+                    {                      
 
                         isObjectPickedUp = true;
                         caughtRigidbody = hit.rigidbody;

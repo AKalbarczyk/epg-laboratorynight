@@ -7,10 +7,11 @@ public class MoveTo : MonoBehaviour {
     NavMeshAgent agent;
     float dist;
     bool noticePlayer = false;
-    
+    Animator animator;
     
     void Start()
-    {       
+    {
+        animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         goal = GameObject.FindGameObjectWithTag("Player").transform;
         dist = 100f;        
@@ -21,8 +22,9 @@ public class MoveTo : MonoBehaviour {
         if (!noticePlayer)        
             dist = Vector3.Distance(goal.position, transform.position);           
         
-        if (dist < 15f && !noticePlayer)
+        if (dist < 35f && !noticePlayer)
         {
+            animator.SetBool("spotPlayer",true);
             noticePlayer = true;
             StartCoroutine("MoveToPlayer");
         }
@@ -30,11 +32,19 @@ public class MoveTo : MonoBehaviour {
 
     IEnumerator MoveToPlayer()
     {
+        yield return new WaitForSeconds(0.5f);
         while (true)
         {
             agent.destination = goal.position;
             yield return new WaitForSeconds(0.5f);
         }
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Movable")
+            animator.SetBool("spotPlayer", true);
+            StartCoroutine("MoveToPlayer");
     }
 
     

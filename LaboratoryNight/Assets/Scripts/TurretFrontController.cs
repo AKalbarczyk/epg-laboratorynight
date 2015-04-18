@@ -25,7 +25,7 @@ public class TurretFrontController : MonoBehaviour {
         if(!startShooting)
             dist = Vector3.Distance(player.position, transform.position);
         
-        if (dist < 20f && !startShooting)
+        if (dist < 25f && !startShooting)
         {
             startShooting = true;
             StartCoroutine("ShootRocket");

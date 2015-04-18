@@ -38,7 +38,7 @@ public class RobotGunController : MonoBehaviour
             obj.GetComponent<Rigidbody>().AddForce(transform.forward * 100f, ForceMode.Impulse);
             Destroy(obj, 0.5f);
 
-            yield return new WaitForSeconds(0.7f);
+            yield return new WaitForSeconds(0.4f);
         }
     }
 
