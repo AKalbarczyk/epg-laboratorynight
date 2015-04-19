@@ -24,7 +24,11 @@ public class MoveTo : MonoBehaviour {
         
         if (dist < 35f && !noticePlayer)
         {
-            animator.SetBool("spotPlayer",true);
+            if (!this.gameObject.name.Contains("Floor"))
+            {
+                animator.SetBool("spotPlayer", true);
+            }
+
             noticePlayer = true;
             StartCoroutine("MoveToPlayer");
         }

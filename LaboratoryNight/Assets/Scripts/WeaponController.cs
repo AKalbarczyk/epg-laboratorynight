@@ -45,7 +45,8 @@ public class WeaponController : MonoBehaviour {
         if (isObjectGoingToPlayer)
         {
             StartCoroutine("DisableObjectGoingToPlayer");
-            caughtObject.transform.position = Vector3.Lerp(caughtObject.transform.position, transform.position + transform.forward * OBJECT_HOLD_OFFSET, Time.deltaTime * 5f);
+            if (caughtObject)
+                caughtObject.transform.position = Vector3.Lerp(caughtObject.transform.position, transform.position + transform.forward * OBJECT_HOLD_OFFSET, Time.deltaTime * 5f);
         }
 
         if (isPullObjMoving)
