@@ -1058,44 +1058,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.8000002
+      value: -20.5
       objectReference: {fileID: 0}
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_LocalPosition.y
       value: 35.4300003
       objectReference: {fileID: 0}
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_LocalPosition.z
       value: 35.5200005
       objectReference: {fileID: 0}
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_LocalRotation.x
-      value: .659534454
+      value: .489214063
       objectReference: {fileID: 0}
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -.00393569889
+      value: .0557908751
       objectReference: {fileID: 0}
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_LocalRotation.z
-      value: .00345334667
+      value: -.0313788429
       objectReference: {fileID: 0}
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .751656115
+      value: .869811654
       objectReference: {fileID: 0}
-    - target: {fileID: 414360, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+    - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 2091048, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
-      propertyPath: far clip plane
-      value: 293.899994
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 27b9615d7367ed344a866f19592db5af, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 036a85573483e024694900846ddef9a4, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &122862900
 GameObject:
