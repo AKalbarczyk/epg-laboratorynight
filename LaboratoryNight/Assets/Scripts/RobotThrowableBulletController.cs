@@ -15,7 +15,6 @@ public class RobotThrowableBulletController : MonoBehaviour {
         StartCoroutine("DisableFlyingToPlayer");
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () 
     {
         if (isFlyingToPlayer)
@@ -23,7 +22,7 @@ public class RobotThrowableBulletController : MonoBehaviour {
             transform.LookAt(player);
         }
 
-        rigidbody.AddRelativeForce(Vector3.forward * 40f, ForceMode.Force);
+        rigidbody.AddRelativeForce(Vector3.forward * 60f, ForceMode.Force);
 	}
 
     void OnTriggerEnter(Collider col)

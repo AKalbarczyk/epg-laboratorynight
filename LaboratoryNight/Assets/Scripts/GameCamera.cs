@@ -5,6 +5,7 @@ public class GameCamera : MonoBehaviour {
 
 	private Vector3 cameraTarget;
     private const float CAMERA_Z_OFFSET = 10f;
+    private const float CAMERA_X_OFFSET = 5f;
 	private Transform target;
     private float camY;
 
@@ -27,7 +28,7 @@ public class GameCamera : MonoBehaviour {
 
         CheckCamShake();
 
-        cameraTarget = new Vector3(target.position.x, camY, target.position.z - CAMERA_Z_OFFSET);
+        cameraTarget = new Vector3(target.position.x - CAMERA_X_OFFSET, camY, target.position.z - CAMERA_Z_OFFSET);
 		transform.position = Vector3.Lerp(transform.position,cameraTarget,Time.deltaTime * 8);
 	}
 

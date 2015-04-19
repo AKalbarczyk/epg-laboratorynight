@@ -19,6 +19,7 @@ public class WeaponController : MonoBehaviour {
     
     private bool isObjectPickedUp = false;
     private bool isObjectGoingToPlayer = false;
+    private bool canPickUpEnemies = false;
 
     private float gravityGunRange = 15;
     private Rigidbody caughtRigidbody;
@@ -195,20 +196,22 @@ public class WeaponController : MonoBehaviour {
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.forward, out hit, gravityGunRange, layerMask))
                 {
-                    if (hit.rigidbody) //did RaycastHit hit any rigidbody? (TODO: narrow down to rigidbodies tagged with Movable)
-                    {                      
+                    if (hit.rigidbody) //did RaycastHit hit any rigidbody? probably needs to be changed to Collider (to catch higher objects)
+                    {
+                        if (hit.rigidbody.tag != "Enemy")
+                        {
+                            isObjectPickedUp = true;
+                            caughtRigidbody = hit.rigidbody;
+                            caughtRigidbody.isKinematic = true;
+                            caughtObject = caughtRigidbody.gameObject;
 
-                        isObjectPickedUp = true;
-                        caughtRigidbody = hit.rigidbody;
-                        caughtRigidbody.isKinematic = true;
-                        caughtObject = caughtRigidbody.gameObject;
+                            //caughtRigidbodyTransformParent = caughtRigidbody.transform.parent;
+                            //caughtObject.transform.position = transform.position + transform.forward * OBJECT_HOLD_OFFSET;
+                            isObjectGoingToPlayer = true;
+                            caughtObject.transform.parent = this.transform;
 
-                        //caughtRigidbodyTransformParent = caughtRigidbody.transform.parent;
-                        //caughtObject.transform.position = transform.position + transform.forward * OBJECT_HOLD_OFFSET;
-                        isObjectGoingToPlayer = true;
-                        caughtObject.transform.parent = this.transform;
-
-                        InitGravityCatchEffect();
+                            InitGravityCatchEffect();
+                        }
                     }
                 }
 
