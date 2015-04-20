@@ -6,27 +6,13 @@ public class WeaponController : MonoBehaviour {
     public GameObject weaponFlash;
     public GameObject bullet;
     public GameObject gravityGunShot;
-    public GameObject gravityCatchEffect; private GameObject gravityCatchEffectObj;
-    public GameObject gravityCatchFailEffect;
     public GameObject pullEffect; private GameObject pullObj; private bool isPullObjMoving = false; private Vector3 initPosition; private bool isPullWorking;
     public GameObject shockwaveEffect; private GameObject shockwaveObj; const int SHOCKWAVE_COUNT = 8;
     private Collider[] colsTrappedInPull;
-    public LayerMask layerMask = -1;
 
     private const float WEAPON_FORCE = 120;
     private bool isShooting = false;
 
-    
-    private bool isObjectPickedUp = false;
-    private bool isObjectGoingToPlayer = false;
-    private bool canPickUpEnemies = false;
-
-    private float gravityGunRange = 15;
-    private Rigidbody caughtRigidbody;
-    private GameObject caughtObject;
-    private Transform caughtRigidbodyTransformParent;
-    private const float OBJECT_HOLD_OFFSET = 3f;
-   
     private int gravityGunShootCount = 0;
     private const int MAX_GRAVITY_GUN_SHOOT_COUNT = 10;
 
@@ -42,13 +28,6 @@ public class WeaponController : MonoBehaviour {
 	void Update () 
     {
 
-        if (isObjectGoingToPlayer)
-        {
-            StartCoroutine("DisableObjectGoingToPlayer");
-            if (caughtObject)
-                caughtObject.transform.position = Vector3.Lerp(caughtObject.transform.position, transform.position + transform.forward * OBJECT_HOLD_OFFSET, Time.deltaTime * 5f);
-        }
-
         if (isPullObjMoving)
         {
             StartCoroutine("DisablePullObjMoving");
@@ -61,7 +40,7 @@ public class WeaponController : MonoBehaviour {
             {
                 foreach (Collider c in colsTrappedInPull)
                 {
-                    if (c && pullObj && c.gameObject.tag == "Movable")
+                    if (c && pullObj && (c.gameObject.tag == "Movable" || c.gameObject.tag == "Enemy"))
                     {
                         c.gameObject.transform.position = Vector3.Lerp(c.gameObject.transform.position, pullObj.transform.position, 0.07f);
                     }
@@ -98,20 +77,7 @@ public class WeaponController : MonoBehaviour {
         {
             isShooting = false;
         }
-
-        GravityGunCatch();
-
 	}
-
-    private IEnumerator DisableObjectGoingToPlayer()
-    {
-        yield return new WaitForSeconds(1f);
-
-        if (isObjectGoingToPlayer)
-        {
-            isObjectGoingToPlayer = false;
-        }
-    }
 
     private IEnumerator DisablePullObjMoving()
     {
@@ -188,72 +154,7 @@ public class WeaponController : MonoBehaviour {
 
         }
     }
-    private void GravityGunCatch()
-    {
-        if (!isObjectPickedUp)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                RaycastHit hit;
-                if (Physics.Raycast(transform.position, transform.forward, out hit, gravityGunRange, layerMask))
-                {
-                    if (hit.rigidbody) //did RaycastHit hit any rigidbody? probably needs to be changed to Collider (to catch higher objects)
-                    {
-                        if (hit.rigidbody.tag != "Enemy")
-                        {
-                            isObjectPickedUp = true;
-                            caughtRigidbody = hit.rigidbody;
-                            caughtRigidbody.isKinematic = true;
-                            caughtObject = caughtRigidbody.gameObject;
 
-                            //caughtRigidbodyTransformParent = caughtRigidbody.transform.parent;
-                            //caughtObject.transform.position = transform.position + transform.forward * OBJECT_HOLD_OFFSET;
-                            isObjectGoingToPlayer = true;
-                            caughtObject.transform.parent = this.transform;
-
-                            InitGravityCatchEffect();
-                        }
-                    }
-                }
-
-                else
-                {
-                    GameObject failEfx = Instantiate(gravityCatchFailEffect, transform.position, transform.rotation) as GameObject;
-                    failEfx.transform.parent = transform;
-                    Destroy(failEfx, 0.4f);
-                }
-            }
-
-
-        }
-        else //object picked up, ready to throw
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
-            {
-                if (caughtRigidbody) //just in case...
-                {
-                    isObjectGoingToPlayer = false;
-                    DestroyGravityCatchEffect();
-                    caughtRigidbody.isKinematic = false;
-                    caughtRigidbody.transform.parent = null;
-                    caughtRigidbody.AddForce(transform.forward * 50f, ForceMode.Impulse);
-                    caughtRigidbody = null;
-                    isObjectPickedUp = false;
-                }
-            }
-        }
-    }
-
-    private void InitGravityCatchEffect()
-    {
-        gravityCatchEffectObj = Instantiate(gravityCatchEffect, transform.position + transform.forward * OBJECT_HOLD_OFFSET, transform.rotation) as GameObject;
-        gravityCatchEffectObj.transform.parent = transform;
-    }
-
-    private void DestroyGravityCatchEffect()
-    {
-        Destroy(gravityCatchEffectObj);
-    }
    private void ShootRifle()
    {
        Transform shotTranform = transform;

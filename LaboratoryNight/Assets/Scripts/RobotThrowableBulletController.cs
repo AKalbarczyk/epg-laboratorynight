@@ -37,10 +37,16 @@ public class RobotThrowableBulletController : MonoBehaviour {
 
         if (col.gameObject.name.Contains("Plane"))
         {
-            Debug.Log("hit plane");
             GameObject efx = Instantiate(hitEfx, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.4f);
             Destroy(this.gameObject, 0.1f);
+        }
+
+        if (col.gameObject.tag == "Enemy" && col.gameObject != this.gameObject) //prevent self-hit
+        {
+            col.SendMessage("TakeDamage", 0.5f);
+            GameObject efx = Instantiate(hitEfx, transform.position, transform.rotation) as GameObject;
+            Destroy(efx, 0.4f);
         }
     }
 
