@@ -21,7 +21,7 @@ public class SlidingDoorController : MonoBehaviour {
 
         if (isDoorOpening)
         {
-            transform.position = Vector3.Lerp(transform.position, upPosition, Time.deltaTime * 4f);
+            transform.position = Vector3.Lerp(transform.position, upPosition, Time.deltaTime * 3f);
         }
 
         if (isDoorClosing)

@@ -4,7 +4,7 @@ using System.Collections;
 public class GameCamera : MonoBehaviour {
 
 	private Vector3 cameraTarget;
-    private const float CAMERA_Z_OFFSET = 10f;
+    private const float CAMERA_Z_OFFSET = 5f;
     private const float CAMERA_X_OFFSET = 5f;
 	private Transform target;
     private float camY;

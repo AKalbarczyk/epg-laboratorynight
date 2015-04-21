@@ -24,6 +24,15 @@ public class GravityGunCatch : MonoBehaviour {
 	
 	void Update () 
     {
+
+        if (!caughtObject && gravityCatchEffectObj)
+        {
+            isObjectGoingToPlayer = false;
+            isObjectPickedUp = false;
+            DestroyGravityCatchEffect();
+            colliders.Clear();
+        }
+
         if (isObjectGoingToPlayer)
         {
             StartCoroutine("DisableObjectGoingToPlayer");
@@ -105,7 +114,7 @@ public class GravityGunCatch : MonoBehaviour {
 
     private Collider GetNearestCollider()
     {
-        float maxDist = 0, currDist = 0;
+        float minDist = 9999, currDist = 9999;
         Collider nearest = null;
         Vector3 myPosition = transform.position;
 
@@ -114,9 +123,9 @@ public class GravityGunCatch : MonoBehaviour {
             if (c)
             {
                 currDist = Vector3.Distance(myPosition, c.gameObject.transform.position);
-                if (currDist > maxDist)
+                if (currDist < minDist)
                 {
-                    maxDist = currDist;
+                    minDist = currDist;
                     nearest = c;
                 }
             }
