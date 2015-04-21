@@ -4,7 +4,6 @@ using System.Collections;
 [RequireComponent (typeof (CharacterController))]
 public class PlayerController : MonoBehaviour 
 {
-
     private float rotationSpeed = 15;
 	private float walkSpeed = 10;
 	private float runSpeed = 8;
@@ -12,11 +11,19 @@ public class PlayerController : MonoBehaviour
 	private Quaternion targetRotation;
 
 	private CharacterController controller;
+    private Animation animation;
 
+    //public AnimationClip idle;
+    //public AnimationClip run;
+    //public AnimationClip shoot;
 
 	void Start () 
     {
 		controller = GetComponent<CharacterController>();
+        animation = GetComponent<Animation>();
+        //animation.AddClip(idle, "idle");
+        //animation.AddClip(run, "run");
+        //animation.AddClip(shoot, "shoot");
 	}
 
 	void Update () 

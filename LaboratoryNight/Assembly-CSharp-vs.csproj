@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GravityGunCatch.cs" />
      <Compile Include="Assets\Scripts\GravityShotController.cs" />
+     <Compile Include="Assets\Scripts\PlayerAnimation.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\PlayerHealthController.cs" />
      <Compile Include="Assets\Scripts\Punch.cs" />

@@ -47,6 +47,12 @@ public class RocketController : MonoBehaviour {
             Destroy(efx, 0.5f);
             Destroy(this.gameObject, 0.1f);
         }
+        else if (col.gameObject.name.Contains("Cube"))
+        {
+            GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+            Destroy(efx, 0.5f);
+            Destroy(this.gameObject, 0.1f);
+        }
 
     }
 
