@@ -36,11 +36,11 @@ public class MoveTo : MonoBehaviour {
 
     IEnumerator MoveToPlayer()
     {
-        yield return new WaitForSeconds(0.5f);
+       // yield return new WaitForSeconds(0.5f);
         while (true)
         {
             agent.destination = goal.position;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.25f);
         }
     }
 

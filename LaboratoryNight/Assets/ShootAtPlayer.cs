@@ -19,7 +19,7 @@ public class ShootAtPlayer : MonoBehaviour {
 	void Update () {
         if (Vector3.Distance(target.position, transform.position) < 15F & initFire)
         {
-            StartCoroutine(Shoot(1f));
+            StartCoroutine("Shoot",0.6f);
             initFire = false;
         }
 	}
