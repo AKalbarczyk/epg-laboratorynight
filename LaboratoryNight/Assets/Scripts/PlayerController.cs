@@ -5,34 +5,46 @@ using System.Collections;
 public class PlayerController : MonoBehaviour 
 {
     private float rotationSpeed = 15;
+    private float rotSpeedNew = 50;
 	private float walkSpeed = 10;
 	private float runSpeed = 8;
 
 	private Quaternion targetRotation;
 
 	private CharacterController controller;
-    private Animation animation;
-
-    //public AnimationClip idle;
-    //public AnimationClip run;
-    //public AnimationClip shoot;
 
 	void Start () 
     {
 		controller = GetComponent<CharacterController>();
-        animation = GetComponent<Animation>();
-        //animation.AddClip(idle, "idle");
-        //animation.AddClip(run, "run");
-        //animation.AddClip(shoot, "shoot");
 	}
 
 	void Update () 
     {
 
-        ApplyMovement();
-        ApplyRotation();
+       // ApplyMovement();
+       // ApplyRotation();
+        ApplyMovementThirdPerson();
+        ApplyRotationThirdPerson();
+
 
 	}
+
+    private void ApplyMovementThirdPerson()
+    {
+        float translation = Input.GetAxis("Vertical") * walkSpeed;
+        float translationLeftRight = Input.GetAxis("Horizontal") * walkSpeed;
+        translation *= Time.deltaTime;
+        translationLeftRight *= Time.deltaTime;
+
+        transform.Translate(translationLeftRight, 0, translation);
+    }
+
+    private void ApplyRotationThirdPerson()
+    {
+        float rotation = Input.GetAxis("Mouse X") * rotSpeedNew;
+        rotation *= Time.deltaTime;
+        transform.Rotate(0, rotation, 0);
+    }
 
     private void ApplyMovement()
     {

@@ -29,7 +29,7 @@ public class PlayerAnimation : MonoBehaviour {
         }
         else 
         {
-            animation.CrossFade("Idle");
+            animation.CrossFade("Idle Aim");
         }
 
         if (Input.GetKey(KeyCode.Mouse0))
