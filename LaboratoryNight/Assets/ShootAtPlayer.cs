@@ -5,8 +5,8 @@ public class ShootAtPlayer : MonoBehaviour {
     private Transform target, myPosition;
     //shooting stuff
     public GameObject weaponFlash;
-    public GameObject smallRocket;
-    private const float WEAPON_FORCE = 20;
+    public GameObject bullet;
+    private const float WEAPON_FORCE = 120;
     bool initFire = true;
 	// Use this for initialization
 	void Start () {
@@ -17,10 +17,9 @@ public class ShootAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        if (Vector3.Distance(target.position, transform.position) < 25F & initFire)
+        if (Vector3.Distance(target.position, transform.position) < 15F & initFire)
         {
-            StartCoroutine("Shoot",2f);
+            StartCoroutine("Shoot",0.6f);
             initFire = false;
         }
 	}
@@ -30,26 +29,20 @@ public class ShootAtPlayer : MonoBehaviour {
         while (true)
         {
             ShootRifle();
-            yield return new WaitForSeconds(wait);            
+            yield return new WaitForSeconds(wait);
+            ShootRifle();
         }
     }
 
      private void ShootRifle()
     {
         Transform shotTranform = transform;
-        GameObject shot = Instantiate(smallRocket, shotTranform.position, transform.rotation) as GameObject;
+        GameObject shot = Instantiate(bullet, shotTranform.position, transform.rotation) as GameObject;
         shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * WEAPON_FORCE, ForceMode.Impulse);
-        StartCoroutine("AccelerateRocket", shot);
+        Destroy(shot, 0.3f);
 
-        //GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
-        //Destroy(flash, 0.3f);
+        GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
+        Destroy(flash, 0.3f);
 
     }
-
-     private IEnumerator AccelerateRocket(GameObject shot)
-     {
-         yield return new WaitForSeconds(0.4f);
-         if (shot)
-             shot.GetComponent<Rigidbody>().AddForce(transform.forward * WEAPON_FORCE *2, ForceMode.Impulse);
-     }
 }

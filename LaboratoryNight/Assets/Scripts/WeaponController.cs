@@ -1,7 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class WeaponController : MonoBehaviour {
+
+    public GUIBarScript gravGunBar;
+    private const float GRAVGUN_INIT_VALUE = 0.3f;
+    private const float GRAVGUN_RECHARGE_VALUE = 0.01f;
+    private float gravGunValue = GRAVGUN_INIT_VALUE;
+    private const float GRAVGUN_SHOOT_VALUE = 0.05f;
+    private const float GRAVGUN_PULL_VALUE = 0.6f;
+    private const float GRAVGUN_SHOCKWAVE_VALUE = 0.8f;
+    
+    public Text weaponModeText;
+    private const string SHOOT_TEXT = "GravityGun Mode: Shoot";
+    private const string PULL_TEXT = "GravityGun Mode: Black Hole";
+    private const string SHOCKWAVE_TEXT = "GravityGun Mode: Shockwave";
 
     public GameObject weaponFlash;
     public GameObject bullet;
@@ -16,13 +30,17 @@ public class WeaponController : MonoBehaviour {
     private int gravityGunShootCount = 0;
     private const int MAX_GRAVITY_GUN_SHOOT_COUNT = 10;
 
+
     private enum WeaponMode { STANDARD, PULL, SHOCKWAVE }
     private WeaponMode currWeaponMod = WeaponMode.STANDARD;
     private bool canUseSpecialMode = true;
 
 	void Start ()
     {
-	
+        gravGunBar.SetNewValue(GRAVGUN_INIT_VALUE);
+        InvokeRepeating("RegenerateGravGun", 0.5f, 0.5f);
+
+        weaponModeText.text = SHOOT_TEXT;
 	}
 	
 	void Update () 
@@ -79,6 +97,20 @@ public class WeaponController : MonoBehaviour {
         }
 	}
 
+    private void UpdateGravGunBar(float value)
+    {
+        this.gravGunValue += value;
+        this.gravGunBar.SetNewValue(gravGunValue);
+    }
+
+    private void RegenerateGravGun()
+    {
+        if (gravGunValue < GRAVGUN_INIT_VALUE)
+        {
+            UpdateGravGunBar(GRAVGUN_RECHARGE_VALUE);
+        }
+    }
+
     private IEnumerator DisablePullObjMoving()
     {
         colsTrappedInPull = null;
@@ -100,28 +132,35 @@ public class WeaponController : MonoBehaviour {
         {
             currWeaponMod = WeaponMode.STANDARD;
             Debug.Log("WeaponMode: STANDARD");
+            weaponModeText.text = SHOOT_TEXT;
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             currWeaponMod = WeaponMode.PULL;
             Debug.Log("WeaponMode: PULL");
+            weaponModeText.text = PULL_TEXT;
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             currWeaponMod = WeaponMode.SHOCKWAVE;
             Debug.Log("WeaponMode: SHOCKWAVE");
+            weaponModeText.text = SHOCKWAVE_TEXT;
         }
     }
 
     private void GravityGunPull()
     {
-        initPosition = transform.position;
-        pullObj = Instantiate(pullEffect, initPosition, transform.rotation) as GameObject;
-        DisablePullObj();
-        StartCoroutine("WeaponModeCooldown");
-        isPullObjMoving = true;
+        if (gravGunValue >= GRAVGUN_PULL_VALUE)
+        {
+            UpdateGravGunBar(-GRAVGUN_PULL_VALUE);
+            initPosition = transform.position;
+            pullObj = Instantiate(pullEffect, initPosition, transform.rotation) as GameObject;
+            DisablePullObj();
+            StartCoroutine("WeaponModeCooldown");
+            isPullObjMoving = true;
+        }
     }
 
     private IEnumerator WeaponModeCooldown()
@@ -133,8 +172,13 @@ public class WeaponController : MonoBehaviour {
 
     private void GravityGunShockwave()
     {
-        StartCoroutine("WeaponModeCooldown");
-        StartCoroutine("WaitAndFireShockwave");
+        if (gravGunValue >= GRAVGUN_SHOCKWAVE_VALUE)
+        {
+            UpdateGravGunBar(-GRAVGUN_SHOCKWAVE_VALUE);
+
+            StartCoroutine("WeaponModeCooldown");
+            StartCoroutine("WaitAndFireShockwave");
+        }
     }
 
     private IEnumerator WaitAndFireShockwave()
@@ -169,14 +213,19 @@ public class WeaponController : MonoBehaviour {
 
    private void ShootGravityGun()
    {
-       gravityGunShootCount++;
-       Transform shotTranform = transform;
-       GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;
-       shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * (WEAPON_FORCE - 100), ForceMode.Impulse);
-       
-      StartCoroutine("GravityGunEffect", shot);
-       
-       Destroy(shot, 1.2f);
+       if (gravGunValue >= GRAVGUN_SHOOT_VALUE)
+       {
+           UpdateGravGunBar(-GRAVGUN_SHOOT_VALUE);
+
+           gravityGunShootCount++;
+           Transform shotTranform = transform;
+           GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;
+           shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * (WEAPON_FORCE - 100), ForceMode.Impulse);
+
+           StartCoroutine("GravityGunEffect", shot);
+
+           Destroy(shot, 1.2f);
+       }
    }
 
    private IEnumerator GravityGunEffect(GameObject shot)
