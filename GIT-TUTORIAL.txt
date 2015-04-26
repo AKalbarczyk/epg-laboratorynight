@@ -12,3 +12,4 @@ wgrywanie commita na repo (jak SVN Commit): git push origin master
 
 sprawdzenie adresu remote'a: git remote -v
 sprawdzenie repo remote'a: git remote origin -v
+a
