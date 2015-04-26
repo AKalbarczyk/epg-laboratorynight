@@ -20,3 +20,12 @@
 
 ** Zbierable
 - mały akumulator doładowujący pasek energii o 15-20%
+
+### Bugi:
+[] gracz przenika przez sciany
+[] movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
+[] RobotKyle czasem obraca sie w kolko kiedy otrzyma obrazenia 
+[] strzaly przeciwnikow/gracza przelatuja przez sciany, movable itd. 
+[] shockwave i pull przelatuja przez sciany
+[] drzwi nie otwieraja sie plynnie
+[] mozna zlapac w GravityGunCatch zwykly pocisk przeciwnika
