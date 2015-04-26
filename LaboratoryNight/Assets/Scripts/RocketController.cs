@@ -4,7 +4,7 @@ using System.Collections;
 public class RocketController : MonoBehaviour {
 
     public GameObject explosion;
-    private const float DAMAGE = 0.3f;
+    private const float DAMAGE = 0.2f;
 
     private bool canBeDestroyed = true;
 	void Start () 
@@ -20,12 +20,10 @@ public class RocketController : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Player")
-        {
-            Camera.main.SendMessage("CamShake");
-            col.gameObject.SendMessage("TakeDamage", DAMAGE);
-    
+        {            
+            col.gameObject.SendMessage("TakeDamage", DAMAGE);    
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
-            Destroy(efx, 0.5f);
+            Destroy(efx, 0.2f);
             Destroy(this.gameObject, 0.1f);
 
         }
