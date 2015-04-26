@@ -2,18 +2,21 @@
 ## UWAGI
 ### 26.04.15
 ####Przeciwnicy:
-- Robot, który strzela i rzuca granatami (częstotlisość strzału taka jak do tej pory, częstotliwość granatów mniejsza)
-- Mały szybki robot, który tylko strzela(częstotliwość bez zmian, zwiększony speed)
+- Robot, który strzela rakietami - wolny i rzadko strzelajacy
+- Mały szybki floorbot, który tylko strzela(częstotliwość bez zmian, zwiększony speed)
+- Szalony naukowiec, który rzuca fiolkami z wybuchającą substancją
 
-- Szalony naukowiec, który rzuca fiolkami z wybuchającą substancją // Tym zajmiemy się na koniec
++ turret - większy, coś ala boss
 - Boss(to opcjonalne, jak starczy czasu)			   //Tym zajmiemy się na koniec
 
 ####Broń gracza:
-** Grav Gun - wszystkie tryby, bez ograniczeń amunicji
-- Tryb pull/push - mały cooldown(1 - 1.5s), skrzynie lub inne przedmioty wykorzystane do tego rozpadają się po uderzeniu
-- Tryb Shockwave - średni cooldown(3s)
-- Tryb Czarnej dziury - duży cooldown(6s), lecz spory zasięg i przeciwnicy wciągnięci nie mogą atakować
+** Grav Gun - 
+- Tryb pull/push - Główny tryb - mały cooldown(1 - 1.5s), skrzynie lub inne przedmioty wykorzystane do tego rozpadają się po uderzeniu
 
-** Alt fire - ilość amunicji ograniczona(20 strzałów)
-- Tryb małych pocisków grawitacyjnych - praktycznie nie istniejący cooldown, mała siła
-Z przeciwników (opcjonalnie - 30-40% szans na drop) wypadają małe akumulatory, które doładowują nasz alt fire
+** Alt fire -  pasek energii, ktory odnawia sie do pewnego poziomu(30%) (1-2)/s
+- Tryb Shockwave - 80% energii na strzał, najmocniejszy tryb
+- Tryb Czarnej dziury - 60% energii na strzał, spory zasięg i przeciwnicy wciągnięci nie mogą atakować
+- Tryb małych pocisków grawitacyjnych 5% energii- praktycznie nie istniejący cooldown, mała siła
+
+** Zbierable
+- mały akumulator doładowujący pasek energii o 15-20%
