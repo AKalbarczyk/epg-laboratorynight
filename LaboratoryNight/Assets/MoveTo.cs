@@ -22,7 +22,7 @@ public class MoveTo : MonoBehaviour {
         if (!noticePlayer)        
             dist = Vector3.Distance(goal.position, transform.position);           
         
-        if (dist < 25f && !noticePlayer)
+        if (dist < 35f && !noticePlayer)
         {
             if (!this.gameObject.name.Contains("Floor"))
             {
