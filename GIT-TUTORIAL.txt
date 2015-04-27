@@ -12,4 +12,6 @@ wgrywanie commita na repo (jak SVN Commit): git push origin master
 
 sprawdzenie adresu remote'a: git remote -v
 sprawdzenie repo remote'a: git remote origin -v
-a
+
+UPDATE 27.04.15
+git status - mo¿esz podejrzeæ jakie zmiany zosta³y wprowadzone zanim je "z-commitujesz"
