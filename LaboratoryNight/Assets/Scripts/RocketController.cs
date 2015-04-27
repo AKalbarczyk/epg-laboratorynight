@@ -52,6 +52,13 @@ public class RocketController : MonoBehaviour {
             Destroy(this.gameObject, 0.1f);
         }
 
+        else if (col.gameObject.tag == "Wall")
+        {
+            GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
+            Destroy(efx, 0.3f);
+            Destroy(this.gameObject, 0.1f);
+        }
+
     }
 
 }

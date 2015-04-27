@@ -21,7 +21,7 @@ public class RobotGunController : MonoBehaviour
         if(!startShooting)
             dist = Vector3.Distance(player.position, transform.position);
 
-        if (dist < 25F && !startShooting)
+        if (dist < 30F && !startShooting)
         {
             startShooting = true;
             StartCoroutine("ShootRocket");
@@ -36,7 +36,7 @@ public class RobotGunController : MonoBehaviour
             GameObject obj = Instantiate(rocket, transform.position, transform.rotation) as GameObject;
 
             obj.GetComponent<Rigidbody>().AddForce(transform.forward * 100f, ForceMode.Impulse);
-            Destroy(obj, 0.5f);
+            Destroy(obj, 0.7f);
 
             yield return new WaitForSeconds(0.4f);
         }

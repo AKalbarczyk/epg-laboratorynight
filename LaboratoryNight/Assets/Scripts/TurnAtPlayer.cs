@@ -14,10 +14,10 @@ public class TurnAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if (Vector3.Distance(target.position, transform.position) < 15F)
-        //{
-        //    myPosition.rotation = Quaternion.Slerp(myPosition.rotation, Quaternion.LookRotation(target.position - myPosition.position), rotationSpeed * Time.deltaTime);
-        //}
+        if (Vector3.Distance(target.position, transform.position) < 25F)
+        {
+            myPosition.rotation = Quaternion.Slerp(myPosition.rotation, Quaternion.LookRotation(target.position - myPosition.position), rotationSpeed * Time.deltaTime);
+        }
    }
 
     private IEnumerator LookAtPlayer()

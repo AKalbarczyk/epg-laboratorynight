@@ -44,7 +44,7 @@ public class RobotHealth : MonoBehaviour {
            // if (canBeHit)
           //  {
                // StartCoroutine("CannotBeHit");
-               // TakeDamage(0.6f);
+                TakeDamage(0.6f);
                 GameObject efx = Instantiate(onHit, transform.position + (transform.up *2), transform.rotation) as GameObject;
                 Destroy(efx, 0.4f);
                 rigidbody.AddForce(col.gameObject.transform.forward * 5f, ForceMode.Impulse);

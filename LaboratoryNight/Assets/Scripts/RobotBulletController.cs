@@ -21,14 +21,19 @@ public class RobotBulletController : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            col.SendMessage("TakeDamage", 0.2f);
+            col.SendMessage("TakeDamage", 0.1f);
             GameObject efx = Instantiate(hitEfx, transform.position, transform.rotation) as GameObject;
             Destroy(efx, 0.4f);
-            Destroy(this.gameObject, 0.1f);
+            Destroy(this.gameObject, 0.5f);
         }
         if (col.gameObject.tag == "NotWalkable" || col.gameObject.tag == "Wall")
         {
             Destroy(this.gameObject, 0.01f);
+        }
+
+        else if (col.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject, 0.1f);
         }
     }
 }
