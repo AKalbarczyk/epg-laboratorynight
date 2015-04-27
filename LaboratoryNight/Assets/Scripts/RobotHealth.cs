@@ -28,7 +28,6 @@ public class RobotHealth : MonoBehaviour {
     void TakeDamage(float damage)
     {
         this.health -= damage;
-        Debug.Log("Robot health: " + health);
 
         if (this.health <= 0)
         {
@@ -40,12 +39,12 @@ public class RobotHealth : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Movable")
+        if (col.gameObject.tag == "Movable" || col.gameObject.tag == "Rocket")
         {
            // if (canBeHit)
           //  {
                // StartCoroutine("CannotBeHit");
-                TakeDamage(0.6f);
+               // TakeDamage(0.6f);
                 GameObject efx = Instantiate(onHit, transform.position + (transform.up *2), transform.rotation) as GameObject;
                 Destroy(efx, 0.4f);
                 rigidbody.AddForce(col.gameObject.transform.forward * 5f, ForceMode.Impulse);
@@ -65,8 +64,6 @@ public class RobotHealth : MonoBehaviour {
 
     private IEnumerator RemoveForces()
     {
-        Debug.Log("RemoveForces called");
-
         yield return new WaitForSeconds(1f);
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;

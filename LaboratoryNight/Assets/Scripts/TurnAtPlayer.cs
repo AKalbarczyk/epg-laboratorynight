@@ -14,9 +14,23 @@ public class TurnAtPlayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Vector3.Distance(target.position, transform.position) < 15F)
+        //if (Vector3.Distance(target.position, transform.position) < 15F)
+        //{
+        //    myPosition.rotation = Quaternion.Slerp(myPosition.rotation, Quaternion.LookRotation(target.position - myPosition.position), rotationSpeed * Time.deltaTime);
+        //}
+   }
+
+    private IEnumerator LookAtPlayer()
+    {
+        yield return new WaitForSeconds(2f);
+        transform.LookAt(target);
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Movable" || col.gameObject.tag ==  "Rocket")
         {
-            myPosition.rotation = Quaternion.Slerp(myPosition.rotation, Quaternion.LookRotation(target.position - myPosition.position), rotationSpeed * Time.deltaTime);
+            StartCoroutine("LookAtPlayer");
         }
-   } 
+    }
 }

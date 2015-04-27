@@ -5,9 +5,12 @@ using System.Collections;
 public class PlayerController : MonoBehaviour 
 {
     private float rotationSpeed = 15;
-    private float rotSpeedNew = 50;
+    private const float ROTATION_SPEED = 50;
 	private float walkSpeed = 10;
 	private float runSpeed = 8;
+
+    private const float WALK_FORWARD_SPEED = 10;
+    private const float WALK_L_R_SPEED = WALK_FORWARD_SPEED / 16f;
 
 	private Quaternion targetRotation;
 
@@ -31,17 +34,15 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyMovementThirdPerson()
     {
-        float translation = Input.GetAxis("Vertical") * walkSpeed;
-        float translationLeftRight = Input.GetAxis("Horizontal") * walkSpeed;
-        translation *= Time.deltaTime;
-        translationLeftRight *= Time.deltaTime;
-
-        transform.Translate(translationLeftRight, 0, translation);
+        float translation = Input.GetAxis("Vertical") * WALK_FORWARD_SPEED;
+        float translationLeftRight = Input.GetAxis("Horizontal") * WALK_L_R_SPEED;
+        
+        controller.Move((transform.right * translationLeftRight) + (transform.forward * translation) * Time.deltaTime);
     }
 
     private void ApplyRotationThirdPerson()
     {
-        float rotation = Input.GetAxis("Mouse X") * rotSpeedNew;
+        float rotation = Input.GetAxis("Mouse X") * ROTATION_SPEED;
         rotation *= Time.deltaTime;
         transform.Rotate(0, rotation, 0);
     }

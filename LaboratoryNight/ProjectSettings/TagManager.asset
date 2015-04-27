@@ -10,6 +10,10 @@ TagManager:
   - Fire
   - Floor
   - Wall
+  - WPPathfinder
+  - Waypoint
+  - Obst
+  - Rocket
   layers:
   - Default
   - TransparentFX
