@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class RobotHealth : MonoBehaviour {
-
+    public GameObject powerUp;
     private float health;
     private Rigidbody rigidbody;
     private bool canBeHit = true;
@@ -29,11 +29,14 @@ public class RobotHealth : MonoBehaviour {
     {
         this.health -= damage;
 
+        
         if (this.health <= 0)
         {
             GameObject efx = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
             Destroy(efx, 0.4f);
-            Destroy(this.gameObject);
+            GameObject obj = Instantiate(powerUp, transform.position, transform.rotation) as GameObject;
+            Destroy(this.gameObject,0.05f);
+            
         }
     }
 

@@ -39,13 +39,14 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Unity 5/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Unity 5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AddEnergy.cs" />
      <Compile Include="Assets\AnimationController.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
@@ -94,6 +95,7 @@
      <Compile Include="Assets\Pathfinding\Scripts\WaypointListNode.cs" />
      <Compile Include="Assets\Pathfinding\Scripts\WaypointNode.cs" />
      <Compile Include="Assets\Pathfinding\Scripts\WaypointPathfinder.cs" />
+     <Compile Include="Assets\PowerUpRotate.cs" />
      <Compile Include="Assets\RobotGunController.cs" />
      <Compile Include="Assets\Scripts\AudioOffset.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
@@ -125,22 +127,31 @@
      <Compile Include="Assets\ShootAtPlayer.cs" />
      <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\TurretRocket.cs" />
+     <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_DemoControl.cs" />
+     <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_RotateObject.cs" />
      <Compile Include="Assets\test_PlayerController.cs" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Mobile\MK_Mobile-Diffuse.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-Glossy.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\GlobalFog.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ContrastComposite.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-Glossy.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-DiffuseBumpRim.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-SoftEdgeUnlit.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-DiffuseRim.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-ParallaxSpec.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\GlowEffectDownsample.shader" />
@@ -149,7 +160,10 @@
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Unlit\MK_Unlit-TransparentCutout.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-ParallaxSpec.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Unlit\MK_Unlit-Transparent.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\Models\test_ArmyPilot\ArmyPilot\ArmyPilot.mesh.xml" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
@@ -158,8 +172,10 @@
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseBumped.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseBumpSpec.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
@@ -169,13 +185,19 @@
      <None Include="Assets\Image Effects\_Sources\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\Tonemapper.shader" />
      <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKGlowEffect\MKGlowBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\MK_Standard.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-AdditiveSoft.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-AdditiveMultiply.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\GlowCompose.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-Diffuse.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\GrayscaleEffect.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-DiffuseBumpSpec.shader" />
      <None Include="Assets\Shaders\DiffuseReflectiveShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\SSAA.shader" />
@@ -189,6 +211,7 @@
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\MotionBlurClear.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\BlurEffectConeTaps.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Mobile\MK_Mobile-DiffuseBumped.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\BlurEffectConeTaps.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\Contrast Stretch\Apply.shader" />
@@ -197,10 +220,17 @@
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-MulitplyDouble.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-Additive.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseDetail.shader" />
      <None Include="Assets\Shaders\ReflectiveDiffuseSpec.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Lightmapped\MK_Lightmap-DiffuseBumped.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Toon\MK_Toon-Basic.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-DiffuseBumpSpec.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-DiffuseBumpSpec.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
@@ -208,18 +238,24 @@
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\CreaseApply.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-Glossy.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-ParallaxSpec.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-DiffuseBumped.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\TiltShift.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-Glossy.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\RadialBlur.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\SunShaftsComposite.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Lightmapped\MK_Lightmap-Diffuse.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Toon\MK_Toon-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\BlendModesOverlay.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
@@ -228,26 +264,31 @@
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
      <None Include="Assets\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Unlit\MK_Unlit-Normal.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\SimpleClear.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\frag_ao.cginc" />
      <None Include="Assets\Image Effects\_Sources\Shaders\FisheyeShader.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ColorCorrectionSelective.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-Diffuse.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ColorCorrectionEffect.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\GlowEffectDownsample.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
      <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKGlowEffect\MKGlowFullScreenDownSample.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\GrayscaleEffect.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-PremultiplyBlend.shader" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Image Effects\_Sources\Shaders\NoiseAndGrainDX11.shader" />
      <None Include="Assets\Models\test_ArmyPilot\ArmyPilot\ArmyPilot.skeleton.xml" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-Blend.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\VortexEffect.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
@@ -260,6 +301,7 @@
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\frag_ao.cginc" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKGlowEffect\MKGlowFastBlur.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\FisheyeShader.shader" />
@@ -268,6 +310,7 @@
      <None Include="Assets\Image Effects\_Sources\Shaders\ColorCorrectionEffect.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\SepiaToneEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-DiffuseBumped.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
@@ -281,6 +324,7 @@
      <None Include="Assets\Image Effects\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-Parallax.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\Bokeh34.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
@@ -300,13 +344,20 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-Diffuse.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-Multiply.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-Parallax.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\TwirlEffect.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-Parallax.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\GlobalFog.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseBumpRim.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Mobile\MK_Mobile-DiffuseBumpSpec-1DirectionalLight.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-AdditiveBlend.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
@@ -316,17 +367,22 @@
      <None Include="Assets\Image Effects\_Sources\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-Diffuse.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\MK_StandardSpecular.shader" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseRim.shader" />
      <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-ParallaxSpec.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\SSAA.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\VortexEffect.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-Glossy.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ColorCorrectionCurvesSimple.shader" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
@@ -337,8 +393,10 @@
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\CameraMotionBlurDX11.shader" />
      <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-Diffuse.shader" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKGlowEffect\MKGlowRender.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\SimpleClear.shader" />
@@ -346,21 +404,31 @@
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\CameraMotionBlurDX11.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-DiffuseBumpedNoLight.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-DiffuseBumpSpec.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKGlowEffect\MKGlowCompose.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-DiffuseBumped.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\BlendForBloom.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\EdgeDetectX.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-Parallax.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Mobile\MK_Mobile-DiffuseBumpSpec.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-DiffuseBumped.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Unity 5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Destruction">
- <HintPath>D:/git/epg-laboratorynight/LaboratoryNight/Assets/Fracture - Box Destruction - Standard/Scripts/Destruction.dll</HintPath>
+ <HintPath>C:/Users/Arek/GIT/epg-laboratorynight/LaboratoryNight/Assets/Fracture - Box Destruction - Standard/Scripts/Destruction.dll</HintPath>
+ </Reference>
+ <Reference Include="MKGlowSystem">
+ <HintPath>C:/Users/Arek/GIT/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
