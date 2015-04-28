@@ -37,28 +37,21 @@ public class RobotHealth : MonoBehaviour {
         }
     }
 
-    void OnCollisionEnter(Collision col)
+    public void ReceiveHit()
     {
-        if (col.gameObject.tag == "Movable" || col.gameObject.tag == "Rocket")
-        {
-           // if (canBeHit)
-          //  {
-               // StartCoroutine("CannotBeHit");
-                TakeDamage(0.6f);
-                GameObject efx = Instantiate(onHit, transform.position + (transform.up *2), transform.rotation) as GameObject;
-                Destroy(efx, 0.4f);
-                rigidbody.AddForce(col.gameObject.transform.forward * 5f, ForceMode.Impulse);
-                StartCoroutine("RemoveForces");
-          //  }
-        }
+        TakeDamage(0.6f);
+        GameObject efx = Instantiate(onHit, transform.position + (transform.up * 2), transform.rotation) as GameObject;
+        Destroy(efx, 0.4f);
+        //rigidbody.AddForce(col.gameObject.transform.forward * 5f, ForceMode.Impulse);
+        StartCoroutine("RemoveForces");
     }
 
     private IEnumerator CannotBeHit()
     {
        
-            this.canBeHit = false;
-            yield return new WaitForSeconds(0.5f);
-            this.canBeHit = true;
+        this.canBeHit = false;
+        yield return new WaitForSeconds(0.5f);
+        this.canBeHit = true;
         
     }
 

@@ -24,7 +24,11 @@ public class MovableController : MonoBehaviour {
             {
                 hitCount++;
 
-              //  Debug.Log("Movable hit enemy. HitCount: " + hitCount);
+                if (col.gameObject.tag == "Enemy")
+                {
+                    col.gameObject.SendMessage("ReceiveHit");
+                }
+
                 if (hitCount == MAX_HIT_COUNT)
                 {
                     GameObject shatter = Instantiate(shatteredCube, transform.position, Quaternion.identity) as GameObject;

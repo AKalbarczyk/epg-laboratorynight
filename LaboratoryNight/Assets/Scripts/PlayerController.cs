@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
 	private float walkSpeed = 10;
 	private float runSpeed = 8;
 
-    private const float WALK_FORWARD_SPEED = 20;
-    private const float WALK_L_R_SPEED = WALK_FORWARD_SPEED / 16f;
+    private const float WALK_FORWARD_SPEED = 10;
+    private const float WALK_L_R_SPEED = WALK_FORWARD_SPEED / (3*WALK_FORWARD_SPEED);
 
 	private Quaternion targetRotation;
 
