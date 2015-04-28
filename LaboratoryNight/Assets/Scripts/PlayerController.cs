@@ -10,16 +10,24 @@ public class PlayerController : MonoBehaviour
 	private float runSpeed = 8;
 
     private const float WALK_FORWARD_SPEED = 10;
-    private const float WALK_L_R_SPEED = WALK_FORWARD_SPEED / (3*WALK_FORWARD_SPEED);
+    private const float WALK_L_R_SPEED = WALK_FORWARD_SPEED / (2*WALK_FORWARD_SPEED);
 
 	private Quaternion targetRotation;
 
 	private CharacterController controller;
 
+    private Vector3 startPosition;
+
 	void Start () 
     {
 		controller = GetComponent<CharacterController>();
+        Invoke("GetPositionY", 1f);
 	}
+
+    private void GetPositionY()
+    {
+        startPosition = transform.position;
+    }
 
 	void Update () 
     {
@@ -28,7 +36,7 @@ public class PlayerController : MonoBehaviour
        // ApplyRotation();
         ApplyMovementThirdPerson();
         ApplyRotationThirdPerson();
-
+        RestrictPosition();
 
 	}
 
@@ -45,6 +53,17 @@ public class PlayerController : MonoBehaviour
         float rotation = Input.GetAxis("Mouse X") * ROTATION_SPEED;
         rotation *= Time.deltaTime;
         transform.Rotate(0, rotation, 0);
+    }
+
+    private void RestrictPosition()
+    {
+        if (startPosition != null)
+        {
+            if (transform.position.y > startPosition.y)
+            {
+                transform.position = new Vector3(transform.position.x, startPosition.y, transform.position.z);
+            }
+        }
     }
 
     private void ApplyMovement()

@@ -4,6 +4,8 @@ using System.Collections;
 public class AddEnergy : MonoBehaviour {
 
 	// Use this for initialization
+    public GameObject collectEfx;
+    private const float ENERGY_BOOST_VALUE = 0.4f;
 	void Start () {
 	
 	}
@@ -18,8 +20,11 @@ public class AddEnergy : MonoBehaviour {
 
         if (col.gameObject.tag == "Player")
         {
-            col.gameObject.SendMessage("UpdateGravGunBar", 0.4f);
-            Destroy(this.gameObject);   
+            col.transform.Find("Weapon").gameObject.SendMessage("UpdateGravGunBar", ENERGY_BOOST_VALUE);
+            GameObject obj = Instantiate(collectEfx, transform.position, Quaternion.identity) as GameObject;
+            Destroy(obj, 1f);
+            this.gameObject.GetComponent<Renderer>().enabled = false;
+            Destroy(this.gameObject, 1f);   
         }
     }
 }

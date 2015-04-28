@@ -34,7 +34,7 @@ public class RobotHealth : MonoBehaviour {
         {
             GameObject efx = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
             Destroy(efx, 0.4f);
-            GameObject obj = Instantiate(powerUp, transform.position, transform.rotation) as GameObject;
+            GameObject obj = Instantiate(powerUp, transform.position + transform.up * 2, transform.rotation) as GameObject;
             Destroy(this.gameObject,0.05f);
             
         }

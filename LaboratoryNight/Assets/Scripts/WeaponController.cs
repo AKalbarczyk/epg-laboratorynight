@@ -97,7 +97,7 @@ public class WeaponController : MonoBehaviour {
         }
 	}
 
-    private void UpdateGravGunBar(float value)
+    public void UpdateGravGunBar(float value)
     {
         this.gravGunValue += value;
         this.gravGunBar.SetNewValue(gravGunValue);
