@@ -1,13 +1,10 @@
 # epg-laboratorynight
 ## UWAGI
-### 26.04.15
-####Przeciwnicy:
-- Robot, który strzela rakietami - wolny i rzadko strzelajacy
-- Mały szybki floorbot, który tylko strzela(częstotliwość bez zmian, zwiększony speed)
-- Szalony naukowiec, który rzuca fiolkami z wybuchającą substancją
-
-+ turret - większy, coś ala boss
-- Boss(to opcjonalne, jak starczy czasu)			   //Tym zajmiemy się na koniec
+### 29.04.15
+- Koncepcja kilku broni pod LPM (na amunicje)
+- Core concept pull/push pod PPM
+- Skille (do przegadania)
+- Pasek mana/energii dla skilli i p/p
 
 ####Broń gracza:
 ** Grav Gun - 
