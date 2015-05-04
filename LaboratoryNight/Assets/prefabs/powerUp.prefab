@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e63d2ea86920f1942b79068c2ecc3305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectEfx: {fileID: 106368, guid: 64174cbfad0693140aa6d7ccdc91ac12, type: 2}
+  collectEfx: {fileID: 100002, guid: 75369bb81385f4904842bf20a51c14a2, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

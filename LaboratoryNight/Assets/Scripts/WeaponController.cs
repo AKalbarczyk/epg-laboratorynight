@@ -309,6 +309,11 @@ public class WeaponController : MonoBehaviour {
        }
    }
 
+   public void AddAmmo(int amount)
+   {
+       UpdateAmmoBar(amount);
+   }
+
    private void ConsumeAmmo()
    {
        if (ammo >= 3)

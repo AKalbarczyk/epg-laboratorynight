@@ -97,6 +97,7 @@
      <Compile Include="Assets\Pathfinding\Scripts\WaypointPathfinder.cs" />
      <Compile Include="Assets\PowerUpRotate.cs" />
      <Compile Include="Assets\RobotGunController.cs" />
+     <Compile Include="Assets\Scripts\AmmoBoxController.cs" />
      <Compile Include="Assets\Scripts\AudioOffset.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\CaptureNormals.cs" />
