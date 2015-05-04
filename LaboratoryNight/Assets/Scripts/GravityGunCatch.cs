@@ -3,6 +3,10 @@ using System.Collections;
 
 public class GravityGunCatch : MonoBehaviour {
 
+    public WeaponController weaponController;
+
+    private const float GRAVGUN_CATCH_VALUE = 0.1f;
+
     private ArrayList colliders = new ArrayList();
 
     private Rigidbody caughtRigidbody;
@@ -44,11 +48,12 @@ public class GravityGunCatch : MonoBehaviour {
 
         if (!isObjectPickedUp)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 Collider c = GetNearestCollider();
-                if (c)
+                if (c && weaponController.GetGravGunValue() > GRAVGUN_CATCH_VALUE)
                 {
+                    
                     isObjectPickedUp = true;
                     caughtRigidbody = c.GetComponent<Rigidbody>();
                     caughtRigidbody.isKinematic = true;
@@ -57,6 +62,7 @@ public class GravityGunCatch : MonoBehaviour {
                     isObjectGoingToPlayer = true;
                     caughtObject.transform.parent = this.transform;
 
+                    weaponController.UpdateGravGunBar(-GRAVGUN_CATCH_VALUE);
                     InitGravityCatchEffect();
                 }
                 else
@@ -72,7 +78,7 @@ public class GravityGunCatch : MonoBehaviour {
         }
         else //object picked up, ready to throw
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 colliders.Clear();
 
@@ -91,6 +97,7 @@ public class GravityGunCatch : MonoBehaviour {
             }
         }
 	}
+
 
     void OnTriggerEnter(Collider col)
     {

@@ -5,21 +5,22 @@ using System.Collections;
 public class WeaponController : MonoBehaviour {
 
     public GUIBarScript gravGunBar;
-    private const float GRAVGUN_INIT_VALUE = 0.3f;
+    private const float GRAVGUN_INIT_VALUE = 1f;
     private const float GRAVGUN_RECHARGE_VALUE = 0.01f;
     private float gravGunValue = GRAVGUN_INIT_VALUE;
+    
     private const float GRAVGUN_SHOOT_VALUE = 0.05f;
     private const float GRAVGUN_PULL_VALUE = 0.6f;
     private const float GRAVGUN_SHOCKWAVE_VALUE = 0.8f;
     
     public Text weaponModeText;
-    private const string SHOOT_TEXT = "GravityGun Mode: Shoot";
-    private const string PULL_TEXT = "GravityGun Mode: Black Hole";
-    private const string SHOCKWAVE_TEXT = "GravityGun Mode: Shockwave";
+    public Text ammoText;
 
     public GameObject weaponFlash;
     public GameObject bullet;
     public GameObject gravityGunShot;
+    public GameObject shotgunShot;
+    public GameObject laserShot;
     public GameObject pullEffect; private GameObject pullObj; private bool isPullObjMoving = false; private Vector3 initPosition; private bool isPullWorking;
     public GameObject shockwaveEffect; private GameObject shockwaveObj; const int SHOCKWAVE_COUNT = 8;
     private Collider[] colsTrappedInPull;
@@ -31,16 +32,21 @@ public class WeaponController : MonoBehaviour {
     private const int MAX_GRAVITY_GUN_SHOOT_COUNT = 10;
 
 
-    private enum WeaponMode { STANDARD, PULL, SHOCKWAVE }
-    private WeaponMode currWeaponMod = WeaponMode.STANDARD;
+    private enum WeaponMode { RIFLE, SHOTGUN, LASER };
+    private WeaponMode[] WEAPON_MODE_ARR = { WeaponMode.RIFLE, WeaponMode.SHOTGUN, WeaponMode.LASER };
+    private int weaponModeIndex = 0;
+    private WeaponMode currWeaponMode = WeaponMode.RIFLE;
+
     private bool canUseSpecialMode = true;
+
+    private int ammo = 100;
 
 	void Start ()
     {
+        ammoText.text = "Ammo: " + ammo;
+        weaponModeText.text = WeaponMode.RIFLE.ToString();
         gravGunBar.SetNewValue(GRAVGUN_INIT_VALUE);
         InvokeRepeating("RegenerateGravGun", 0.5f, 0.5f);
-
-        weaponModeText.text = SHOOT_TEXT;
 	}
 	
 	void Update () 
@@ -67,40 +73,54 @@ public class WeaponController : MonoBehaviour {
         }
 
         CheckWeaponMode();
+        CheckWeapon();
+        CheckSkills();
+	}
 
-        if (Input.GetAxisRaw("Fire2") != 0)
+    public float GetGravGunValue()
+    {
+        return this.gravGunValue;
+    }
+
+
+    private void CheckSkills()
+    {
+
+        if (!isShooting)
         {
-            if (!isShooting)
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                if (currWeaponMod == WeaponMode.STANDARD)
-                {
-                    ShootGravityGun();
-                }
-
-                else if (currWeaponMod == WeaponMode.PULL && canUseSpecialMode)
-                {
-                    GravityGunPull();
-                }
-
-                else if (currWeaponMod == WeaponMode.SHOCKWAVE && canUseSpecialMode)
-                {
-                    GravityGunShockwave();
-                }
-
-                isShooting = true;
+                GravityGunPull();
             }
-        }
 
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                GravityGunShockwave();
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                //TODO?
+            }
+
+            isShooting = true;
+        }
         else
         {
             isShooting = false;
         }
-	}
+    }
 
     public void UpdateGravGunBar(float value)
     {
         this.gravGunValue += value;
         this.gravGunBar.SetNewValue(gravGunValue);
+    }
+
+    private void UpdateAmmoBar(int value)
+    {
+        ammo += value;
+        ammoText.text = "Ammo: " + ammo;
     }
 
     private void RegenerateGravGun()
@@ -128,26 +148,50 @@ public class WeaponController : MonoBehaviour {
 
     private void CheckWeaponMode()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetAxisRaw("Mouse ScrollWheel") > 0)
         {
-            currWeaponMod = WeaponMode.STANDARD;
-            Debug.Log("WeaponMode: STANDARD");
-            weaponModeText.text = SHOOT_TEXT;
+            if (weaponModeIndex == WEAPON_MODE_ARR.Length - 1)
+            {
+                weaponModeIndex = -1;
+            }
+            currWeaponMode = WEAPON_MODE_ARR[++weaponModeIndex];
+            weaponModeText.text = currWeaponMode.ToString();
+        }
+        else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0)
+        {
+            if (weaponModeIndex == 0)
+            {
+                weaponModeIndex = WEAPON_MODE_ARR.Length;
+            }
+            currWeaponMode = WEAPON_MODE_ARR[--weaponModeIndex];
+            weaponModeText.text = currWeaponMode.ToString();
+        }
+        
+    }
+    private void CheckWeapon()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (currWeaponMode == WeaponMode.RIFLE)
+            {
+                ShootGravityGun();
+            }
+
+            else if (currWeaponMode == WeaponMode.SHOTGUN)
+            {
+                ShootShotgun();
+            }
+            //else if (currWeaponMode == WeaponMode.LASER)
+            //{
+            //    ShootLaser();
+            //}
         }
 
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (currWeaponMode == WeaponMode.LASER)
         {
-            currWeaponMod = WeaponMode.PULL;
-            Debug.Log("WeaponMode: PULL");
-            weaponModeText.text = PULL_TEXT;
+            ShootLaser();
         }
 
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            currWeaponMod = WeaponMode.SHOCKWAVE;
-            Debug.Log("WeaponMode: SHOCKWAVE");
-            weaponModeText.text = SHOCKWAVE_TEXT;
-        }
     }
 
     private void GravityGunPull()
@@ -211,21 +255,56 @@ public class WeaponController : MonoBehaviour {
        
    }
 
-   private void ShootGravityGun()
+   private void ShootShotgun()
    {
-       if (gravGunValue >= GRAVGUN_SHOOT_VALUE)
+       
+       int shotgunShotCount = 4;
+       GameObject[] shotArr = new GameObject[shotgunShotCount];
+       for (int i = 0; i < shotgunShotCount; i++)
        {
-           UpdateGravGunBar(-GRAVGUN_SHOOT_VALUE);
+           Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+           GameObject shot = Instantiate(shotgunShot, pos, transform.rotation) as GameObject;
+           shotArr[i] = shot;
+       }
 
-           gravityGunShootCount++;
-           Transform shotTranform = transform;
-           GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;
-           shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * (WEAPON_FORCE - 100), ForceMode.Impulse);
-
-           StartCoroutine("GravityGunEffect", shot);
-
+       float positionFactor = -20f;
+       foreach (GameObject shot in shotArr)
+       {
+           shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * (WEAPON_FORCE - 50f) + transform.right * positionFactor, ForceMode.Impulse);
+           positionFactor += 10f;
            Destroy(shot, 1.2f);
        }
+
+       UpdateAmmoBar(-5);
+   
+   }
+
+   private void ShootLaser()
+   {
+       if (Input.GetKeyDown(KeyCode.Mouse0))
+       {
+           laserShot.SetActive(true);
+           UpdateAmmoBar(-10);
+       }
+       
+       if (Input.GetKeyUp(KeyCode.Mouse0))
+       {
+           laserShot.SetActive(false);
+       }
+   }
+
+   private void ShootGravityGun()
+   {
+        gravityGunShootCount++;
+        Transform shotTranform = transform;
+        GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;
+        shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * (WEAPON_FORCE - 100), ForceMode.Impulse);
+
+        StartCoroutine("GravityGunEffect", shot);
+
+        Destroy(shot, 1.2f);
+
+        UpdateAmmoBar(-1);
    }
 
    private IEnumerator GravityGunEffect(GameObject shot)

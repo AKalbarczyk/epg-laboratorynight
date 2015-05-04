@@ -24,3 +24,17 @@ C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\Temp\bin\Debug\
 C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
 C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\Arek\Desktop\epg-laboratorynight-master\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.pdb
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\Destruction.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\UnityEditor.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\UnityEngine.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\UnityEngine.UI.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\Unity.CecilTools.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\Mono.Cecil.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\Unity.SerializationLogic.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\Unity.DataContract.dll
+D:\git\epg-laboratorynight\LaboratoryNight\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\git\epg-laboratorynight\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+D:\git\epg-laboratorynight\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.dll
+D:\git\epg-laboratorynight\LaboratoryNight\obj\Debug\Assembly-CSharp-firstpass.pdb
