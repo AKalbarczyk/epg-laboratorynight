@@ -34,7 +34,12 @@ public class PlayerAnimation : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Mouse0))
         {
-            animation.CrossFade("Idle Firing");
+            animation.Play("Walk Firing");
+        }
+
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            animation.Play("Jump");
         }
 	}
 }

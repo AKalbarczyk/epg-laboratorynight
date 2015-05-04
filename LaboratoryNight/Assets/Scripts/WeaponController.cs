@@ -39,7 +39,8 @@ public class WeaponController : MonoBehaviour {
 
     private bool canUseSpecialMode = true;
 
-    private int ammo = 100;
+    private int ammo = 30;
+    private bool isShootingLaser = false;
 
 	void Start ()
     {
@@ -174,22 +175,27 @@ public class WeaponController : MonoBehaviour {
         {
             if (currWeaponMode == WeaponMode.RIFLE)
             {
-                ShootGravityGun();
+                if (ammo >= 1)
+                {
+                    ShootGravityGun();
+                }
             }
 
             else if (currWeaponMode == WeaponMode.SHOTGUN)
             {
-                ShootShotgun();
+                if (ammo >= 4)
+                {
+                    ShootShotgun();
+                }
             }
-            //else if (currWeaponMode == WeaponMode.LASER)
-            //{
-            //    ShootLaser();
-            //}
         }
 
         if (currWeaponMode == WeaponMode.LASER)
         {
-            ShootLaser();
+            if (ammo >= 1)
+            {
+                ShootLaser();
+            }
         }
 
     }
@@ -243,17 +249,17 @@ public class WeaponController : MonoBehaviour {
         }
     }
 
-   private void ShootRifle()
-   {
-       Transform shotTranform = transform;
-       GameObject shot = Instantiate(bullet, shotTranform.position, transform.rotation) as GameObject;
-       shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * WEAPON_FORCE, ForceMode.Impulse);
-       Destroy(shot, 0.3f);
+   //private void ShootRifle()
+   //{
+   //    Transform shotTranform = transform;
+   //    GameObject shot = Instantiate(bullet, shotTranform.position, transform.rotation) as GameObject;
+   //    shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * WEAPON_FORCE, ForceMode.Impulse);
+   //    Destroy(shot, 0.3f);
 
-       GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
-       Destroy(flash, 0.1f);
+   //    GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
+   //    Destroy(flash, 0.1f);
        
-   }
+   //}
 
    private void ShootShotgun()
    {
@@ -275,6 +281,8 @@ public class WeaponController : MonoBehaviour {
            Destroy(shot, 1.2f);
        }
 
+       GameObject flash = Instantiate(weaponFlash, transform.position, transform.rotation) as GameObject;
+       Destroy(flash, 0.1f);
        UpdateAmmoBar(-5);
    
    }
@@ -284,12 +292,34 @@ public class WeaponController : MonoBehaviour {
        if (Input.GetKeyDown(KeyCode.Mouse0))
        {
            laserShot.SetActive(true);
-           UpdateAmmoBar(-10);
+           isShootingLaser = true;
+           InvokeRepeating("ConsumeAmmo", 0, 0.5f);
+           laserShot.SendMessage("StartApplyDamage");
        }
        
        if (Input.GetKeyUp(KeyCode.Mouse0))
        {
+           if (ammo >= 3)
+           {
+               laserShot.SendMessage("StopApplyDamage");
+               laserShot.SetActive(false);
+               isShootingLaser = false;
+               CancelInvoke("ConsumeAmmo");
+           }
+       }
+   }
+
+   private void ConsumeAmmo()
+   {
+       if (ammo >= 3)
+       {
+           UpdateAmmoBar(-3);
+       }
+       else
+       {
            laserShot.SetActive(false);
+           isShootingLaser = false;
+           CancelInvoke("ConsumeAmmo");
        }
    }
 
