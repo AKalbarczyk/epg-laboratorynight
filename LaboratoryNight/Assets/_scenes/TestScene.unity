@@ -146,7 +146,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
 --- !u!1 &14052484
 GameObject:
   m_ObjectHideFlags: 0
@@ -6965,7 +6965,7 @@ Transform:
   - {fileID: 916368958}
   - {fileID: 749916217}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1 &1010763446
 GameObject:
   m_ObjectHideFlags: 0
@@ -8687,6 +8687,10 @@ Prefab:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1295111624}
+    - target: {fileID: 11419788, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
+      propertyPath: shockwaveEffect
+      value: 
+      objectReference: {fileID: 100000, guid: c8fd86fe5050dc04bb501b291c30f591, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
   m_IsPrefabParent: 0

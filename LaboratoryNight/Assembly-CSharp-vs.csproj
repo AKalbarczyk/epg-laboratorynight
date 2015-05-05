@@ -119,6 +119,7 @@
      <Compile Include="Assets\Scripts\RocketController.cs" />
      <Compile Include="Assets\Scripts\Rotator.cs" />
      <Compile Include="Assets\Scripts\ScrollingUVs.cs" />
+     <Compile Include="Assets\Scripts\ShockwaveController.cs" />
      <Compile Include="Assets\Scripts\SlidingDoorController.cs" />
      <Compile Include="Assets\Scripts\TurnAtPlayer.cs" />
      <Compile Include="Assets\Scripts\TurretFrontController.cs" />
@@ -146,6 +147,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ContrastComposite.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-Glossy.shader" />
+     <None Include="Assets\Help.txt" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-DiffuseBumpRim.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-SoftEdgeUnlit.shader" />

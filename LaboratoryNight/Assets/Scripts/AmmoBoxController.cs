@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-
 public class AmmoBoxController : MonoBehaviour {
 
 	// Use this for initialization
@@ -19,9 +18,12 @@ public class AmmoBoxController : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             col.gameObject.transform.Find("Weapon").SendMessage("AddAmmo", 10);
-            GameObject obj = Instantiate(efx, transform.position, transform.rotation) as GameObject;
+            GameObject obj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
+
             Destroy(obj, 0.5f);
-            Destroy(this.gameObject, 0.5f);
+            Destroy(this.gameObject, 0.25f);
+
+
         }
     }
 }
