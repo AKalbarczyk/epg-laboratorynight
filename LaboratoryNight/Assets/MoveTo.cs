@@ -8,9 +8,11 @@ public class MoveTo : MonoBehaviour {
     float dist;
     bool noticePlayer = false;
     Animator animator;
+    public float minDist;
     
     void Start()
     {
+        
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         goal = GameObject.FindGameObjectWithTag("Player").transform;
@@ -19,24 +21,26 @@ public class MoveTo : MonoBehaviour {
 
     void Update()
     {
-        if (!noticePlayer)        
-            dist = Vector3.Distance(goal.position, transform.position);           
-        
-        if (dist < 25f && !noticePlayer)
+        if (!noticePlayer)
+        {
+            dist = Vector3.Distance(goal.position, transform.position);
+        }
+
+        if (dist <= minDist && !noticePlayer)
         {
             if (!this.gameObject.name.Contains("Floor"))
             {
                 animator.SetBool("spotPlayer", true);
-            }
+            }         
 
-            noticePlayer = true;
-            StartCoroutine("MoveToPlayer");
-        }
+           noticePlayer = true;
+           StartCoroutine("MoveToPlayer");
+        }        
     }
 
     IEnumerator MoveToPlayer()
     {
-       // yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
         while (true)
         {
             agent.destination = goal.position;
@@ -47,8 +51,13 @@ public class MoveTo : MonoBehaviour {
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.tag == "Movable")
-            animator.SetBool("spotPlayer", true);
+        {
+            if (!this.gameObject.name.Contains("Floor"))
+            {
+                animator.SetBool("spotPlayer", true);
+            } 
             StartCoroutine("MoveToPlayer");
+        }
     }
 
     

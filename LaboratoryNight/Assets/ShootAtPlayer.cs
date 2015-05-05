@@ -18,7 +18,7 @@ public class ShootAtPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Vector3.Distance(target.position, transform.position) < 25F & initFire)
+        if (Vector3.Distance(target.position, transform.position) < 19F & initFire)
         {
             StartCoroutine("Shoot",2f);
             initFire = false;

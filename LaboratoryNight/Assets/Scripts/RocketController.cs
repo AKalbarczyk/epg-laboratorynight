@@ -20,11 +20,13 @@ public class RocketController : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Player")
-        {            
-            col.gameObject.SendMessage("TakeDamage", DAMAGE);    
+        {
+            Destroy(this.gameObject, 0.1f);
+            col.gameObject.SendMessage("TakeDamage", DAMAGE);
+            
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.2f);
-            Destroy(this.gameObject, 0.1f);
+            
 
         }
 
