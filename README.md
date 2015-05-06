@@ -1,27 +1,15 @@
-# epg-laboratorynight
+# Laboratory Night
 ## UWAGI
-### 29.04.15
-- Koncepcja kilku broni pod LPM (na amunicje)
-- Core concept pull/push pod PPM
-- Skille (do przegadania)
-- Pasek mana/energii dla skilli i p/p
-
-####Broń gracza:
-** Grav Gun - 
-- Tryb pull/push - Główny tryb - mały cooldown(1 - 1.5s), skrzynie lub inne przedmioty wykorzystane do tego rozpadają się po uderzeniu
-
-** Alt fire -  pasek energii, ktory odnawia sie do pewnego poziomu(30%) (1-2)/s
-- Tryb Shockwave - 80% energii na strzał, najmocniejszy tryb
-- Tryb Czarnej dziury - 60% energii na strzał, spory zasięg i przeciwnicy wciągnięci nie mogą atakować
-- Tryb małych pocisków grawitacyjnych 5% energii- praktycznie nie istniejący cooldown, mała siła
-
-** Zbierable
-- mały akumulator doładowujący pasek energii o 15-20%
+### 2015.05.06
+- [!] zmiana kamery
+- [!] różna amunicja dla broni (odpowiednie assety)
+- [!] pull-push na przytrzymanie prawego przycisku (hold, release)
+- brak akcji na brak amunicji/many,
+- gracz zaczyna z jedną bronią, potem zbiera kolejne
+- nowy skill pod 3 (tarcza?)
 
 ### Bugi:
-- [ ] movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
-- [*] RobotKyle czasem obraca sie w kolko kiedy otrzyma obrazenia (sila nadana Rigidbody) // Naprawiony 
-- [*] strzaly przeciwnikow/gracza przelatuja przez sciany, movable itd. naprawiony
-- [ ] shockwave i pull przelatuja przez sciany
-- [ ] drzwi nie otwieraja sie plynnie
-- [ ] mozna zlapac w GravityGunCatch zwykly pocisk przeciwnika
+- movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
+- shockwave i pull przelatuja przez sciany
+- drzwi nie otwieraja sie plynnie
+- mozna zlapac w GravityGunCatch zwykly pocisk przeciwnika
