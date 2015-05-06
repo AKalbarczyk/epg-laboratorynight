@@ -7,6 +7,7 @@
 - brak akcji na brak amunicji/many,
 - gracz zaczyna z jedną bronią, potem zbiera kolejne
 - nowy skill pod 3 (tarcza?)
+- wiekszy collider robota Kyle (pociski w niego nie trafiaja)
 
 ### Bugi:
 - movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
