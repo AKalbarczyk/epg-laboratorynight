@@ -84,7 +84,8 @@ public class GravityGunCatch : MonoBehaviour {
 
                 if (caughtRigidbody) //just in case...
                 {
-                    caughtRigidbody.gameObject.SendMessage("IsThrown");
+                    if (caughtRigidbody.tag != "Rocket")
+                        caughtRigidbody.gameObject.SendMessage("IsThrown");
 
                     isObjectGoingToPlayer = false;
                     DestroyGravityCatchEffect();

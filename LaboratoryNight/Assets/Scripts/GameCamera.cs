@@ -15,9 +15,16 @@ public class GameCamera : MonoBehaviour {
 
 	void Update () 
     {
-        
-
+        CheckMouseMovement();
 	}
+
+    private void CheckMouseMovement()
+    {
+        float mouseMovement = Input.GetAxis("Mouse Y") * Time.deltaTime * 3f;
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + mouseMovement);
+
+        Mathf.Clamp(transform.localPosition.z, -4, -1);
+    }
 
     private void CamShake()
     {

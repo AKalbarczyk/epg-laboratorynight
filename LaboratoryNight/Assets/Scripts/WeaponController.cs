@@ -14,7 +14,10 @@ public class WeaponController : MonoBehaviour {
     private const float GRAVGUN_SHOCKWAVE_VALUE = 0.8f;
     
     public Text weaponModeText;
-    public Text ammoText;
+
+    public Text rifleAmmoText;
+    public Text shotgunAmmoText;
+    public Text laserAmmoText;
 
     public GameObject weaponFlash;
     public GameObject bullet;
@@ -42,10 +45,20 @@ public class WeaponController : MonoBehaviour {
     private int ammo = 30;
     private bool isShootingLaser = false;
 
+
+    private int rifleAmmo = 30;
+    private int shotgunAmmo = 30;
+    private int laserAmmo = 30;
+
+    private const int RIFLE_AMMO_CONSUMPTION = 1;
+    private const int SHOTGUN_AMMO_CONSUMPTION = 4;
+
 	void Start ()
     {
-        ammoText.text = "Ammo: " + ammo;
         weaponModeText.text = WeaponMode.RIFLE.ToString();
+        rifleAmmoText.text = rifleAmmo.ToString();
+        shotgunAmmoText.text = shotgunAmmo.ToString();
+        laserAmmoText.text = laserAmmo.ToString();
         gravGunBar.SetNewValue(GRAVGUN_INIT_VALUE);
         InvokeRepeating("RegenerateGravGun", 0.5f, 0.5f);
 	}
@@ -118,10 +131,21 @@ public class WeaponController : MonoBehaviour {
         this.gravGunBar.SetNewValue(gravGunValue);
     }
 
-    private void UpdateAmmoBar(int value)
+    public void UpdateRifleAmmo(int value)
     {
-        ammo += value;
-        ammoText.text = "Ammo: " + ammo;
+        rifleAmmo += value;
+        rifleAmmoText.text = rifleAmmo.ToString();
+    }
+
+    public void UpdateShoutgunAmmo(int value)
+    {
+        shotgunAmmo += value;
+        shotgunAmmoText.text = shotgunAmmo.ToString();
+    }
+    public void UpdateLaserAmmo(int value)
+    {
+        laserAmmo += value;
+        laserAmmoText.text = laserAmmo.ToString();
     }
 
     private void RegenerateGravGun()
@@ -175,7 +199,7 @@ public class WeaponController : MonoBehaviour {
         {
             if (currWeaponMode == WeaponMode.RIFLE)
             {
-                if (ammo >= 1)
+                if (rifleAmmo >= RIFLE_AMMO_CONSUMPTION)
                 {
                     ShootGravityGun();
                 }
@@ -183,7 +207,7 @@ public class WeaponController : MonoBehaviour {
 
             else if (currWeaponMode == WeaponMode.SHOTGUN)
             {
-                if (ammo >= 4)
+                if (shotgunAmmo >= SHOTGUN_AMMO_CONSUMPTION)
                 {
                     ShootShotgun();
                 }
@@ -192,7 +216,7 @@ public class WeaponController : MonoBehaviour {
 
         if (currWeaponMode == WeaponMode.LASER)
         {
-            if (ammo >= 1)
+            if (laserAmmo >= 3)
             {
                 ShootLaser();
             }
@@ -283,7 +307,7 @@ public class WeaponController : MonoBehaviour {
 
        GameObject flash = Instantiate(weaponFlash, transform.position, transform.rotation) as GameObject;
        Destroy(flash, 0.1f);
-       UpdateAmmoBar(-5);
+       UpdateShoutgunAmmo(-SHOTGUN_AMMO_CONSUMPTION);
    
    }
 
@@ -299,7 +323,7 @@ public class WeaponController : MonoBehaviour {
        
        if (Input.GetKeyUp(KeyCode.Mouse0))
        {
-           if (ammo >= 3)
+           if (laserAmmo >= 3)
            {
                laserShot.SendMessage("StopApplyDamage");
                laserShot.SetActive(false);
@@ -309,16 +333,12 @@ public class WeaponController : MonoBehaviour {
        }
    }
 
-   public void AddAmmo(int amount)
-   {
-       UpdateAmmoBar(amount);
-   }
 
    private void ConsumeAmmo()
    {
-       if (ammo >= 3)
+       if (laserAmmo >= 3)
        {
-           UpdateAmmoBar(-3);
+           UpdateLaserAmmo(-3);
        }
        else
        {
@@ -339,7 +359,7 @@ public class WeaponController : MonoBehaviour {
 
         Destroy(shot, 1.2f);
 
-        UpdateAmmoBar(-1);
+        UpdateRifleAmmo(-1);
    }
 
    private IEnumerator GravityGunEffect(GameObject shot)
