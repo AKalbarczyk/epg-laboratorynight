@@ -21,6 +21,9 @@ public class GravityGunCatch : MonoBehaviour {
 
     private bool isObjectGoingToPlayer = false;
     private bool isObjectPickedUp = false;
+
+    private bool isIncreasingThrowPower = false;
+    private float throwPower = 0;
 	void Start () 
     {
 	
@@ -28,6 +31,10 @@ public class GravityGunCatch : MonoBehaviour {
 	
 	void Update () 
     {
+        if (isIncreasingThrowPower)
+        {
+            IncreaseThrowPower();
+        }
 
         if (!caughtObject && gravityCatchEffectObj)
         {
@@ -64,6 +71,7 @@ public class GravityGunCatch : MonoBehaviour {
 
                     weaponController.UpdateGravGunBar(-GRAVGUN_CATCH_VALUE);
                     InitGravityCatchEffect();
+                    isIncreasingThrowPower = true;
                 }
                 else
                 {
@@ -71,6 +79,8 @@ public class GravityGunCatch : MonoBehaviour {
                     GameObject failEfx = Instantiate(gravityCatchFailEffect, transform.position, transform.rotation) as GameObject;
                     failEfx.transform.parent = transform;
                     Destroy(failEfx, 0.4f);
+                    throwPower = 0;
+                    isIncreasingThrowPower = false;
                 }
 
 
@@ -78,8 +88,9 @@ public class GravityGunCatch : MonoBehaviour {
         }
         else //object picked up, ready to throw
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyUp(KeyCode.Mouse1))
             {
+                isIncreasingThrowPower = false;
                 colliders.Clear();
 
                 if (caughtRigidbody) //just in case...
@@ -91,13 +102,30 @@ public class GravityGunCatch : MonoBehaviour {
                     DestroyGravityCatchEffect();
                     caughtRigidbody.isKinematic = false;
                     caughtRigidbody.transform.parent = null;
-                    caughtRigidbody.AddForce(transform.forward * 50f, ForceMode.Impulse);
+
+                    if (throwPower > 50)
+                    {
+                        throwPower = 50;
+                    }
+
+                    caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);
                     caughtRigidbody = null;
                     isObjectPickedUp = false;
+                    throwPower = 0;
+                    isIncreasingThrowPower = false;
                 }
             }
         }
 	}
+
+    private void IncreaseThrowPower()
+    {
+        if (Input.GetButton("Fire2"))
+        {
+            throwPower += Time.deltaTime;
+            throwPower *= 1.2f;
+        }
+    }
 
 
     void OnTriggerEnter(Collider col)
