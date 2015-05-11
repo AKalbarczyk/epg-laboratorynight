@@ -26,15 +26,15 @@ public class AmmoBoxController : MonoBehaviour {
         {
             if (ammoBoxType == AmmoBoxType.RIFLE_AMMO)
             {
-                col.gameObject.transform.Find("Weapon").SendMessage("UpdateRifleAmmo", 10);
+                col.gameObject.transform.Find("Weapon").SendMessage("UpdateRifleAmmo", 15);
             }
             else if (ammoBoxType == AmmoBoxType.SHOTGUN_AMMO)
             {
-                col.gameObject.transform.Find("Weapon").SendMessage("UpdateShotgunAmmo", 5);
+                col.gameObject.transform.Find("Weapon").SendMessage("UpdateShotgunAmmo", 10);
             }
             else if (ammoBoxType == AmmoBoxType.LASER_AMMO)
             {
-                col.gameObject.transform.Find("Weapon").SendMessage("UpdateLaserAmmo", 10);
+                col.gameObject.transform.Find("Weapon").SendMessage("UpdateLaserAmmo", 15);
             }
             else
             {

@@ -3,6 +3,7 @@ using System.Collections;
 
 public class RobotHealth : MonoBehaviour {
     public GameObject powerUp;
+    public GameObject powerUp2;
     private float health;
     private Rigidbody rigidbody;
     private bool canBeHit = true;
@@ -32,9 +33,15 @@ public class RobotHealth : MonoBehaviour {
         
         if (this.health <= 0)
         {
+            GameObject obj;
+            GameObject obj2;
             GameObject efx = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
             Destroy(efx, 0.4f);
-            GameObject obj = Instantiate(powerUp, transform.position + transform.up * 2, transform.rotation) as GameObject;
+            if (Random.Range(0.0F, 1.0F) >= 0.6) //40% drop chance
+                obj = Instantiate(powerUp, transform.position + transform.up * 2, transform.rotation) as GameObject;
+            
+            if(Random.Range(0.0F,1.0F) >= 0.5) //50%
+                 obj2 = Instantiate(powerUp2, transform.position + transform.up * 2 + transform.right *2, transform.rotation) as GameObject;
             Destroy(this.gameObject,0.05f);
             
         }
