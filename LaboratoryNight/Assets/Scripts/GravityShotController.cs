@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GravityShotController : MonoBehaviour {
-    private const float DAMAGE = 0.1f;
+    private const float DAMAGE = 0.25f;
     public GameObject explosion;
 
 	void Start () 

@@ -1,0 +1,117 @@
+fileFormatVersion: 2
+guid: 3241b577cef4e994683d287e3ed9e554
+timeCreated: 1431452563
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: bulets_bvatery
+    100002: dec_korpgol
+    100004: dergatel001
+    100006: dulo_dec
+    100008: korpgol
+    100010: kurok_duloniz
+    100012: pricell
+    100014: ruchka
+    100016: //RootNode
+    100018: tubes001
+    100020: verh_DULO
+    400000: bulets_bvatery
+    400002: dec_korpgol
+    400004: dergatel001
+    400006: dulo_dec
+    400008: korpgol
+    400010: kurok_duloniz
+    400012: pricell
+    400014: ruchka
+    400016: //RootNode
+    400018: tubes001
+    400020: verh_DULO
+    2300000: bulets_bvatery
+    2300002: dec_korpgol
+    2300004: dergatel001
+    2300006: dulo_dec
+    2300008: korpgol
+    2300010: kurok_duloniz
+    2300012: pricell
+    2300014: ruchka
+    2300016: tubes001
+    2300018: verh_DULO
+    3300000: bulets_bvatery
+    3300002: dec_korpgol
+    3300004: dergatel001
+    3300006: dulo_dec
+    3300008: korpgol
+    3300010: kurok_duloniz
+    3300012: pricell
+    3300014: ruchka
+    3300016: tubes001
+    3300018: verh_DULO
+    4300000: bulets_bvatery
+    4300002: dec_korpgol
+    4300004: dergatel001
+    4300006: dulo_dec
+    4300008: korpgol
+    4300010: kurok_duloniz
+    4300012: pricell
+    4300014: ruchka
+    4300016: tubes001
+    4300018: verh_DULO
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

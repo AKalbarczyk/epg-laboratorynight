@@ -5,7 +5,7 @@ using System.Collections;
 public class WeaponController : MonoBehaviour {
 
     public GUIBarScript gravGunBar;
-    private const float GRAVGUN_INIT_VALUE = 1f;
+    private const float GRAVGUN_INIT_VALUE = 0.3f;
     private const float GRAVGUN_RECHARGE_VALUE = 0.01f;
     private float gravGunValue = GRAVGUN_INIT_VALUE;
     
@@ -18,6 +18,10 @@ public class WeaponController : MonoBehaviour {
     public Text rifleAmmoText;
     public Text shotgunAmmoText;
     public Text laserAmmoText;
+
+    private Outline rifleAmmoTextOutline;
+    private Outline shotgunAmmoTextOutline;
+    private Outline laserAmmoTextOutline;
 
     public GameObject weaponFlash;
     public GameObject bullet;
@@ -36,19 +40,18 @@ public class WeaponController : MonoBehaviour {
 
 
     private enum WeaponMode { RIFLE, SHOTGUN, LASER };
-    private WeaponMode[] WEAPON_MODE_ARR = { WeaponMode.RIFLE, WeaponMode.SHOTGUN, WeaponMode.LASER };
+    private WeaponMode[] WEAPON_MODE_ARR = { WeaponMode.RIFLE, WeaponMode.RIFLE, WeaponMode.RIFLE };
     private int weaponModeIndex = 0;
     private WeaponMode currWeaponMode = WeaponMode.RIFLE;
 
     private bool canUseSpecialMode = true;
 
-    private int ammo = 30;
     private bool isShootingLaser = false;
 
 
     private int rifleAmmo = 30;
-    private int shotgunAmmo = 30;
-    private int laserAmmo = 30;
+    private int shotgunAmmo = 0;
+    private int laserAmmo = 0;
 
     private const int RIFLE_AMMO_CONSUMPTION = 1;
     private const int SHOTGUN_AMMO_CONSUMPTION = 4;
@@ -59,6 +62,14 @@ public class WeaponController : MonoBehaviour {
         rifleAmmoText.text = rifleAmmo.ToString();
         shotgunAmmoText.text = shotgunAmmo.ToString();
         laserAmmoText.text = laserAmmo.ToString();
+
+        shotgunAmmoText.color = Color.gray;
+        laserAmmoText.color = Color.gray;
+
+        rifleAmmoTextOutline = rifleAmmoText.GetComponent<Outline>();
+        shotgunAmmoTextOutline = shotgunAmmoText.GetComponent<Outline>();
+        laserAmmoTextOutline = laserAmmoText.GetComponent<Outline>();
+
         gravGunBar.SetNewValue(GRAVGUN_INIT_VALUE);
         InvokeRepeating("RegenerateGravGun", 0.5f, 0.5f);
 	}
@@ -90,6 +101,18 @@ public class WeaponController : MonoBehaviour {
         CheckWeapon();
         CheckSkills();
 	}
+
+    public void EnableShotgun()
+    {
+        WEAPON_MODE_ARR[1] = WeaponMode.SHOTGUN;
+        shotgunAmmoText.color = Color.red;
+    }
+
+    public void EnableLaser()
+    {
+        WEAPON_MODE_ARR[2] = WeaponMode.LASER;
+        laserAmmoText.color = Color.blue;
+    }
 
     public float GetGravGunValue()
     {
@@ -181,6 +204,8 @@ public class WeaponController : MonoBehaviour {
             }
             currWeaponMode = WEAPON_MODE_ARR[++weaponModeIndex];
             weaponModeText.text = currWeaponMode.ToString();
+
+            ApplyAmmoTextOutline();
         }
         else if (Input.GetAxisRaw("Mouse ScrollWheel") < 0)
         {
@@ -190,8 +215,31 @@ public class WeaponController : MonoBehaviour {
             }
             currWeaponMode = WEAPON_MODE_ARR[--weaponModeIndex];
             weaponModeText.text = currWeaponMode.ToString();
+
+            ApplyAmmoTextOutline();
         }
-        
+    }
+
+    private void ApplyAmmoTextOutline()
+    {
+        if (currWeaponMode == WeaponMode.RIFLE)
+        {
+            rifleAmmoTextOutline.enabled = true;
+            shotgunAmmoTextOutline.enabled = false;
+            laserAmmoTextOutline.enabled = false;
+        }
+        else if (currWeaponMode == WeaponMode.SHOTGUN)
+        {
+            rifleAmmoTextOutline.enabled = false;
+            shotgunAmmoTextOutline.enabled = true;
+            laserAmmoTextOutline.enabled = false;
+        }
+        else if (currWeaponMode == WeaponMode.LASER)
+        {
+            rifleAmmoTextOutline.enabled = false;
+            shotgunAmmoTextOutline.enabled = false;
+            laserAmmoTextOutline.enabled = true;
+        }
     }
     private void CheckWeapon()
     {
