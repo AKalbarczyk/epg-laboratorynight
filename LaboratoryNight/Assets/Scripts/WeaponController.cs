@@ -4,7 +4,7 @@ using System.Collections;
 
 public class WeaponController : MonoBehaviour {
 
-    public GUIBarScript gravGunBar;
+    public GameObject gravGunBarObj;
     private const float GRAVGUN_INIT_VALUE = 0.3f;
     private const float GRAVGUN_RECHARGE_VALUE = 0.01f;
     private float gravGunValue = GRAVGUN_INIT_VALUE;
@@ -70,7 +70,7 @@ public class WeaponController : MonoBehaviour {
         shotgunAmmoTextOutline = shotgunAmmoText.GetComponent<Outline>();
         laserAmmoTextOutline = laserAmmoText.GetComponent<Outline>();
 
-        gravGunBar.SetNewValue(GRAVGUN_INIT_VALUE);
+        gravGunBarObj.SendMessage("SetNewValue", GRAVGUN_INIT_VALUE);
         InvokeRepeating("RegenerateGravGun", 0.5f, 0.5f);
 	}
 	
@@ -151,7 +151,8 @@ public class WeaponController : MonoBehaviour {
     public void UpdateGravGunBar(float value)
     {
         this.gravGunValue += value;
-        this.gravGunBar.SetNewValue(gravGunValue);
+        //this.gravGunBar.SetNewValue(gravGunValue);
+        this.gravGunBarObj.SendMessage("SetNewValue", gravGunValue);
     }
 
     public void UpdateRifleAmmo(int value)
@@ -160,7 +161,7 @@ public class WeaponController : MonoBehaviour {
         rifleAmmoText.text = rifleAmmo.ToString();
     }
 
-    public void UpdateShoutgunAmmo(int value)
+    public void UpdateShotgunAmmo(int value)
     {
         shotgunAmmo += value;
         shotgunAmmoText.text = shotgunAmmo.ToString();
@@ -355,7 +356,7 @@ public class WeaponController : MonoBehaviour {
 
        GameObject flash = Instantiate(weaponFlash, transform.position, transform.rotation) as GameObject;
        Destroy(flash, 0.1f);
-       UpdateShoutgunAmmo(-SHOTGUN_AMMO_CONSUMPTION);
+       UpdateShotgunAmmo(-SHOTGUN_AMMO_CONSUMPTION);
    
    }
 

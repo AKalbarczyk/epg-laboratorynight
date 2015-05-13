@@ -22,7 +22,7 @@ public class CollectWeapon : MonoBehaviour {
         {
             thisWeapon.EnableShotgun();
             SendShotgunAmmoDropInfo();
-            thisWeapon.UpdateShoutgunAmmo(15);
+            thisWeapon.UpdateShotgunAmmo(15);
             Destroy(col.gameObject, 0.1f);
         }
 

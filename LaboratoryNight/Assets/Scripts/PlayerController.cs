@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private float rotationSpeed = 15;
     private const float ROTATION_SPEED = 50;
-	private float walkSpeed = 10;
+	private float walkSpeed = 20;
 	private float runSpeed = 8;
 
     private const float WALK_FORWARD_SPEED = 10;

@@ -16,8 +16,8 @@ public class GameCamera : MonoBehaviour {
     private const bool oldCameraEnabled = true;
     private Vector3 cameraTarget;
 
-    private const float CAMERA_Z_OFFSET = 10f;
-    private const float CAMERA_X_OFFSET = 5f;
+    private const float CAMERA_Z_OFFSET = 5f;
+    private const float CAMERA_X_OFFSET = 0f;
     private Transform target;
     private float camY;
     private Vector3 originalPos;
@@ -94,7 +94,7 @@ public class GameCamera : MonoBehaviour {
         }
         else
         {
-            camShake = true;
+            camShakeOld = true;
         }
     }
 }

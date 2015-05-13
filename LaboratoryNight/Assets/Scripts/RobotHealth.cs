@@ -60,12 +60,12 @@ public class RobotHealth : MonoBehaviour {
 
             if (Random.Range(0.0F, 1.0F) >= 0.7) //30% drop chance 
             {
-                GameObject obj = Instantiate(manaPowerUp, transform.position + transform.up * 2, transform.rotation) as GameObject;
+                GameObject obj = Instantiate(manaPowerUp, transform.position, transform.rotation) as GameObject;
             }
 
             if (Random.Range(0.0F, 1.0F) >= 0.2) //80%
             {
-                GameObject obj2 = Instantiate(rifleAmmo, transform.position + transform.up * 2 + transform.right * 2, transform.rotation) as GameObject;
+                GameObject obj2 = Instantiate(rifleAmmo, transform.position + transform.right * 2, transform.rotation) as GameObject;
                 
             }
 
@@ -73,7 +73,7 @@ public class RobotHealth : MonoBehaviour {
             {
                 if (Random.Range(0.0F, 1.0F) >= 0.5) //50%
                 {
-                    GameObject obj2 = Instantiate(shotgunAmmo, transform.position + transform.up * 3 + transform.right * 4, transform.rotation) as GameObject;
+                    GameObject obj2 = Instantiate(shotgunAmmo, transform.position + transform.right * 4, transform.rotation) as GameObject;
                     return;
                 }
             }
@@ -81,12 +81,12 @@ public class RobotHealth : MonoBehaviour {
             {
                 if (Random.Range(0.0F, 1.0F) >= 0.5) //50%
                 {
-                    GameObject obj2 = Instantiate(laserAmmo, transform.position + transform.up * 3 + transform.right * 4, transform.rotation) as GameObject;
+                    GameObject obj2 = Instantiate(laserAmmo, transform.position +  transform.right * -2, transform.rotation) as GameObject;
                     return;
                 }
             }
             
-            Destroy(this.gameObject,0.05f);
+            Destroy(this.gameObject);
 
         }
     }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerHealthController : MonoBehaviour {
 
-    public GUIBarScript healthBar;
+    public GameObject healthBarObj;
     private float health;
 
 	void Start () 
@@ -19,13 +19,13 @@ public class PlayerHealthController : MonoBehaviour {
     void TakeDamage(float damage)
     {
         this.health -= damage;
-        healthBar.SetNewValue(this.health);
+        healthBarObj.SendMessage("SetNewValue", this.health);
         Camera.main.SendMessage("CamShake");
     }
 
     void GainHealth(float health)
     {
         this.health += health;
-        healthBar.SetNewValue(this.health);
+        healthBarObj.SendMessage("SetNewValue", this.health);
     }
 }
