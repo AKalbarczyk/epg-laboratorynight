@@ -23,6 +23,14 @@ public class WeaponController : MonoBehaviour {
     private Outline shotgunAmmoTextOutline;
     private Outline laserAmmoTextOutline;
 
+    public RawImage rifleSymbol;
+    public RawImage shotgunSymbol;
+    public RawImage laserSymbol;
+
+    private Outline rifleSymbolOutline;
+    private Outline shotgunSymbolOutline;
+    private Outline laserSymbolOutline;
+
     public GameObject weaponFlash;
     public GameObject bullet;
     public GameObject gravityGunShot;
@@ -56,6 +64,8 @@ public class WeaponController : MonoBehaviour {
     private const int RIFLE_AMMO_CONSUMPTION = 1;
     private const int SHOTGUN_AMMO_CONSUMPTION = 4;
 
+    public LineRenderer laserTrace;
+
 	void Start ()
     {
         weaponModeText.text = WeaponMode.RIFLE.ToString();
@@ -69,6 +79,10 @@ public class WeaponController : MonoBehaviour {
         rifleAmmoTextOutline = rifleAmmoText.GetComponent<Outline>();
         shotgunAmmoTextOutline = shotgunAmmoText.GetComponent<Outline>();
         laserAmmoTextOutline = laserAmmoText.GetComponent<Outline>();
+
+        rifleSymbolOutline = rifleSymbol.GetComponent<Outline>();
+        shotgunSymbolOutline = shotgunSymbol.GetComponent<Outline>();
+        laserSymbolOutline = laserSymbol.GetComponent<Outline>();
 
         gravGunBarObj.SendMessage("SetNewValue", GRAVGUN_INIT_VALUE);
         InvokeRepeating("RegenerateGravGun", 0.5f, 0.5f);
@@ -106,12 +120,14 @@ public class WeaponController : MonoBehaviour {
     {
         WEAPON_MODE_ARR[1] = WeaponMode.SHOTGUN;
         shotgunAmmoText.color = Color.red;
+        shotgunSymbol.color = Color.red;
     }
 
     public void EnableLaser()
     {
         WEAPON_MODE_ARR[2] = WeaponMode.LASER;
         laserAmmoText.color = Color.blue;
+        laserSymbol.color = Color.red;
     }
 
     public float GetGravGunValue()
@@ -228,18 +244,36 @@ public class WeaponController : MonoBehaviour {
             rifleAmmoTextOutline.enabled = true;
             shotgunAmmoTextOutline.enabled = false;
             laserAmmoTextOutline.enabled = false;
+
+            rifleSymbolOutline.enabled = true;
+            shotgunSymbolOutline.enabled = false;
+            laserSymbolOutline.enabled = false;
+
+            laserTrace.SetColors(Color.yellow, Color.yellow);
         }
         else if (currWeaponMode == WeaponMode.SHOTGUN)
         {
             rifleAmmoTextOutline.enabled = false;
             shotgunAmmoTextOutline.enabled = true;
             laserAmmoTextOutline.enabled = false;
+
+            rifleSymbolOutline.enabled = false;
+            shotgunSymbolOutline.enabled = true;
+            laserSymbolOutline.enabled = false;
+
+            laserTrace.SetColors(Color.red, Color.red);
         }
         else if (currWeaponMode == WeaponMode.LASER)
         {
             rifleAmmoTextOutline.enabled = false;
             shotgunAmmoTextOutline.enabled = false;
             laserAmmoTextOutline.enabled = true;
+
+            rifleSymbolOutline.enabled = false;
+            shotgunSymbolOutline.enabled = false;
+            laserSymbolOutline.enabled = true;
+
+            laserTrace.SetColors(Color.cyan, Color.cyan);
         }
     }
     private void CheckWeapon()

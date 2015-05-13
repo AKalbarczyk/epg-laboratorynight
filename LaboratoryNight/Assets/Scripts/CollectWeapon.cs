@@ -6,6 +6,7 @@ public class CollectWeapon : MonoBehaviour {
 	// Use this for initialization
     private GameObject[] allEnemies;
     public WeaponController thisWeapon;
+    public GameObject collectEfx;
 	void Start () 
     {
         allEnemies = GameObject.FindGameObjectsWithTag("Enemy");   
@@ -22,7 +23,12 @@ public class CollectWeapon : MonoBehaviour {
         {
             thisWeapon.EnableShotgun();
             SendShotgunAmmoDropInfo();
-            thisWeapon.UpdateShotgunAmmo(15);
+            thisWeapon.UpdateShotgunAmmo(10);
+
+            GameObject efx = Instantiate(collectEfx, col.transform.position, Quaternion.identity) as GameObject;
+            Destroy(efx, 0.3f);
+
+
             Destroy(col.gameObject, 0.1f);
         }
 
@@ -31,6 +37,10 @@ public class CollectWeapon : MonoBehaviour {
             thisWeapon.EnableLaser();
             SendLaserAmmoDropInfo();
             thisWeapon.UpdateLaserAmmo(15);
+
+            GameObject efx = Instantiate(collectEfx, col.transform.position, Quaternion.identity) as GameObject;
+            Destroy(efx, 0.3f);
+
             Destroy(col.gameObject, 0.1f);
         }
     }

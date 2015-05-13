@@ -24,6 +24,8 @@ public class GravityGunCatch : MonoBehaviour {
 
     private bool isIncreasingThrowPower = false;
     private float throwPower = 0;
+
+    public GameObject gravityGunCatchTrace;
 	void Start () 
     {
 	
@@ -57,6 +59,8 @@ public class GravityGunCatch : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
+                StartCoroutine("ActivateGravityGunCatchTrace");
+
                 Collider c = GetNearestCollider();
                 if (c && weaponController.GetGravGunValue() > GRAVGUN_CATCH_VALUE)
                 {
@@ -125,6 +129,15 @@ public class GravityGunCatch : MonoBehaviour {
         }
 	}
 
+    private IEnumerator ActivateGravityGunCatchTrace()
+    {
+        if (!this.gravityGunCatchTrace.activeSelf)
+        {
+            this.gravityGunCatchTrace.SetActive(true);
+            yield return new WaitForSeconds(0.7f);
+            this.gravityGunCatchTrace.SetActive(false);
+        }
+    }
     private void IncreaseThrowPower()
     {
         if (Input.GetButton("Fire2"))

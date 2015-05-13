@@ -30,6 +30,8 @@ public class RobotHealth : MonoBehaviour {
         rifleAmmo = Resources.Load("ammo_box_rifle") as GameObject;
         shotgunAmmo = Resources.Load("ammo_box_shotgun") as GameObject;
         laserAmmo = Resources.Load("ammo_box_laser") as GameObject;
+
+        onHit = Resources.Load("Explosion02") as GameObject;
 	}
 	
 	// Update is called once per frame
