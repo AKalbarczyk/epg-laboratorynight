@@ -8,10 +8,11 @@ public class WeaponController : MonoBehaviour {
     private const float GRAVGUN_INIT_VALUE = 0.3f;
     private const float GRAVGUN_RECHARGE_VALUE = 0.01f;
     private float gravGunValue = GRAVGUN_INIT_VALUE;
-    
+
+    private const float GRAVGUN_SHIELD_VALUE = 0.3f;
     private const float GRAVGUN_SHOOT_VALUE = 0.05f;
-    private const float GRAVGUN_PULL_VALUE = 0.6f;
-    private const float GRAVGUN_SHOCKWAVE_VALUE = 0.8f;
+    private const float GRAVGUN_PULL_VALUE = 0.4f;
+    private const float GRAVGUN_SHOCKWAVE_VALUE = 0.5f;
     
     public Text weaponModeText;
 
@@ -38,6 +39,7 @@ public class WeaponController : MonoBehaviour {
     public GameObject laserShot;
     public GameObject pullEffect; private GameObject pullObj; private bool isPullObjMoving = false; private Vector3 initPosition; private bool isPullWorking;
     public GameObject shockwaveEffect; private GameObject shockwaveObj; const int SHOCKWAVE_COUNT = 8;
+    public GameObject shieldEfx;
     private Collider[] colsTrappedInPull;
 
     private const float WEAPON_FORCE = 120;
@@ -127,7 +129,7 @@ public class WeaponController : MonoBehaviour {
     {
         WEAPON_MODE_ARR[2] = WeaponMode.LASER;
         laserAmmoText.color = Color.blue;
-        laserSymbol.color = Color.red;
+        laserSymbol.color = Color.blue;
     }
 
     public float GetGravGunValue()
@@ -143,18 +145,19 @@ public class WeaponController : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                GravityGunPull();
+                GravityGunShield();
             }
-
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                GravityGunShockwave();
+                GravityGunPull();
             }
 
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                //TODO?
+                GravityGunShockwave();
             }
+
+           
 
             isShooting = true;
         }
@@ -306,6 +309,24 @@ public class WeaponController : MonoBehaviour {
         }
 
     }
+
+    private void GravityGunShield()
+    {
+        if (gravGunValue >= GRAVGUN_SHIELD_VALUE)
+        {
+            shieldEfx.SetActive(true);
+            Invoke("DisableShield", 7f);
+        }
+    }
+
+    private void DisableShield()
+    {
+        if (shieldEfx.activeSelf)
+        {
+            shieldEfx.SetActive(false);
+        }
+    }
+
 
     private void GravityGunPull()
     {
