@@ -29,7 +29,7 @@ public class TurretRocket : MonoBehaviour {
         }
 
 
-        else if (col.gameObject.name == "Turret")
+        else if (col.gameObject.name.Contains("Turret"))
         {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);

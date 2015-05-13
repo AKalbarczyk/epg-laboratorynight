@@ -95,7 +95,7 @@ public class GravityGunCatch : MonoBehaviour {
 
                 if (caughtRigidbody) //just in case...
                 {
-                    if (caughtRigidbody.tag != "Rocket")
+                    if (caughtRigidbody.tag != "Rocket" && caughtRigidbody.name != "flask")
                         caughtRigidbody.gameObject.SendMessage("IsThrown");
 
                     isObjectGoingToPlayer = false;
@@ -108,7 +108,14 @@ public class GravityGunCatch : MonoBehaviour {
                         throwPower = 50;
                     }
 
-                    caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);
+                    if (caughtRigidbody.tag == "Movable")
+                    {
+                        caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);
+                    }
+                    else
+                    {
+                        caughtRigidbody.AddForce(transform.forward * 50, ForceMode.Impulse);
+                    }
                     caughtRigidbody = null;
                     isObjectPickedUp = false;
                     throwPower = 0;

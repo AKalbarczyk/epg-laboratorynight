@@ -31,7 +31,7 @@ public class RocketController : MonoBehaviour {
         }
 
 
-        else if (col.gameObject.name == "turretObj")
+        else if (col.gameObject.name.Contains("Turret") )
         {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);

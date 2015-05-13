@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 startPosition;
 
+    private const bool oldCameraEnabled = true;
+
 	void Start () 
     {
 		controller = GetComponent<CharacterController>();
@@ -31,11 +33,16 @@ public class PlayerController : MonoBehaviour
 
 	void Update () 
     {
-
-       // ApplyMovement();
-       // ApplyRotation();
-        ApplyMovementThirdPerson();
-        ApplyRotationThirdPerson();
+        if (oldCameraEnabled)
+        {
+            ApplyMovement();
+            ApplyRotation();
+        }
+        else
+        {
+            ApplyMovementThirdPerson();
+            ApplyRotationThirdPerson();
+        }
         RestrictPosition();
 
 	}
