@@ -8,6 +8,7 @@
 - pokazany zasięg grav guna
 - level design (cel, np. zebrać keycardy żeby dojść do windy/wyjścia). Level powinien iść "w górę" z dodatkowymi pomieszczeniami po bokach (główny ruch to góra/dół)
 - naprawa bugów dropable, boxy lataja w powietrzu
+
 ### Bugi:
 - movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
 - shockwave i pull przelatuja przez sciany
