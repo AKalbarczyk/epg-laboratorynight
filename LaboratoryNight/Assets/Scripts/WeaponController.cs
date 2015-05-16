@@ -4,6 +4,8 @@ using System.Collections;
 
 public class WeaponController : MonoBehaviour {
 
+    public PlayerHealthController playerHealth;
+
     public GameObject gravGunBarObj;
     private const float GRAVGUN_INIT_VALUE = 0.3f;
     private const float GRAVGUN_RECHARGE_VALUE = 0.01f;
@@ -32,6 +34,7 @@ public class WeaponController : MonoBehaviour {
     private Outline shotgunSymbolOutline;
     private Outline laserSymbolOutline;
 
+    public Image shieldSymbol;
     public Image blackHoleSymbol;
     public Image shockwaveSymbol;
 
@@ -200,6 +203,21 @@ public class WeaponController : MonoBehaviour {
 
     private void RegenerateGravGun()
     {
+        if (gravGunValue < GRAVGUN_SHIELD_VALUE)
+        {
+            if (shieldSymbol.color != Color.gray)
+            {
+                shieldSymbol.color = Color.gray;
+            }
+        }
+        else
+        {
+            if (shieldSymbol.color != Color.white)
+            {
+                shieldSymbol.color = Color.white;
+            }
+        }
+        
         if (gravGunValue < GRAVGUN_PULL_VALUE)
         {
             if (blackHoleSymbol.color != Color.gray)
@@ -364,13 +382,16 @@ public class WeaponController : MonoBehaviour {
     {
         if (gravGunValue >= GRAVGUN_SHIELD_VALUE)
         {
+            playerHealth.ShieldActivated();
             shieldEfx.SetActive(true);
+            UpdateGravGunBar(-GRAVGUN_SHIELD_VALUE);
             Invoke("DisableShield", 7f);
         }
     }
 
     private void DisableShield()
     {
+        playerHealth.ShieldDeactivated();
         if (shieldEfx.activeSelf)
         {
             shieldEfx.SetActive(false);

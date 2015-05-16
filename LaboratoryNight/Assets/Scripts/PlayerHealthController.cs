@@ -5,6 +5,7 @@ public class PlayerHealthController : MonoBehaviour {
 
     public GameObject healthBarObj;
     private float health;
+    private bool shieldActive = false;
 
 	void Start () 
     {
@@ -16,11 +17,24 @@ public class PlayerHealthController : MonoBehaviour {
 	    
 	}
 
+    public void ShieldActivated()
+    {
+        shieldActive = true;
+    }
+
+    public void ShieldDeactivated()
+    {
+        shieldActive = false;
+    }
+
     void TakeDamage(float damage)
     {
-        this.health -= damage;
-        healthBarObj.SendMessage("SetNewValue", this.health);
-        Camera.main.SendMessage("CamShake");
+        if (!shieldActive)
+        {
+            this.health -= damage;
+            healthBarObj.SendMessage("SetNewValue", this.health);
+            Camera.main.SendMessage("CamShake");
+        }
     }
 
     void GainHealth(float health)

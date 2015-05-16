@@ -18,14 +18,14 @@ public class ShieldController : MonoBehaviour {
     {
         if (col.gameObject.tag == "RobotBullet")
         {
-            Destroy(col.gameObject, 0.2f);
+            Destroy(col.gameObject, 0.02f);
         }
 
         else if (col.gameObject.tag == "Rocket")
         {
             GameObject obj = Instantiate(explosion, col.transform.position, col.transform.rotation) as GameObject;
             Destroy(obj, 0.7f);
-            Destroy(col.gameObject, 0.3f);
+            Destroy(col.gameObject);
 
         }
     }
