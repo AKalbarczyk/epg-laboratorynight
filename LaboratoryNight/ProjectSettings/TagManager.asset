@@ -15,6 +15,7 @@ TagManager:
   - Obst
   - Rocket
   - PowerUp
+  - RobotBullet
   layers:
   - Default
   - TransparentFX

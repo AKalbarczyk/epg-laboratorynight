@@ -32,6 +32,13 @@ public class WeaponController : MonoBehaviour {
     private Outline shotgunSymbolOutline;
     private Outline laserSymbolOutline;
 
+    public Image blackHoleSymbol;
+    public Image shockwaveSymbol;
+
+    public Image rifleSelector;
+    public Image shotgunSelector;
+    public Image laserSelector;
+
     public GameObject weaponFlash;
     public GameObject bullet;
     public GameObject gravityGunShot;
@@ -64,7 +71,7 @@ public class WeaponController : MonoBehaviour {
     private int laserAmmo = 0;
 
     private const int RIFLE_AMMO_CONSUMPTION = 1;
-    private const int SHOTGUN_AMMO_CONSUMPTION = 4;
+    private const int SHOTGUN_AMMO_CONSUMPTION = 1;
 
     public LineRenderer laserTrace;
 
@@ -143,16 +150,16 @@ public class WeaponController : MonoBehaviour {
 
         if (!isShooting)
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKey(KeyCode.Alpha1))
             {
                 GravityGunShield();
             }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
+            else if (Input.GetKey(KeyCode.Alpha2))
             {
                 GravityGunPull();
             }
 
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            else if (Input.GetKey(KeyCode.Alpha3))
             {
                 GravityGunShockwave();
             }
@@ -193,6 +200,37 @@ public class WeaponController : MonoBehaviour {
 
     private void RegenerateGravGun()
     {
+        if (gravGunValue < GRAVGUN_PULL_VALUE)
+        {
+            if (blackHoleSymbol.color != Color.gray)
+            {
+                blackHoleSymbol.color = Color.gray;
+            }
+        }
+        else
+        {
+            if (blackHoleSymbol.color != Color.white)
+            {
+                blackHoleSymbol.color = Color.white;
+            }
+        }
+
+        if (gravGunValue < GRAVGUN_SHOCKWAVE_VALUE)
+        {
+            if (shockwaveSymbol.color != Color.gray)
+            {
+                shockwaveSymbol.color = Color.gray;
+            }
+        }
+        else
+        {
+            if (shockwaveSymbol.color != Color.white)
+            {
+                shockwaveSymbol.color = Color.white;
+            }
+        }
+
+
         if (gravGunValue < GRAVGUN_INIT_VALUE)
         {
             UpdateGravGunBar(GRAVGUN_RECHARGE_VALUE);
@@ -252,6 +290,10 @@ public class WeaponController : MonoBehaviour {
             shotgunSymbolOutline.enabled = false;
             laserSymbolOutline.enabled = false;
 
+            rifleSelector.enabled = true;
+            shotgunSelector.enabled = false;
+            laserSelector.enabled = false;
+
             laserTrace.SetColors(Color.yellow, Color.yellow);
         }
         else if (currWeaponMode == WeaponMode.SHOTGUN)
@@ -264,6 +306,10 @@ public class WeaponController : MonoBehaviour {
             shotgunSymbolOutline.enabled = true;
             laserSymbolOutline.enabled = false;
 
+            rifleSelector.enabled = false;
+            shotgunSelector.enabled = true;
+            laserSelector.enabled = false;
+
             laserTrace.SetColors(Color.red, Color.red);
         }
         else if (currWeaponMode == WeaponMode.LASER)
@@ -275,6 +321,10 @@ public class WeaponController : MonoBehaviour {
             rifleSymbolOutline.enabled = false;
             shotgunSymbolOutline.enabled = false;
             laserSymbolOutline.enabled = true;
+
+            rifleSelector.enabled = false;
+            shotgunSelector.enabled = false;
+            laserSelector.enabled = true;
 
             laserTrace.SetColors(Color.cyan, Color.cyan);
         }

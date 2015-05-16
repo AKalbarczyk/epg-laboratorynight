@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11425700}
   m_Layer: 0
   m_Name: robot_bullet
-  m_TagString: Untagged
+  m_TagString: RobotBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
