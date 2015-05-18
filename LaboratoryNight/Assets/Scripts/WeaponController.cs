@@ -179,7 +179,14 @@ public class WeaponController : MonoBehaviour {
 
     public void UpdateGravGunBar(float value)
     {
-        this.gravGunValue += value;
+        if (this.gravGunValue + value > 1)
+        {
+            this.gravGunValue = 1;
+        }
+        else
+        {
+            this.gravGunValue += value;
+        }
         //this.gravGunBar.SetNewValue(gravGunValue);
         this.gravGunBarObj.SendMessage("SetNewValue", gravGunValue);
     }

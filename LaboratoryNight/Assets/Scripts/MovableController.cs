@@ -8,8 +8,11 @@ public class MovableController : MonoBehaviour {
     private bool isThrown = false;
     private int hitCount = 0;
     private const int MAX_HIT_COUNT = 2;
-	void Start () {
-	
+    private Rigidbody rigidbody;
+	void Start () 
+    {
+        this.rigidbody = GetComponent<Rigidbody>();
+        this.rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
 	}
 	
 	void Update () {
@@ -55,5 +58,15 @@ public class MovableController : MonoBehaviour {
     {
        // Debug.Log("IsThrown called");
         isThrown = true;
+    }
+
+    private void InvokedRemoveForces()
+    {
+        rigidbody.velocity = Vector3.zero;
+        rigidbody.angularVelocity = Vector3.zero;
+    }
+    public void RemoveForces()
+    {
+        Invoke("InvokedRemoveForces", 1.5f);
     }
 }

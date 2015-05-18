@@ -39,7 +39,14 @@ public class PlayerHealthController : MonoBehaviour {
 
     void GainHealth(float health)
     {
-        this.health += health;
+        if (this.health + health > 1)
+        {
+            this.health = 1;
+        }
+        else
+        {
+            this.health += health;
+        }
         healthBarObj.SendMessage("SetNewValue", this.health);
     }
 }

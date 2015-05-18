@@ -16,6 +16,7 @@ TagManager:
   - Rocket
   - PowerUp
   - RobotBullet
+  - HealthPack
   layers:
   - Default
   - TransparentFX

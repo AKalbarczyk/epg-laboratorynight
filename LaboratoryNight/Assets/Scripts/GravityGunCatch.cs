@@ -122,6 +122,8 @@ public class GravityGunCatch : MonoBehaviour {
                     {
                         caughtRigidbody.AddForce(transform.forward * 50, ForceMode.Impulse);
                     }
+
+                    caughtRigidbody.SendMessage("RemoveForces");
                     caughtRigidbody = null;
                     isObjectPickedUp = false;
                     throwPower = 0;
