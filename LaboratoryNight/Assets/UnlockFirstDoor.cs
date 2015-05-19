@@ -4,25 +4,34 @@ using System.Collections;
 
 public class UnlockFirstDoor : MonoBehaviour {
     public Text text;
+    bool canPress;
+
+    public GameObject bootEffect;
+    
 	// Use this for initialization
-	void Start () {
-	
+	void Start () {        
+        canPress = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
+        if (canPress && (Input.GetKeyDown("space")))
+        {            
+            FirstClosedDoorScript.isAllowed = true;
+            canPress = false;
+            GameObject boot = Instantiate(bootEffect, transform.position + transform.up*4, transform.rotation) as GameObject;
+            Destroy(boot, 0.3f);
+            text.text = "";
+        }
 	}
 
     void OnTriggerEnter(Collider target)
     {
-        if (target.gameObject.tag == "Player")
+        if ((target.gameObject.tag == "Player") && !FirstClosedDoorScript.isAllowed)
         {            
             text.text = "press space to hack the computer";
-            if (Input.GetKey(KeyCode.Space))
-            {
-                text.text = "asdddddddddddddddddddd";
-            }
+            canPress = true;            
         }
     }
 
@@ -31,6 +40,7 @@ public class UnlockFirstDoor : MonoBehaviour {
         if (target.gameObject.tag == "Player")
         {
             text.text = "";
+            canPress = false;  
         }
     }
 }

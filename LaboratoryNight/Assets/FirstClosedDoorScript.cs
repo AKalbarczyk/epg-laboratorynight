@@ -8,7 +8,7 @@ public class FirstClosedDoorScript : MonoBehaviour
     private bool isDoorOpening = false;
     private bool isDoorClosing = false;
  
-    public bool isAllowed;
+    public static bool isAllowed;
 
     private Vector3 basePosition;
     private Vector3 upPosition;
@@ -67,5 +67,6 @@ public class FirstClosedDoorScript : MonoBehaviour
         if(target.gameObject.tag == "Player")
             text.text = "";
     }
+    
 }
 

@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour
         }
         RestrictPosition();
 
+       
+        
 	}
 
     private void ApplyMovementThirdPerson()
