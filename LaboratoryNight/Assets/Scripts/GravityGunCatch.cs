@@ -109,20 +109,9 @@ public class GravityGunCatch : MonoBehaviour {
                     caughtRigidbody.isKinematic = false;
                     caughtRigidbody.transform.parent = null;
 
-                    if (throwPower > 50)
-                    {
-                        throwPower = 50;
-                    }
-
-                    if (caughtRigidbody.tag == "Movable")
-                    {
-                        caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);
-                    }
-                    else
-                    {
-                        caughtRigidbody.AddForce(transform.forward * 50, ForceMode.Impulse);
-                    }
-
+                    throwPower = 50;
+                    caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);                  
+                   
                     caughtRigidbody.SendMessage("RemoveForces");
                     caughtRigidbody = null;
                     isObjectPickedUp = false;
