@@ -137,9 +137,11 @@
      <Compile Include="Assets\ShootAtPlayer.cs" />
      <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\SlidingDoorBlocked.cs" />
+     <Compile Include="Assets\ThirdClosedDoor.cs" />
      <Compile Include="Assets\TurretRocket.cs" />
      <Compile Include="Assets\UnlockFirstDoor.cs" />
      <Compile Include="Assets\UnlockSecondDoor.cs" />
+     <Compile Include="Assets\UnlockThirdDoor.cs" />
      <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_DemoControl.cs" />
      <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_RotateObject.cs" />
      <Compile Include="Assets\test_PlayerController.cs" />
