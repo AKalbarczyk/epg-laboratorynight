@@ -89,7 +89,7 @@ public class GameCamera : MonoBehaviour {
         {
             if (!camShakeScript.enabled)
             {
-                camShakeScript.enabled = true;
+              //  camShakeScript.enabled = true;
             }
         }
         else
