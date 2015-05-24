@@ -1,10 +1,10 @@
 # Laboratory Night
 ## UWAGI
 ### 2015.05.20
-- placeholdery (poprawa assetów etc)
+- placeholdery (poprawa assetów etc) - DONE
 - oświetlenie
-- level design (dłuższy level)
-- minimapa
+- level design (dłuższy level) - IN PROGRESS
+- minimapa - DONE
 
 
 ### Bugi:
