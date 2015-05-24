@@ -21,6 +21,7 @@ public class UnlockSecondDoor : MonoBehaviour {
         if (canPress && (Input.GetKeyDown("space")))
         {
             SecondClosedDoor.isAllowed = true;
+            SlidingDoorBlocked.unlockDoor = true;
             canPress = false;
             GameObject boot = Instantiate(bootEffect, transform.position + transform.up * 4, transform.rotation) as GameObject;
             Destroy(boot, 0.3f);
@@ -30,7 +31,7 @@ public class UnlockSecondDoor : MonoBehaviour {
 
     void OnTriggerEnter(Collider target)
     {
-        if ((target.gameObject.tag == "Player") && !FirstClosedDoorScript.isAllowed)
+        if ((target.gameObject.tag == "Player") && !SecondClosedDoor.isAllowed)
         {
             text.text = "press space to hack the computer";
             canPress = true;
