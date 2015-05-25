@@ -4,6 +4,7 @@ using System.Collections;
 public class MiniMapFollow : MonoBehaviour {
 
     public Transform target;
+    public GameObject camera;
 	// Use this for initialization
 	void Start () {
         transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
@@ -13,4 +14,6 @@ public class MiniMapFollow : MonoBehaviour {
 	void Update () {
         transform.position = new Vector3(target.position.x, transform.position.y, target.position.z);
 	}
+
+    
 }
