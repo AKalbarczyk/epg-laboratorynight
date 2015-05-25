@@ -1551,7 +1551,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 6709341}
   - 108: {fileID: 6709342}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 62
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,66 +1748,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 7688976}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &11371446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 11371448}
-  - 108: {fileID: 11371447}
-  m_Layer: 0
-  m_Name: Directional light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!108 &11371447
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 11371446}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 1
-  m_Color: {r: .985294104, g: .946122229, b: .630298436, a: 1}
-  m_Intensity: 1.46000004
-  m_Range: 10
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &11371448
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 11371446}
-  m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
-  m_LocalPosition: {x: -186.241669, y: 12.388339, z: 122.17321}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 706805833}
-  m_RootOrder: 5
 --- !u!1 &12694459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3081,7 +3021,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 29680149}
   - 108: {fileID: 29680150}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3832,7 +3772,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 56481883}
   - 108: {fileID: 56481884}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4271,7 +4211,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1647117be9416043a0b23a47fe7caa2, type: 2}
       propertyPath: m_RootOrder
-      value: 400
+      value: 396
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1647117be9416043a0b23a47fe7caa2, type: 2}
       propertyPath: m_LocalScale.x
@@ -4309,7 +4249,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 65517943}
   - 108: {fileID: 65517944}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5950,7 +5890,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 71836982}
   - 108: {fileID: 71836983}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6156,7 +6096,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 78142626}
   - 108: {fileID: 78142627}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6362,7 +6302,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 81140216}
   - 108: {fileID: 81140217}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8199,7 +8139,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 114704979}
   - 108: {fileID: 114704980}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 78
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9422,7 +9362,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 119730493}
   - 108: {fileID: 119730494}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10995,7 +10935,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 153761481}
   - 108: {fileID: 153761482}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11670,7 +11610,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 158351618}
   - 108: {fileID: 158351617}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13375,7 +13315,7 @@ Transform:
   m_PrefabParentObject: {fileID: 487000, guid: bbf976a15240e4446ad4dd2479e98b02, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 194573670}
-  m_LocalRotation: {x: .653281629, y: .270598024, z: -.270597994, w: .65328151}
+  m_LocalRotation: {x: .653281569, y: .270597994, z: -.270597965, w: .65328145}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -14940,7 +14880,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 63d1b85f6a90d4e4cbe4e69b2b2f374f, type: 3}
       propertyPath: m_RootOrder
-      value: 415
+      value: 410
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 63d1b85f6a90d4e4cbe4e69b2b2f374f, type: 3}
       propertyPath: m_LocalScale.x
@@ -15201,7 +15141,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 210904522}
   - 108: {fileID: 210904523}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18601,7 +18541,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 242567575}
   - 108: {fileID: 242567574}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24974,7 +24914,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 339011593}
   - 108: {fileID: 339011594}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25107,7 +25047,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 341686503}
   - 108: {fileID: 341686504}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 63
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26063,7 +26003,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 362118340}
   - 108: {fileID: 362118341}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26948,7 +26888,7 @@ Transform:
   m_PrefabParentObject: {fileID: 452348, guid: 5d572dc92514b3543bd9d7045e247ff1, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 388526085}
-  m_LocalRotation: {x: .653281629, y: .270598024, z: -.270597994, w: .65328151}
+  m_LocalRotation: {x: .653281569, y: .270597994, z: -.270597965, w: .65328145}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -32600,7 +32540,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e38f4bde01116364a8bf36cf30944f84, type: 2}
       propertyPath: m_RootOrder
-      value: 406
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e38f4bde01116364a8bf36cf30944f84, type: 2}
       propertyPath: m_Name
@@ -33641,7 +33581,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 456112967}
   - 108: {fileID: 456112968}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34347,7 +34287,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 476645105}
   - 108: {fileID: 476645106}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34890,7 +34830,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 480614246}
   - 108: {fileID: 480614247}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35170,7 +35110,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 486197877}
   - 108: {fileID: 486197878}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36168,7 +36108,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dcef58cb05b0b47adbe025ead636c2, type: 2}
       propertyPath: m_RootOrder
-      value: 405
+      value: 399
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: d0dcef58cb05b0b47adbe025ead636c2, type: 2}
       propertyPath: m_LocalScale.x
@@ -37031,7 +36971,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 518548180}
   - 108: {fileID: 518548181}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37737,7 +37677,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 527580198}
   - 108: {fileID: 527580199}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38281,7 +38221,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 535271953}
   - 108: {fileID: 535271954}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39590,7 +39530,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9dbd61983d2eafc48bb30dd3a8a60174, type: 3}
       propertyPath: m_RootOrder
-      value: 401
+      value: 397
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9dbd61983d2eafc48bb30dd3a8a60174, type: 3}
       propertyPath: m_LocalScale.x
@@ -41241,7 +41181,7 @@ Transform:
   m_PrefabParentObject: {fileID: 471938, guid: 17ef0b6009ba9d0459e09b86f5b29f2d, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 586137782}
-  m_LocalRotation: {x: .653281569, y: .270597994, z: -.270597965, w: .65328145}
+  m_LocalRotation: {x: .653281629, y: .270598024, z: -.270597994, w: .65328151}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -42303,66 +42243,6 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!1 &586202433
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 586202435}
-  - 108: {fileID: 586202434}
-  m_Layer: 0
-  m_Name: Point light 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &586202434
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 586202433}
-  m_Enabled: 1
-  serializedVersion: 6
-  m_Type: 2
-  m_Color: {r: .786764741, g: .777269304, b: .746269524, a: 1}
-  m_Intensity: 6.51000023
-  m_Range: 60.4099998
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_BounceIntensity: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &586202435
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 586202433}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -303.641663, y: 18.4883385, z: -17.0267944}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 706805833}
-  m_RootOrder: 4
 --- !u!1 &588533725
 GameObject:
   m_ObjectHideFlags: 0
@@ -42990,7 +42870,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 598916348}
   - 108: {fileID: 598916349}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45155,7 +45035,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 621475807}
   - 108: {fileID: 621475808}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46161,7 +46041,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465908, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 185824, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_Name
@@ -48374,7 +48254,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 705096280}
   - 108: {fileID: 705096281}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48527,18 +48407,16 @@ Transform:
   - {fileID: 1968020564}
   - {fileID: 621311273}
   - {fileID: 1391174661}
-  - {fileID: 586202435}
-  - {fileID: 11371448}
   - {fileID: 993037068}
-  - {fileID: 530744785}
   - {fileID: 1088512602}
+  - {fileID: 530744785}
   - {fileID: 1094389426}
   - {fileID: 1785403689}
   - {fileID: 1293875331}
   - {fileID: 2014508058}
   - {fileID: 951809479}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 12
 --- !u!1 &708389471
 GameObject:
   m_ObjectHideFlags: 0
@@ -48649,7 +48527,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455812, guid: 7da09a2d641dd2543a1099398f1925bf, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 11475062, guid: 7da09a2d641dd2543a1099398f1925bf, type: 2}
       propertyPath: efx
@@ -49236,7 +49114,7 @@ Transform:
   - {fileID: 91385396}
   - {fileID: 188553059}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!1 &716231639
 GameObject:
   m_ObjectHideFlags: 0
@@ -49600,7 +49478,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1 &720482508
 GameObject:
   m_ObjectHideFlags: 0
@@ -53203,7 +53081,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 777148674}
   - 108: {fileID: 777148675}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55094,7 +54972,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 805612244}
   - 108: {fileID: 805612245}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56405,7 +56283,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 813061949}
   - 108: {fileID: 813061950}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 70
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60512,7 +60390,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 870550139}
   - 108: {fileID: 870550140}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62077,7 +61955,7 @@ Transform:
   - {fileID: 1244072093}
   - {fileID: 1817038473}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!199 &906411199
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -63408,7 +63286,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e38f4bde01116364a8bf36cf30944f84, type: 2}
       propertyPath: m_RootOrder
-      value: 419
+      value: 413
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e38f4bde01116364a8bf36cf30944f84, type: 2}
       propertyPath: m_Name
@@ -63714,7 +63592,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 922340055}
   - 108: {fileID: 922340056}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64549,7 +64427,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 937839544}
   - 108: {fileID: 937839545}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64956,7 +64834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 63d1b85f6a90d4e4cbe4e69b2b2f374f, type: 3}
       propertyPath: m_RootOrder
-      value: 407
+      value: 404
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 63d1b85f6a90d4e4cbe4e69b2b2f374f, type: 3}
       propertyPath: m_Name
@@ -66151,7 +66029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 45b15a070f9999e469721154c803fa2f, type: 3}
       propertyPath: m_RootOrder
-      value: 412
+      value: 407
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 45b15a070f9999e469721154c803fa2f, type: 3}
       propertyPath: m_Name
@@ -68827,7 +68705,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 986440330}
   - 108: {fileID: 986440331}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 60
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69280,7 +69158,7 @@ Transform:
   - {fileID: 1110609950}
   - {fileID: 1868684948}
   m_Father: {fileID: 706805833}
-  m_RootOrder: 6
+  m_RootOrder: 4
 --- !u!1 &994824925
 GameObject:
   m_ObjectHideFlags: 0
@@ -70715,7 +70593,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1012661354}
   - 108: {fileID: 1012661355}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71068,7 +70946,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1020213237}
   - 108: {fileID: 1020213238}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 69
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71347,7 +71225,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 87ecace2782a531499e26f03edd00fe5, type: 2}
       propertyPath: m_RootOrder
-      value: 408
+      value: 405
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 87ecace2782a531499e26f03edd00fe5, type: 2}
       propertyPath: m_LocalScale.x
@@ -71381,7 +71259,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1026422902}
   - 108: {fileID: 1026422903}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73932,7 +73810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1647117be9416043a0b23a47fe7caa2, type: 2}
       propertyPath: m_RootOrder
-      value: 411
+      value: 406
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a1647117be9416043a0b23a47fe7caa2, type: 2}
       propertyPath: m_LocalScale.x
@@ -74112,7 +73990,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1087090424}
   - 108: {fileID: 1087090425}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74582,31 +74460,31 @@ Transform:
   - {fileID: 455476129}
   - {fileID: 1210932523}
   - {fileID: 1806466770}
-  - {fileID: 2015356129}
   - {fileID: 1835062145}
-  - {fileID: 1924858687}
+  - {fileID: 2015356129}
   - {fileID: 65047603}
   - {fileID: 559822382}
-  - {fileID: 1890328651}
-  - {fileID: 1963272272}
-  - {fileID: 1195208789}
+  - {fileID: 1924858687}
   - {fileID: 506813715}
   - {fileID: 442073728}
+  - {fileID: 1890328651}
+  - {fileID: 1195208789}
+  - {fileID: 1963272272}
   - {fileID: 939237058}
   - {fileID: 1025826318}
-  - {fileID: 1771839150}
-  - {fileID: 1671319882}
   - {fileID: 1082528013}
   - {fileID: 965474984}
+  - {fileID: 1771839150}
+  - {fileID: 1671319882}
+  - {fileID: 202844445}
   - {fileID: 1666681025}
   - {fileID: 1520162625}
-  - {fileID: 202844445}
-  - {fileID: 1505603415}
-  - {fileID: 1957816258}
-  - {fileID: 1757457444}
   - {fileID: 914815602}
+  - {fileID: 1505603415}
+  - {fileID: 1757457444}
+  - {fileID: 1957816258}
   m_Father: {fileID: 706805833}
-  m_RootOrder: 8
+  m_RootOrder: 5
 --- !u!1001 &1089367097
 Prefab:
   m_ObjectHideFlags: 0
@@ -74726,7 +74604,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 462968, guid: 0b14db4df4a728047a2312dc1244025a, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 189822, guid: 0b14db4df4a728047a2312dc1244025a, type: 2}
       propertyPath: m_Name
@@ -74881,7 +74759,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1097458240}
   - 108: {fileID: 1097458241}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 82
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75407,7 +75285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465908, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2344246, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -75692,7 +75570,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1112620935}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75788,8 +75666,9 @@ Transform:
   - {fileID: 2029209153}
   - {fileID: 1983603044}
   - {fileID: 1097458240}
+  - {fileID: 2100066294}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &1112770031
 GameObject:
   m_ObjectHideFlags: 0
@@ -77523,7 +77402,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1134266909}
   - 108: {fileID: 1134266910}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 64
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77656,7 +77535,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1136376205}
   - 108: {fileID: 1136376206}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77789,7 +77668,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1139425347}
   - 108: {fileID: 1139425348}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81810,7 +81689,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1171728872}
   - 108: {fileID: 1171728873}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81943,7 +81822,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1176313167}
   - 108: {fileID: 1176313168}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82559,7 +82438,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1188380699}
   - 108: {fileID: 1188380700}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82747,7 +82626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 45b15a070f9999e469721154c803fa2f, type: 3}
       propertyPath: m_RootOrder
-      value: 404
+      value: 402
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 45b15a070f9999e469721154c803fa2f, type: 3}
       propertyPath: m_Name
@@ -84231,7 +84110,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_LocalScale.y
@@ -84285,7 +84164,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1229381044}
   - 108: {fileID: 1229381045}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85189,7 +85068,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1243344179}
   - 108: {fileID: 1243344180}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88692,7 +88571,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1260164371}
   - 108: {fileID: 1260164372}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92379,7 +92258,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1348188216}
   - 108: {fileID: 1348188217}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93470,7 +93349,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1368101146}
   - 108: {fileID: 1368101147}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 77
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93630,7 +93509,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1369558053}
   - 108: {fileID: 1369558054}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 59
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94375,7 +94254,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1382471194}
   - 108: {fileID: 1382471195}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95026,7 +94905,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1402815100}
   - 108: {fileID: 1402815101}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95296,7 +95175,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1412865598}
   - 108: {fileID: 1412865599}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97842,7 +97721,8 @@ GameObject:
   - 4: {fileID: 1466274115}
   - 20: {fileID: 1466274114}
   - 114: {fileID: 1466274111}
-  m_Layer: 0
+  - 114: {fileID: 1466274112}
+  m_Layer: 11
   m_Name: MiniMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97861,7 +97741,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 899451491}
-  camera: {fileID: 0}
+--- !u!114 &1466274112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1466274110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 428eb342f8cfcc44d951c5e1f7a2d9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1466274114
 Camera:
   m_ObjectHideFlags: 0
@@ -97905,7 +97795,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &1467129769
 Prefab:
   m_ObjectHideFlags: 0
@@ -99232,7 +99122,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1492580896}
   - 108: {fileID: 1492580895}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Directional light 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99876,7 +99766,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465908, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 185824, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_Name
@@ -100219,7 +100109,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_RootOrder
-      value: 416
+      value: 414
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_LocalScale.x
@@ -100590,7 +100480,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1513520750}
   - 108: {fileID: 1513520751}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100994,7 +100884,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2028cb1f4b4384a4a94c587c3b1a8df3, type: 3}
       propertyPath: m_RootOrder
-      value: 414
+      value: 412
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2028cb1f4b4384a4a94c587c3b1a8df3, type: 3}
       propertyPath: m_LocalScale.x
@@ -102116,7 +102006,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1544188858}
   - 108: {fileID: 1544188859}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104442,7 +104332,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1569297794}
   - 108: {fileID: 1569297795}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104648,7 +104538,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1574061013}
   - 108: {fileID: 1574061014}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 73
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105373,7 +105263,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1590772418}
   - 108: {fileID: 1590772419}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106066,7 +105956,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1609777679}
   - 108: {fileID: 1609777680}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 71
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108648,7 +108538,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_RootOrder
-      value: 413
+      value: 411
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_LocalScale.x
@@ -108787,7 +108677,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 63d1b85f6a90d4e4cbe4e69b2b2f374f, type: 3}
       propertyPath: m_RootOrder
-      value: 410
+      value: 409
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 63d1b85f6a90d4e4cbe4e69b2b2f374f, type: 3}
       propertyPath: m_LocalScale.x
@@ -114655,7 +114545,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1723473245}
   - 108: {fileID: 1723473246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116331,7 +116221,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1743228717}
   - 108: {fileID: 1743228718}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 65
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116930,7 +116820,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 40694183cef852946a4713a37b36d6d3, type: 2}
       propertyPath: m_RootOrder
-      value: 418
+      value: 415
       objectReference: {fileID: 0}
     - target: {fileID: 100008, guid: 40694183cef852946a4713a37b36d6d3, type: 2}
       propertyPath: m_Name
@@ -117686,7 +117576,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e38f4bde01116364a8bf36cf30944f84, type: 2}
       propertyPath: m_RootOrder
-      value: 409
+      value: 408
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: e38f4bde01116364a8bf36cf30944f84, type: 2}
       propertyPath: m_Name
@@ -118422,7 +118312,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1784829107}
   - 108: {fileID: 1784829108}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 68
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119097,7 +118987,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1793421807}
   - 108: {fileID: 1793421808}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122536,7 +122426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_RootOrder
-      value: 396
+      value: 394
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_Name
@@ -125186,7 +125076,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1876740267}
   - 108: {fileID: 1876740268}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125392,7 +125282,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1878960755}
   - 108: {fileID: 1878960756}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126013,7 +125903,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 429158bc8dd68b9449ac645b0493fb6f, type: 2}
       propertyPath: m_RootOrder
-      value: 402
+      value: 401
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 429158bc8dd68b9449ac645b0493fb6f, type: 2}
       propertyPath: m_LocalScale.x
@@ -127153,7 +127043,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1912478840}
   - 108: {fileID: 1912478841}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 56
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127977,7 +127867,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_RootOrder
-      value: 399
+      value: 398
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_Name
@@ -130872,7 +130762,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1948167585}
   - 108: {fileID: 1948167586}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131589,7 +131479,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_RootOrder
-      value: 417
+      value: 416
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f6c51af23a703e94f9f7b73590d09342, type: 3}
       propertyPath: m_LocalScale.x
@@ -131777,7 +131667,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1958936160}
   - 108: {fileID: 1958936161}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133319,7 +133209,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1983603044}
   - 108: {fileID: 1983603045}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 81
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133567,7 +133457,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485032, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 166098, guid: 036a85573483e024694900846ddef9a4, type: 2}
       propertyPath: m_IsActive
@@ -137880,7 +137770,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2029209153}
   - 108: {fileID: 2029209154}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 80
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139108,7 +138998,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2041898111}
   - 108: {fileID: 2041898112}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 66
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139527,7 +139417,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2051533223}
   - 108: {fileID: 2051533224}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 79
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140095,7 +139985,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2058926880}
   - 108: {fileID: 2058926881}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 67
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140256,7 +140146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 465908, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 185824, guid: 557e69fa5770966429e7b3cb75825275, type: 2}
       propertyPath: m_Name
@@ -140456,7 +140346,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2065482913}
   - 108: {fileID: 2065482914}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141390,7 +141280,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2085927093}
   - 108: {fileID: 2085927094}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 74
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141739,7 +141629,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2090077205}
   - 108: {fileID: 2090077206}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142191,7 +142081,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2100066294}
   - 108: {fileID: 2100066293}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142237,11 +142127,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2100066292}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -136.800003, y: 19.7999992, z: -51.0999985}
+  m_LocalPosition: {x: -61.6000061, y: 98.6000061, z: -37.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1112620935}
+  m_RootOrder: 79
 --- !u!1 &2100663557
 GameObject:
   m_ObjectHideFlags: 0
@@ -142543,7 +142433,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2104545573}
   - 108: {fileID: 2104545574}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 57
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142718,7 +142608,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2108892262}
   - 108: {fileID: 2108892263}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point light 34
   m_TagString: Untagged
   m_Icon: {fileID: 0}

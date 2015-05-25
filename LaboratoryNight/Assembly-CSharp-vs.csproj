@@ -66,6 +66,7 @@
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
      <Compile Include="Assets\FirstClosedDoorScript.cs" />
+     <Compile Include="Assets\FogScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\ControlGUIScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoreButtonScript.cs" />
