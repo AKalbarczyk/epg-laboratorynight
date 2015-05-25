@@ -24,7 +24,6 @@ public class UnlockSecondDoor : MonoBehaviour {
             SlidingDoorBlocked.unlockDoor = true;
             canPress = false;
             GameObject boot = Instantiate(bootEffect, transform.position + transform.up * 4, transform.rotation) as GameObject;
-            Destroy(boot, 0.3f);
             text.text = "";
         }
     }

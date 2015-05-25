@@ -40,10 +40,10 @@ public class ScientistHealth : MonoBehaviour {
             Destroy(efx, 0.4f);
 
             if (Random.Range(0.0F, 1.0F) >= 0.45)
-            obj = Instantiate(powerUp, transform.position + transform.up * 2 + transform.right *2, transform.rotation) as GameObject;
+            obj = Instantiate(powerUp, transform.position + transform.right *2, transform.rotation) as GameObject;
             
             if(Random.Range(0.0F,1.0F) >= 0.7) 
-                obj2 = Instantiate(powerUp2, transform.position + transform.up * 2, transform.rotation) as GameObject;
+                obj2 = Instantiate(powerUp2, transform.position, transform.rotation) as GameObject;
             Destroy(this.gameObject, 0.05f);
 
         }
