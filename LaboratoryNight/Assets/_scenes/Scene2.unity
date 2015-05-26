@@ -2126,7 +2126,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11442748, guid: 928f84c88a75ac749aa0867af075953a, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 864663277}
+    - target: {fileID: 2071218, guid: 928f84c88a75ac749aa0867af075953a, type: 2}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: .850000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071218, guid: 928f84c88a75ac749aa0867af075953a, type: 2}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: .150000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071218, guid: 928f84c88a75ac749aa0867af075953a, type: 2}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: .354999989
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11417436, guid: 928f84c88a75ac749aa0867af075953a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 928f84c88a75ac749aa0867af075953a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &43745327
@@ -7428,6 +7445,22 @@ BoxCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400008, guid: 40694183cef852946a4713a37b36d6d3, type: 2}
   m_PrefabInternal: {fileID: 192858374}
+--- !u!1 &192902161
+GameObject:
+  m_PrefabParentObject: {fileID: 159040, guid: 928f84c88a75ac749aa0867af075953a, type: 2}
+  m_PrefabInternal: {fileID: 41486048}
+--- !u!114 &192902162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 192902161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2233bec03fc203f40a618515e4407799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlitShader: {fileID: 4800000, guid: a1919258d368e3944a77cf3d7e6a4bc8, type: 3}
 --- !u!1001 &193131167
 Prefab:
   m_ObjectHideFlags: 0
@@ -31269,6 +31302,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &864663277
+Transform:
+  m_PrefabParentObject: {fileID: 493708, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+  m_PrefabInternal: {fileID: 864663276}
 --- !u!1001 &865037658
 Prefab:
   m_ObjectHideFlags: 0
