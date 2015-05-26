@@ -14,11 +14,28 @@ public class ScientistHealth : MonoBehaviour {
 
     private Transform player;
 
+    private bool canDropShotgunAmmo = false;
+    private bool canDropLaserAmmo = false;
+
+    public GameObject manaPowerUp;
+    public GameObject rifleAmmo;
+    public GameObject shotgunAmmo;
+    public GameObject laserAmmo;
+    public GameObject healthPack;
+
     void Start()
     {
         health = 1;
         rigidbody = gameObject.GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        manaPowerUp = Resources.Load("powerUp") as GameObject;
+        rifleAmmo = Resources.Load("ammo_box_rifle") as GameObject;
+        shotgunAmmo = Resources.Load("ammo_box_shotgun") as GameObject;
+        laserAmmo = Resources.Load("ammo_box_laser") as GameObject;
+        healthPack = Resources.Load("health pack") as GameObject;
+
+        onHit = Resources.Load("Explosion02") as GameObject;
     }
 
     // Update is called once per frame
@@ -34,24 +51,51 @@ public class ScientistHealth : MonoBehaviour {
 
         if (this.health <= 0)
         {     
-            GameObject obj;
-            GameObject obj2;
+     
             GameObject efx = Instantiate(explosion, transform.position, transform.rotation) as GameObject;
             Destroy(efx, 0.4f);
 
-            if (Random.Range(0.0F, 1.0F) >= 0.45)
-            obj = Instantiate(powerUp, transform.position + transform.right *2, transform.rotation) as GameObject;
-            
-            if(Random.Range(0.0F,1.0F) >= 0.7) 
-                obj2 = Instantiate(powerUp2, transform.position, transform.rotation) as GameObject;
-            Destroy(this.gameObject, 0.05f);
+            if (Random.Range(0.0F, 1.0F) >= 0.5)
+            {
+                GameObject obj = Instantiate(healthPack, transform.position - transform.right * 2, transform.rotation) as GameObject;
+            }
+
+            if (Random.Range(0.0F, 1.0F) >= 0.5) //50% drop chance 
+            {
+                GameObject obj = Instantiate(manaPowerUp, transform.position, transform.rotation) as GameObject;
+            }
+
+            if (Random.Range(0.0F, 1.0F) >= 0.4) //60%
+            {
+                GameObject obj2 = Instantiate(rifleAmmo, transform.position + transform.right * 2, transform.rotation) as GameObject;
+
+            }
+
+            if (canDropShotgunAmmo)
+            {
+                if (Random.Range(0.0F, 1.0F) >= 0.5) //50%
+                {
+                    GameObject obj2 = Instantiate(shotgunAmmo, transform.position + transform.right * 4, transform.rotation) as GameObject;
+                    Destroy(this.gameObject);
+                }
+            }
+            if (canDropLaserAmmo)
+            {
+                if (Random.Range(0.0F, 1.0F) >= 0.5) //50%
+                {
+                    GameObject obj2 = Instantiate(laserAmmo, transform.position + transform.right * -2, transform.rotation) as GameObject;
+                    Destroy(this.gameObject);
+                }
+            }
+
+            Destroy(this.gameObject);
 
         }
     }
 
     public void ReceiveHit()
     {
-        TakeDamage(0.6f);
+        TakeDamage(0.45f);
         GameObject efx = Instantiate(onHit, transform.position + (transform.up * 2), transform.rotation) as GameObject;
         Destroy(efx, 0.4f);
         //rigidbody.AddForce(col.gameObject.transform.forward * 5f, ForceMode.Impulse);
@@ -73,5 +117,15 @@ public class ScientistHealth : MonoBehaviour {
         rigidbody.velocity = Vector3.zero;
         rigidbody.angularVelocity = Vector3.zero;
         transform.LookAt(player);
+    }
+
+    public void CanDropShotgunAmmo()
+    {
+        this.canDropShotgunAmmo = true;
+    }
+
+    public void CanDropLaserAmmo()
+    {
+        this.canDropLaserAmmo = true;
     }
 }

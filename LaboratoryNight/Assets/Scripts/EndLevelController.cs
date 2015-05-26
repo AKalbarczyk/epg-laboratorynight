@@ -19,7 +19,7 @@ public class EndLevelController : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            GameObject obj = Instantiate(efx, col.transform.position, Quaternion.identity) as GameObject;
+            GameObject obj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
             Invoke("LoadNextLevel", 3f);
         }
     }

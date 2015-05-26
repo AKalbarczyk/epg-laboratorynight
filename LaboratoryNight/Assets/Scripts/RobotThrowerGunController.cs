@@ -21,7 +21,7 @@ public class RobotThrowerGunController : MonoBehaviour {
     {
         dist = Vector3.Distance(player.position, transform.position);
 
-        if (dist <25F && !startShooting)
+        if (dist < 25F && !startShooting)
         {
             startShooting = true;
             StartCoroutine("ShootRocket");
@@ -38,7 +38,7 @@ public class RobotThrowerGunController : MonoBehaviour {
             obj.GetComponent<Rigidbody>().AddForce(transform.up * 30f, ForceMode.Impulse);
             Destroy(obj, 5f);
 
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.7f);
         }
     }
 }
