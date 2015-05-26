@@ -9,10 +9,12 @@ public class MovableController : MonoBehaviour {
     private int hitCount = 0;
     private const int MAX_HIT_COUNT = 2;
     private Rigidbody rigidbody;
+
 	void Start () 
     {
         this.rigidbody = GetComponent<Rigidbody>();
         this.rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
+        this.shatteredCube = Resources.Load("ShatteredCube") as GameObject;
 	}
 	
 	void Update () {
