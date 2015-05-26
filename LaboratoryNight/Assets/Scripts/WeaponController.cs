@@ -16,8 +16,6 @@ public class WeaponController : MonoBehaviour {
     private const float GRAVGUN_PULL_VALUE = 0.4f;
     private const float GRAVGUN_SHOCKWAVE_VALUE = 0.5f;
     
-    public Text weaponModeText;
-
     public Text rifleAmmoText;
     public Text shotgunAmmoText;
     public Text laserAmmoText;
@@ -80,7 +78,6 @@ public class WeaponController : MonoBehaviour {
 
 	void Start ()
     {
-        weaponModeText.text = WeaponMode.RIFLE.ToString();
         rifleAmmoText.text = rifleAmmo.ToString();
         shotgunAmmoText.text = shotgunAmmo.ToString();
         laserAmmoText.text = laserAmmo.ToString();
@@ -286,7 +283,6 @@ public class WeaponController : MonoBehaviour {
                 weaponModeIndex = -1;
             }
             currWeaponMode = WEAPON_MODE_ARR[++weaponModeIndex];
-            weaponModeText.text = currWeaponMode.ToString();
 
             ApplyAmmoTextOutline();
         }
@@ -297,7 +293,6 @@ public class WeaponController : MonoBehaviour {
                 weaponModeIndex = WEAPON_MODE_ARR.Length;
             }
             currWeaponMode = WEAPON_MODE_ARR[--weaponModeIndex];
-            weaponModeText.text = currWeaponMode.ToString();
 
             ApplyAmmoTextOutline();
         }

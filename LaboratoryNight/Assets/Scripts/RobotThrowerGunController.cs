@@ -12,7 +12,7 @@ public class RobotThrowerGunController : MonoBehaviour {
 	void Start () 
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+        rocket = Resources.Load("flask") as GameObject;
         dist = 100F;
 	}
 	
