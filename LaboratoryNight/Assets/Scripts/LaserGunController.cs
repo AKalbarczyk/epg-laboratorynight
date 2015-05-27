@@ -45,7 +45,7 @@ public class LaserGunController : MonoBehaviour {
         {
             if (col)
             {
-                col.SendMessage("TakeDamage", 0.2f);
+                col.SendMessage("TakeDamage", 0.5f);
                 GameObject obj = Instantiate(laserHit, col.gameObject.transform.position, col.gameObject.transform.rotation) as GameObject;
                 Destroy(obj, 0.3f);
             }

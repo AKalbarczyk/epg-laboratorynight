@@ -31290,7 +31290,7 @@ Prefab:
     - target: {fileID: 11424848, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: gravityGunShot
       value: 
-      objectReference: {fileID: 114124, guid: 934a4eeecef1daa4089c4e9e11b12b53, type: 2}
+      objectReference: {fileID: 170364, guid: 450971a87edf561408fcdf34a5428e84, type: 2}
     - target: {fileID: 11424848, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: shotgunShot
       value: 
@@ -31298,7 +31298,7 @@ Prefab:
     - target: {fileID: 11424848, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: pullEffect
       value: 
-      objectReference: {fileID: 138020, guid: bcad14bb7e32c79499a3f1cff77849fb, type: 2}
+      objectReference: {fileID: 122064, guid: 87cac2a089ee7af46a244e32990383ed, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
   m_IsPrefabParent: 0

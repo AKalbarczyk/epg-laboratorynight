@@ -387,7 +387,7 @@ public class WeaponController : MonoBehaviour {
             playerHealth.ShieldActivated();
             shieldEfx.SetActive(true);
             UpdateGravGunBar(-GRAVGUN_SHIELD_VALUE);
-            Invoke("DisableShield", 7f);
+            Invoke("DisableShield", 5f);
         }
     }
 
@@ -403,7 +403,7 @@ public class WeaponController : MonoBehaviour {
 
     private void GravityGunPull()
     {
-        if (gravGunValue >= GRAVGUN_PULL_VALUE)
+        if (gravGunValue >= GRAVGUN_PULL_VALUE && canUseSpecialMode)
         {
             UpdateGravGunBar(-GRAVGUN_PULL_VALUE);
             initPosition = transform.position;
@@ -417,7 +417,7 @@ public class WeaponController : MonoBehaviour {
     private IEnumerator WeaponModeCooldown()
     {
         canUseSpecialMode = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         canUseSpecialMode = true;
     }
 
@@ -530,21 +530,19 @@ public class WeaponController : MonoBehaviour {
         gravityGunShootCount++;
         Transform shotTranform = transform;
         GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;
-        shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * (WEAPON_FORCE - 100), ForceMode.Impulse);
-
-        StartCoroutine("GravityGunEffect", shot);
+        shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * WEAPON_FORCE, ForceMode.Impulse);
 
         Destroy(shot, 1.2f);
 
         UpdateRifleAmmo(-1);
    }
 
-   private IEnumerator GravityGunEffect(GameObject shot)
-   {
-       yield return new WaitForSeconds(0.32f);
-       if (shot)
-         shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * WEAPON_FORCE, ForceMode.Impulse);
-   }
+   //private IEnumerator GravityGunEffect(GameObject shot)
+   //{
+   //    yield return new WaitForSeconds(0.32f);
+   //    if (shot)
+   //      shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * WEAPON_FORCE, ForceMode.Impulse);
+   //}
 
    private IEnumerator GravityGunWait()
    {
