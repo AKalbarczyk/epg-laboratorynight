@@ -26,6 +26,6 @@ public class EndLevelController : MonoBehaviour {
 
     public void LoadNextLevel()
     {
-        Application.LoadLevel("TestScene");
+        Application.LoadLevel("Scene2");
     }
 }

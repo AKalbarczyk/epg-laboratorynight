@@ -4,6 +4,13 @@
 - mini mapa : najważniejsze punkty, bugi (laset itp)
 - bronie : zmniejszyć siłę shotgun'a, zwiększyć siłę lasera, max ammo
 - movable: telewizory, stoły, łóżka itp
+- nowe naboje
+- normalny strzał
+- zbierable usunąć opóźnienie
+- collidery prefabów
+- zamkniete drzwi
+- oznaczenie odwiedzonych pomieszczen
+
 
 ### Bugi:
 - movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
