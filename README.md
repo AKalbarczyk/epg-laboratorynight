@@ -1,11 +1,9 @@
 # Laboratory Night
 ## UWAGI
-### 2015.05.20
-- placeholdery (poprawa assetów etc) - DONE
-- oświetlenie
-- level design (dłuższy level) - IN PROGRESS
-- minimapa - DONE
-
+### 2015.05.27
+- mini mapa : najważniejsze punkty, bugi (laset itp)
+- bronie : zmniejszyć siłę shotgun'a, zwiększyć siłę lasera, max ammo
+- movable: telewizory, stoły, łóżka itp
 
 ### Bugi:
 - movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
