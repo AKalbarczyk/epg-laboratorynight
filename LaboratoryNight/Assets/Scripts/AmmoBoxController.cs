@@ -44,8 +44,8 @@ public class AmmoBoxController : MonoBehaviour {
             
             GameObject obj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
 
-            Destroy(obj, 0.5f);
-            Destroy(this.gameObject, 0.25f);
+            Destroy(obj, 0.05f);
+            Destroy(this.gameObject, 0.01f);
 
 
         }

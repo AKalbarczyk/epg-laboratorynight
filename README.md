@@ -1,14 +1,14 @@
 # Laboratory Night
 ## UWAGI
 ### 2015.05.27
-- mini mapa : najważniejsze punkty, bugi (laset itp)
-- bronie : zmniejszyć siłę shotgun'a, zwiększyć siłę lasera, max ammo
+- mini mapa : najważniejsze punkty, bugi (laset itp) - done
+- bronie : zmniejszyć siłę shotgun'a, zwiększyć siłę lasera, max ammo(done)
 - movable: telewizory, stoły, łóżka itp
 - nowe naboje
-- normalny strzał
-- zbierable usunąć opóźnienie
-- collidery prefabów
-- zamkniete drzwi
+- normalny strzał - done
+- zbierable usunąć opóźnienie - done
+- collidery prefabów - done
+- zamkniete drzwi - done
 - oznaczenie odwiedzonych pomieszczen
 
 

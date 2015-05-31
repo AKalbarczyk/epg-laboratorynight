@@ -71,6 +71,10 @@ public class WeaponController : MonoBehaviour {
     private int shotgunAmmo = 0;
     private int laserAmmo = 0;
 
+    private int maxRifleAmmo = 40;
+    private int maxShotgunAmmo = 20;
+    private int maxLaserAmmo = 15;
+
     private const int RIFLE_AMMO_CONSUMPTION = 1;
     private const int SHOTGUN_AMMO_CONSUMPTION = 1;
 
@@ -189,19 +193,25 @@ public class WeaponController : MonoBehaviour {
     }
 
     public void UpdateRifleAmmo(int value)
-    {
+    {        
         rifleAmmo += value;
+        if (rifleAmmo >= maxRifleAmmo)
+            rifleAmmo = maxRifleAmmo;
         rifleAmmoText.text = rifleAmmo.ToString();
     }
 
     public void UpdateShotgunAmmo(int value)
     {
         shotgunAmmo += value;
+        if (shotgunAmmo >= maxShotgunAmmo)
+            shotgunAmmo = maxShotgunAmmo;
         shotgunAmmoText.text = shotgunAmmo.ToString();
     }
     public void UpdateLaserAmmo(int value)
     {
         laserAmmo += value;
+        if (laserAmmo >= maxLaserAmmo)
+            laserAmmo = maxLaserAmmo;
         laserAmmoText.text = laserAmmo.ToString();
     }
 
@@ -450,18 +460,6 @@ public class WeaponController : MonoBehaviour {
         }
     }
 
-   //private void ShootRifle()
-   //{
-   //    Transform shotTranform = transform;
-   //    GameObject shot = Instantiate(bullet, shotTranform.position, transform.rotation) as GameObject;
-   //    shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * WEAPON_FORCE, ForceMode.Impulse);
-   //    Destroy(shot, 0.3f);
-
-   //    GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
-   //    Destroy(flash, 0.1f);
-       
-   //}
-
    private void ShootShotgun()
    {
        
@@ -536,13 +534,6 @@ public class WeaponController : MonoBehaviour {
 
         UpdateRifleAmmo(-1);
    }
-
-   //private IEnumerator GravityGunEffect(GameObject shot)
-   //{
-   //    yield return new WaitForSeconds(0.32f);
-   //    if (shot)
-   //      shot.GetComponent<Rigidbody>().AddForce(shot.transform.forward * WEAPON_FORCE, ForceMode.Impulse);
-   //}
 
    private IEnumerator GravityGunWait()
    {
