@@ -26,9 +26,11 @@ public class GravityGunCatch : MonoBehaviour {
     private float throwPower = 0;
 
     public GameObject gravityGunCatchTrace;
+
+    public SoundsController sounds;
 	void Start () 
     {
-	
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	void Update () 
@@ -64,7 +66,7 @@ public class GravityGunCatch : MonoBehaviour {
                 Collider c = GetNearestCollider();
                 if (c && weaponController.GetGravGunValue() > GRAVGUN_CATCH_VALUE)
                 {
-                    
+                    sounds.GravityGun();
                     isObjectPickedUp = true;
                     caughtRigidbody = c.GetComponent<Rigidbody>();
                     caughtRigidbody.isKinematic = true;

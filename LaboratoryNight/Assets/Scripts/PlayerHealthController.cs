@@ -7,9 +7,12 @@ public class PlayerHealthController : MonoBehaviour {
     private float health;
     private bool shieldActive = false;
 
+    public SoundsController sounds;
+
 	void Start () 
     {
         health = 1;
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	void Update () 
@@ -33,6 +36,7 @@ public class PlayerHealthController : MonoBehaviour {
         {
             this.health -= damage;
             healthBarObj.SendMessage("SetNewValue", this.health);
+            sounds.PlayerHit();
             Camera.main.SendMessage("CamShake");
         }
     }

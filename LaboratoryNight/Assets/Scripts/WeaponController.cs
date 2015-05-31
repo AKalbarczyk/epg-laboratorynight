@@ -4,6 +4,8 @@ using System.Collections;
 
 public class WeaponController : MonoBehaviour {
 
+    public SoundsController sounds;
+
     public PlayerHealthController playerHealth;
 
     public GameObject gravGunBarObj;
@@ -325,6 +327,8 @@ public class WeaponController : MonoBehaviour {
             laserSelector.enabled = false;
 
             laserTrace.SetColors(Color.yellow, Color.yellow);
+
+            sounds.SwitchWeapon();
         }
         else if (currWeaponMode == WeaponMode.SHOTGUN)
         {
@@ -341,6 +345,8 @@ public class WeaponController : MonoBehaviour {
             laserSelector.enabled = false;
 
             laserTrace.SetColors(Color.red, Color.red);
+
+            sounds.SwitchWeapon();
         }
         else if (currWeaponMode == WeaponMode.LASER)
         {
@@ -357,6 +363,8 @@ public class WeaponController : MonoBehaviour {
             laserSelector.enabled = true;
 
             laserTrace.SetColors(Color.cyan, Color.cyan);
+
+            sounds.SwitchWeapon();
         }
     }
     private void CheckWeapon()
@@ -397,6 +405,7 @@ public class WeaponController : MonoBehaviour {
             playerHealth.ShieldActivated();
             shieldEfx.SetActive(true);
             UpdateGravGunBar(-GRAVGUN_SHIELD_VALUE);
+            sounds.Shield();
             Invoke("DisableShield", 5f);
         }
     }
@@ -419,6 +428,7 @@ public class WeaponController : MonoBehaviour {
             initPosition = transform.position;
             pullObj = Instantiate(pullEffect, initPosition, transform.rotation) as GameObject;
             DisablePullObj();
+            sounds.BlackHole();
             StartCoroutine("WeaponModeCooldown");
             isPullObjMoving = true;
         }
@@ -436,7 +446,7 @@ public class WeaponController : MonoBehaviour {
         if (gravGunValue >= GRAVGUN_SHOCKWAVE_VALUE)
         {
             UpdateGravGunBar(-GRAVGUN_SHOCKWAVE_VALUE);
-
+            sounds.Shockwave();
             StartCoroutine("WeaponModeCooldown");
             StartCoroutine("WaitAndFireShockwave");
         }
@@ -462,6 +472,8 @@ public class WeaponController : MonoBehaviour {
 
    private void ShootShotgun()
    {
+
+       sounds.ShotgunShot();
        
        int shotgunShotCount = 4;
        GameObject[] shotArr = new GameObject[shotgunShotCount];
@@ -490,6 +502,8 @@ public class WeaponController : MonoBehaviour {
    {
        if (Input.GetKeyDown(KeyCode.Mouse0))
        {
+           sounds.LaserShot();
+
            laserShot.SetActive(true);
            isShootingLaser = true;
            InvokeRepeating("ConsumeAmmo", 0, 0.5f);
@@ -525,6 +539,8 @@ public class WeaponController : MonoBehaviour {
 
    private void ShootGravityGun()
    {
+       sounds.RifleShot();
+
         gravityGunShootCount++;
         Transform shotTranform = transform;
         GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;

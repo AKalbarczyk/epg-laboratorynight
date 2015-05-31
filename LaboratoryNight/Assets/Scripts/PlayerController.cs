@@ -20,15 +20,27 @@ public class PlayerController : MonoBehaviour
 
     private const bool oldCameraEnabled = true;
 
+    public SoundsController sounds;
+
 	void Start () 
     {
 		controller = GetComponent<CharacterController>();
         Invoke("GetPositionY", 1f);
+        sounds = GameObject.FindObjectOfType<SoundsController>();
+        InvokeRepeating("PlayFootsteps", 0, 0.3f);
 	}
 
     private void GetPositionY()
     {
         startPosition = transform.position;
+    }
+
+    private void PlayFootsteps()
+    {
+        if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+        {
+            sounds.Footsteps();
+        }
     }
 
 	void Update () 

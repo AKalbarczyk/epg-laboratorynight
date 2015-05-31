@@ -11,8 +11,10 @@ public class AmmoBoxController : MonoBehaviour {
 
     public enum AmmoBoxType { RIFLE_AMMO, SHOTGUN_AMMO, LASER_AMMO };
     public AmmoBoxType ammoBoxType;
-	void Start () {
 
+    public SoundsController sounds;
+	void Start () {
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	// Update is called once per frame
@@ -43,7 +45,7 @@ public class AmmoBoxController : MonoBehaviour {
             }
             
             GameObject obj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
-
+            sounds.PickUp();
             Destroy(obj, 0.05f);
             Destroy(this.gameObject, 0.01f);
 

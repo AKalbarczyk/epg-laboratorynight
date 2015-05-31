@@ -11,10 +11,13 @@ public class OpenLockedDoor : MonoBehaviour
     private Vector3 basePosition;
     private Vector3 upPosition;
 
+    public SoundsController sounds;
+
     void Start()
     {
         basePosition = transform.position;
         upPosition = new Vector3(basePosition.x, basePosition.y + 10, basePosition.z);
+        sounds = GameObject.FindObjectOfType<SoundsController>();
     }
 
 

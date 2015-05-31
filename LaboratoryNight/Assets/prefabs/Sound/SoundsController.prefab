@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &176210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 448640}
+  - 114: {fileID: 11486018}
+  m_Layer: 0
+  m_Name: SoundsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &448640
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11486018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 176210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d7267b322937a4e97c461699352475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footsteps: {fileID: 8300000, guid: 94dbd4febab734210a43c84263f5e116, type: 3}
+  rifleShot: {fileID: 8300000, guid: f6cb1f581b7444b23a05b613a16420d5, type: 3}
+  shotgunShot: {fileID: 8300000, guid: d22add9310406466492fea0d086ee95a, type: 3}
+  laserShot: {fileID: 8300000, guid: 3535722c57175449695abd945d3df695, type: 3}
+  robotShot: {fileID: 8300000, guid: 21fc9e37a8fe04a32a8ed376a21b5cd9, type: 3}
+  turretShot: {fileID: 8300000, guid: e5ffe5ad56ed84f80b79cf081c6d0209, type: 3}
+  flaskThrow: {fileID: 8300000, guid: 8f63a99abbeabc3498994cc053fcdcd2, type: 3}
+  rocketHit: {fileID: 8300000, guid: b00177400ce884a1f8777420c5b09e13, type: 3}
+  enemyHit: {fileID: 8300000, guid: f3377e2e326e784478bf71836c4d1a15, type: 3}
+  playerHit: {fileID: 8300000, guid: 3ca121c001790493aac9f6aec90cfc06, type: 3}
+  pickUp: {fileID: 8300000, guid: fc6041f6b07bc447d9c04f84a2274536, type: 3}
+  healthPickUp: {fileID: 8300000, guid: 5ab91a2740f8b4476a8946f20def321f, type: 3}
+  manaPickUp: {fileID: 8300000, guid: cc98b8ccdf9a248059887d064e7e5067, type: 3}
+  shield: {fileID: 8300000, guid: 26fdf572d8ba64140aecd1cf2d4a2897, type: 3}
+  blackHole: {fileID: 8300000, guid: ee3500c0c978c6548a16b59f40ec53c5, type: 3}
+  shockwave: {fileID: 8300000, guid: 6b2f5e232b0be01449b826110c3ad7ec, type: 3}
+  doorOpening: {fileID: 8300000, guid: 1a358488dbc0038479a3a64bb09d7090, type: 3}
+  switchWeapon: {fileID: 8300000, guid: 3b7a828a646174088aa48ee1db9c439c, type: 3}
+  gravityGun: {fileID: 8300000, guid: cd5817e224b2b4d579cf0d0d8bfce316, type: 3}
+  hackComputer: {fileID: 8300000, guid: 1a358488dbc0038479a3a64bb09d7090, type: 3}
+  movableHit: {fileID: 8300000, guid: d7550df87e06fba479f77c93f02e5a58, type: 3}
+  flaskHit: {fileID: 8300000, guid: 8c8ead0e2239ae8418fa0700611da715, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 176210}
+  m_IsPrefabParent: 1

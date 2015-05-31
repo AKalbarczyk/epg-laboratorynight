@@ -9,10 +9,13 @@ public class RobotGunController : MonoBehaviour
     private Transform player;
     float dist;
     bool startShooting = false;
+
+    public SoundsController sounds;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         dist = 100F;
+        sounds = GameObject.FindObjectOfType<SoundsController>();
     }
 
     // Update is called once per frame
@@ -37,6 +40,8 @@ public class RobotGunController : MonoBehaviour
 
             obj.GetComponent<Rigidbody>().AddForce(transform.forward * 100f, ForceMode.Impulse);
             Destroy(obj, 0.7f);
+
+            sounds.RobotShot();
 
             yield return new WaitForSeconds(0.4f);
         }

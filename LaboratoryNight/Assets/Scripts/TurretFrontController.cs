@@ -8,10 +8,12 @@ public class TurretFrontController : MonoBehaviour {
     private Transform player;
     float dist;
     bool startShooting = false;
+
+    public SoundsController sounds;
 	void Start () 
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-       
+        sounds = GameCamera.FindObjectOfType<SoundsController>();
         dist = 100F;
        //StartCoroutine("ShootRocket");
        
@@ -43,6 +45,8 @@ public class TurretFrontController : MonoBehaviour {
 
             obj.GetComponent<Rigidbody>().AddForce(transform.forward * 20f, ForceMode.Impulse);
             StartCoroutine("AccelerateRocket", obj);
+
+            sounds.TurretShot();
 
             yield return new WaitForSeconds(2f);
         }

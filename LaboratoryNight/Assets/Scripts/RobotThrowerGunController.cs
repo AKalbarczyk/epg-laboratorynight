@@ -9,11 +9,14 @@ public class RobotThrowerGunController : MonoBehaviour {
     float dist;
     bool startShooting = false;
 
+    public SoundsController sounds;
+
 	void Start () 
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rocket = Resources.Load("flask") as GameObject;
         dist = 100F;
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	// Update is called once per frame
@@ -38,6 +41,7 @@ public class RobotThrowerGunController : MonoBehaviour {
             obj.GetComponent<Rigidbody>().AddForce(transform.up * 30f, ForceMode.Impulse);
             Destroy(obj, 5f);
 
+            sounds.FlaskThrow();
             yield return new WaitForSeconds(0.7f);
         }
     }

@@ -10,11 +10,14 @@ public class MovableController : MonoBehaviour {
     private const int MAX_HIT_COUNT = 2;
     private Rigidbody rigidbody;
 
+    public SoundsController sounds;
+
 	void Start () 
     {
         this.rigidbody = GetComponent<Rigidbody>();
         this.rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
         this.shatteredCube = Resources.Load("ShatteredCube") as GameObject;
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	void Update () {
@@ -32,7 +35,9 @@ public class MovableController : MonoBehaviour {
                 if (col.gameObject.tag == "Enemy")
                 {
                     col.gameObject.SendMessage("ReceiveHit");
+                    sounds.MovableHit();
                 }
+
 
                 if (hitCount == MAX_HIT_COUNT)
                 {

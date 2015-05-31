@@ -7,9 +7,11 @@ public class TurretRocket : MonoBehaviour {
     private const float DAMAGE = 0.8f;
 
     private bool canBeDestroyed = true;
+
+    public SoundsController sounds;
 	void Start () 
     {
-	    
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	void Update () 
@@ -24,8 +26,9 @@ public class TurretRocket : MonoBehaviour {
             col.gameObject.SendMessage("TakeDamage", DAMAGE);    
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.2f);
+            sounds.RocketHit();
             Destroy(this.gameObject, 0.1f);
-
+            
         }
 
 
@@ -34,6 +37,7 @@ public class TurretRocket : MonoBehaviour {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
             Destroy(col.gameObject);
+            sounds.RocketHit();
             Destroy(this.gameObject, 0.1f);
         }
 
@@ -43,18 +47,21 @@ public class TurretRocket : MonoBehaviour {
 
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
+            sounds.RocketHit();
             Destroy(this.gameObject, 0.1f);
         }
         else if (col.gameObject.name.Contains("Cube"))
         {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
+            sounds.RocketHit();
             Destroy(this.gameObject, 0.1f);
         }
         else if (col.gameObject.name.Contains("Plane"))
         {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
+            sounds.RocketHit();
             Destroy(this.gameObject, 0.1f);
         }
 

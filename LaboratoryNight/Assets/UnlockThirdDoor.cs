@@ -9,10 +9,13 @@ public class UnlockThirdDoor : MonoBehaviour {
 
     public GameObject bootEffect;
 
+    public SoundsController sounds;
+
     // Use this for initialization
     void Start()
     {
         canPress = false;
+        sounds = GameObject.FindObjectOfType<SoundsController>();
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class UnlockThirdDoor : MonoBehaviour {
             canPress = false;
             GameObject boot = Instantiate(bootEffect, transform.position + transform.up * 4, transform.rotation) as GameObject;
             text.text = "";
+            sounds.HackComputer();
         }
     }
 

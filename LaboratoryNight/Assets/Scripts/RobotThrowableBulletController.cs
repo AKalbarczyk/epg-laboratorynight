@@ -11,11 +11,16 @@ public class RobotThrowableBulletController : MonoBehaviour {
 
     private string thrownByTag;
 
+    public SoundsController sounds;
+
 	void Start () 
     {
         rigidbody = this.gameObject.GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine("DisableFlyingToPlayer");
+        this.thrownByTag = "Enemy";
+
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	void FixedUpdate () 
@@ -36,6 +41,7 @@ public class RobotThrowableBulletController : MonoBehaviour {
             GameObject efx = Instantiate(hitEfx, transform.position, transform.rotation) as GameObject;
             Destroy(efx, 0.4f);
             Destroy(this.gameObject, 0.1f);
+
         }
 
         if (col.gameObject.name.Contains("Plane"))
@@ -51,6 +57,8 @@ public class RobotThrowableBulletController : MonoBehaviour {
             GameObject efx = Instantiate(hitEfx, transform.position, transform.rotation) as GameObject;
             Destroy(efx, 0.4f);
         }
+
+        sounds.FlaskHit();
     }
 
     private IEnumerator DisableFlyingToPlayer()

@@ -66,8 +66,6 @@
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
      <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
      <Compile Include="Assets\FirstClosedDoorScript.cs" />
-     <Compile Include="Assets\Fx Explosion Pack\Script\DestroyEffect.cs" />
-     <Compile Include="Assets\Fx Explosion Pack\Script\csLightControl.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\ControlGUIScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoreButtonScript.cs" />
@@ -131,6 +129,7 @@
      <Compile Include="Assets\Scripts\ShieldController.cs" />
      <Compile Include="Assets\Scripts\ShockwaveController.cs" />
      <Compile Include="Assets\Scripts\SlidingDoorController.cs" />
+     <Compile Include="Assets\Scripts\SoundsController.cs" />
      <Compile Include="Assets\Scripts\TurnAtPlayer.cs" />
      <Compile Include="Assets\Scripts\TurretFrontController.cs" />
      <Compile Include="Assets\Scripts\TurretRotationController.cs" />

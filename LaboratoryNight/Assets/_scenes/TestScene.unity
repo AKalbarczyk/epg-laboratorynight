@@ -278,6 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1368793
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -983,6 +984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &22172371
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -2289,6 +2291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &49774052
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -7973,6 +7976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &159554025
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -8829,6 +8833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &182334449
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -9080,6 +9085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0619fb55aa6605945938d13208b03fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: {fileID: 0}
 --- !u!135 &185716519
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12090,6 +12096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &243936697
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -13616,6 +13623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &279422555
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -14099,6 +14107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &293185319
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -15093,6 +15102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &310349612
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -15373,6 +15383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &315835022
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -15491,6 +15502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &316182766
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -15828,6 +15840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &319574819
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -16476,6 +16489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &336688406
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -16937,6 +16951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &343354647
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17626,6 +17641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &360653272
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -17890,6 +17906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &365519215
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18427,6 +18444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &384513778
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -18987,6 +19005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &396694029
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -20524,6 +20543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &436033213
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -20724,6 +20744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &436435982
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -21815,6 +21836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &451886084
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -22201,6 +22223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &461881465
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -22465,6 +22488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &464059283
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -22583,6 +22607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &467541784
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -23103,6 +23128,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11424848, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+      propertyPath: sounds
+      value: 
+      objectReference: {fileID: 1829043037}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
   m_IsPrefabParent: 0
@@ -23430,6 +23459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &477679654
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -24106,6 +24136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &494702802
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -24943,6 +24974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &509474477
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -25439,6 +25471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &517032545
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -26602,6 +26635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &532624386
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -27754,6 +27788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &556325371
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -30014,6 +30049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &598217995
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -31071,6 +31107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0619fb55aa6605945938d13208b03fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: {fileID: 0}
 --- !u!135 &621311269
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -35245,6 +35282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &721728104
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -37666,6 +37704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &783289568
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -40627,6 +40666,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 834307917}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &834328528
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1179780894}
+    m_Modifications:
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &836273817
 GameObject:
   m_ObjectHideFlags: 0
@@ -41256,6 +41337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &851740280
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -42310,6 +42392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &883094526
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -42647,6 +42730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &886362950
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -42752,6 +42836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0619fb55aa6605945938d13208b03fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: {fileID: 0}
 --- !u!135 &886376089
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -45063,6 +45148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &928140485
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -45254,6 +45340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &930703033
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -46552,6 +46639,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 948471463}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &948824657
+Transform:
+  m_PrefabParentObject: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+  m_PrefabInternal: {fileID: 1154900212}
 --- !u!1 &949351256
 GameObject:
   m_ObjectHideFlags: 0
@@ -47128,6 +47219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &963320558
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -49232,6 +49324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1008354958
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -49982,6 +50075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1022959058
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -50491,6 +50585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1034810827
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -51178,6 +51273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1048362367
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -54279,6 +54375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1110609952
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -54778,6 +54875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1114372154
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -55955,6 +56053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1126442778
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -57056,6 +57155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1152774675
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -57275,6 +57375,48 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1153509259}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1154900212
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1179780894}
+    m_Modifications:
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 404842, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4084969a31b288a4d854219d1718a065, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1156102666
 Prefab:
   m_ObjectHideFlags: 0
@@ -58544,6 +58686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1178557028
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -58617,6 +58760,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1178557025}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1179780893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1179780894}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1179780894
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1179780893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 165.001694, y: 10.7933502, z: 27.4367256}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 948824657}
+  - {fileID: 1829043036}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1 &1182709579
 GameObject:
   m_ObjectHideFlags: 0
@@ -61353,6 +61525,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0619fb55aa6605945938d13208b03fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: {fileID: 0}
 --- !u!135 &1241199088
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -62808,6 +62981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1250153839
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -64952,6 +65126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1290855157
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -65503,6 +65678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1298425583
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -65710,6 +65886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1302369056
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -72510,6 +72687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1461678845
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -73002,6 +73180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1478548903
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -73418,6 +73597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1485990211
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -73961,6 +74141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1494007521
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -74590,6 +74771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1504569922
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -75592,6 +75774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1523608344
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -76209,6 +76392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1541951108
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -76764,6 +76948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1550635122
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -78033,6 +78218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1575253662
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -80096,6 +80282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1628469425
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -80851,6 +81038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1644961468
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -81115,6 +81303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1651678647
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -81809,6 +81998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1671443699
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -84569,6 +84759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1751082626
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -85253,6 +85444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1758598307
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -85371,6 +85563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1764519617
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -86289,6 +86482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1784236840
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -87855,6 +88049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1805517265
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -88654,6 +88849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1814391162
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -88932,6 +89128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1818791256
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -89050,6 +89247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1819372709
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -89415,6 +89613,16 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1824778810}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1829043036
+Transform:
+  m_PrefabParentObject: {fileID: 448640, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+  m_PrefabInternal: {fileID: 834328528}
+--- !u!114 &1829043037
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11486018, guid: 9a076b82259d82749ba7a0f8bca71dc3,
+    type: 2}
+  m_PrefabInternal: {fileID: 834328528}
+  m_Script: {fileID: 11500000, guid: 95d7267b322937a4e97c461699352475, type: 3}
 --- !u!1 &1829917454
 GameObject:
   m_ObjectHideFlags: 0
@@ -89460,6 +89668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1829917457
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -89648,6 +89857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1838945762
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -89766,6 +89976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1839854401
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -89970,6 +90181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1840077422
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -90450,6 +90662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1852456519
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -91152,6 +91365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1861742457
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -91562,6 +91776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1868684950
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -91769,6 +91984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1873503551
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -91887,6 +92103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1874420181
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -95720,6 +95937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1941969788
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -96326,6 +96544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1947581416
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -96723,6 +96942,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1950234473
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -97901,6 +98121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1966661505
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -98060,6 +98281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0619fb55aa6605945938d13208b03fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: {fileID: 0}
 --- !u!135 &1968020560
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -98392,6 +98614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1978598123
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -98862,6 +99085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &1990637156
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -99318,6 +99542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &2002640399
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -99509,6 +99734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &2009262746
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -101846,6 +102072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &2041603859
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -102446,6 +102673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &2053486755
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -105353,6 +105581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &2110546391
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -106575,6 +106804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 0}
+  sounds: {fileID: 0}
 --- !u!208 &2130196261
 NavMeshObstacle:
   m_ObjectHideFlags: 0
