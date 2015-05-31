@@ -39,7 +39,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180306}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
@@ -71,7 +71,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180306}
   serializedVersion: 2
-  m_Mass: 3
+  m_Mass: 1.70000005
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 1
@@ -103,7 +103,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: .300000012
   m_StartWidth: 1
   m_EndWidth: 1
   m_Colors:

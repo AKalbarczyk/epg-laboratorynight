@@ -104,6 +104,11 @@ public class GravityGunCatch : MonoBehaviour {
                         caughtRigidbody.gameObject.SendMessage("IsThrown");
                     }
 
+                    if (caughtRigidbody.name == "flask")
+                    {
+                        caughtRigidbody.gameObject.SendMessage("BulletThrown", "Player");
+                    }
+
                     isObjectGoingToPlayer = false;
                     DestroyGravityCatchEffect();
                     caughtRigidbody.isKinematic = false;

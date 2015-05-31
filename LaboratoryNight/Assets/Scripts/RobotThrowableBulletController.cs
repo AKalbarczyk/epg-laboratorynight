@@ -8,6 +8,9 @@ public class RobotThrowableBulletController : MonoBehaviour {
     private bool isFlyingToPlayer = true;
 
     public GameObject hitEfx;
+
+    private string thrownByTag;
+
 	void Start () 
     {
         rigidbody = this.gameObject.GetComponent<Rigidbody>();
@@ -42,7 +45,7 @@ public class RobotThrowableBulletController : MonoBehaviour {
             Destroy(this.gameObject, 0.1f);
         }
 
-        if (col.gameObject.tag == "Enemy" && col.gameObject != this.gameObject) //prevent self-hit
+        if (col.gameObject.tag == "Enemy" && col.gameObject != this.gameObject && !thrownByTag.Equals("Enemy")) //prevent self-hit
         {
             col.SendMessage("TakeDamage", 0.5f);
             GameObject efx = Instantiate(hitEfx, transform.position, transform.rotation) as GameObject;
@@ -52,8 +55,12 @@ public class RobotThrowableBulletController : MonoBehaviour {
 
     private IEnumerator DisableFlyingToPlayer()
     {
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.3f);
         isFlyingToPlayer = false;
     }
 
+    public void BulletThrown(string objTag)
+    {
+        this.thrownByTag = objTag;
+    }
 }
