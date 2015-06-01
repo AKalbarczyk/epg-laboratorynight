@@ -13,6 +13,7 @@
 
 
 ### Bugi:
+- (!!!) po smierci i ponownym zaladowaniu levela nie da sie hackowac komputera
 - movable przenikaja przez sciany kiedy gracz trzyma je w GravGunie
 - shockwave i pull przelatuja przez sciany
 - drzwi nie otwieraja sie plynnie
