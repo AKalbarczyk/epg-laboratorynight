@@ -39,7 +39,8 @@ public class SoundsController : MonoBehaviour {
     public AudioClip flaskHit;
 
     public AudioClip noAmmo;
-  
+
+    public AudioClip collectWeapon;
 
 	void Start () {
 
@@ -169,5 +170,10 @@ public class SoundsController : MonoBehaviour {
     public void NoAmmo()
     {
         AudioSource.PlayClipAtPoint(noAmmo, Camera.main.transform.position);
+    }
+
+    public void CollectWeapon()
+    {
+        AudioSource.PlayClipAtPoint(collectWeapon, Camera.main.transform.position);
     }
 }

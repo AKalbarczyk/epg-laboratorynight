@@ -20,6 +20,8 @@ public class RobotHealth : MonoBehaviour {
     public GameObject onHit;
 
     private Transform player;
+
+    public SoundsController sounds;
     
 	void Start () 
     {
@@ -34,6 +36,8 @@ public class RobotHealth : MonoBehaviour {
         healthPack = Resources.Load("health pack") as GameObject;
 
         onHit = Resources.Load("Explosion02") as GameObject;
+
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	// Update is called once per frame
@@ -56,6 +60,7 @@ public class RobotHealth : MonoBehaviour {
     {
         this.health -= damage;
 
+        sounds.EnemyHit();
         
         if (this.health <= 0)
         {

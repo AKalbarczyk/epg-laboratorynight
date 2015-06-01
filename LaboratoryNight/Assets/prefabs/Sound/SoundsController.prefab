@@ -1,14 +1,14 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &176210
+--- !u!1 &186512
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 448640}
-  - 114: {fileID: 11486018}
+  - 4: {fileID: 403260}
+  - 114: {fileID: 11416236}
   m_Layer: 0
   m_Name: SoundsController
   m_TagString: Untagged
@@ -16,24 +16,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &448640
+--- !u!4 &403260
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176210}
+  m_GameObject: {fileID: 186512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11486018
+--- !u!114 &11416236
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 176210}
+  m_GameObject: {fileID: 186512}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 95d7267b322937a4e97c461699352475, type: 3}
@@ -53,14 +53,17 @@ MonoBehaviour:
   healthPickUp: {fileID: 8300000, guid: 5ab91a2740f8b4476a8946f20def321f, type: 3}
   manaPickUp: {fileID: 8300000, guid: cc98b8ccdf9a248059887d064e7e5067, type: 3}
   shield: {fileID: 8300000, guid: 26fdf572d8ba64140aecd1cf2d4a2897, type: 3}
-  blackHole: {fileID: 8300000, guid: ee3500c0c978c6548a16b59f40ec53c5, type: 3}
+  blackHole: {fileID: 8300000, guid: 3cd16699ceed09f4da69e3fe51b1aceb, type: 3}
   shockwave: {fileID: 8300000, guid: 6b2f5e232b0be01449b826110c3ad7ec, type: 3}
   doorOpening: {fileID: 8300000, guid: 1a358488dbc0038479a3a64bb09d7090, type: 3}
   switchWeapon: {fileID: 8300000, guid: 3b7a828a646174088aa48ee1db9c439c, type: 3}
   gravityGun: {fileID: 8300000, guid: cd5817e224b2b4d579cf0d0d8bfce316, type: 3}
+  gravityGunFail: {fileID: 8300000, guid: 592df79a021d14c1f89701af35e4ad14, type: 3}
   hackComputer: {fileID: 8300000, guid: 1a358488dbc0038479a3a64bb09d7090, type: 3}
   movableHit: {fileID: 8300000, guid: d7550df87e06fba479f77c93f02e5a58, type: 3}
   flaskHit: {fileID: 8300000, guid: 8c8ead0e2239ae8418fa0700611da715, type: 3}
+  noAmmo: {fileID: 8300000, guid: 3535722c57175449695abd945d3df695, type: 3}
+  collectWeapon: {fileID: 8300000, guid: ee3500c0c978c6548a16b59f40ec53c5, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -70,5 +73,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 176210}
+  m_RootGameObject: {fileID: 186512}
   m_IsPrefabParent: 1

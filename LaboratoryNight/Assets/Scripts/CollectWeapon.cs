@@ -7,9 +7,12 @@ public class CollectWeapon : MonoBehaviour {
     private GameObject[] allEnemies;
     public WeaponController thisWeapon;
     public GameObject collectEfx;
+
+    public SoundsController sounds;
 	void Start () 
     {
-        allEnemies = GameObject.FindGameObjectsWithTag("Enemy");   
+        allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        sounds = GameObject.FindObjectOfType<SoundsController>();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +31,7 @@ public class CollectWeapon : MonoBehaviour {
             GameObject efx = Instantiate(collectEfx, col.transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.3f);
 
+            sounds.CollectWeapon();
 
             Destroy(col.gameObject, 0.1f);
         }
@@ -40,6 +44,8 @@ public class CollectWeapon : MonoBehaviour {
 
             GameObject efx = Instantiate(collectEfx, col.transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.3f);
+
+            sounds.CollectWeapon();
 
             Destroy(col.gameObject, 0.1f);
         }

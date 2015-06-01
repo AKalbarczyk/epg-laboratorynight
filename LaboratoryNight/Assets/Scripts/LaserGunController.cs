@@ -15,7 +15,7 @@ public class LaserGunController : MonoBehaviour {
 
     public void StartApplyDamage()
     {
-        InvokeRepeating("ApplyDamage", 0, 0.5f);
+        InvokeRepeating("ApplyDamage", 0.5f, 0.5f);
     }
 
     public void StopApplyDamage()
@@ -47,7 +47,7 @@ public class LaserGunController : MonoBehaviour {
             {
                 col.SendMessage("TakeDamage", 0.5f);
                 GameObject obj = Instantiate(laserHit, col.gameObject.transform.position, col.gameObject.transform.rotation) as GameObject;
-                Destroy(obj, 0.3f);
+                Destroy(obj, 0.45f);
             }
         }
     }

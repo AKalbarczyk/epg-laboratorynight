@@ -6,8 +6,9 @@ public class EndGameScreen : MonoBehaviour {
 
     public RawImage FadeImg;
     public float fadeSpeed = 1.5f;
-    public bool sceneStarting = true;
+    private bool sceneStarting = false;
     private bool sceneEnding = false;
+    private bool sceneStarted = false;
 
     void Awake()
     {
@@ -17,6 +18,10 @@ public class EndGameScreen : MonoBehaviour {
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Space) && !sceneStarted)
+        {
+            sceneStarting = true;
+        }
         // If the scene is starting...
         if (sceneStarting)
         {
@@ -62,6 +67,7 @@ public class EndGameScreen : MonoBehaviour {
 
             // The scene is no longer starting.
             sceneStarting = false;
+            sceneStarted = true;
         }
     }
 
