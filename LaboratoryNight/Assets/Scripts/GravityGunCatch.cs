@@ -64,7 +64,7 @@ public class GravityGunCatch : MonoBehaviour {
                 StartCoroutine("ActivateGravityGunCatchTrace");
 
                 Collider c = GetNearestCollider();
-                if (c && weaponController.GetGravGunValue() > GRAVGUN_CATCH_VALUE)
+                if (c && weaponController.GetGravGunValue() > GRAVGUN_CATCH_VALUE && c.gameObject.name != "robot_bullet")
                 {
                     sounds.GravityGun();
                     isObjectPickedUp = true;
@@ -117,9 +117,13 @@ public class GravityGunCatch : MonoBehaviour {
                     caughtRigidbody.transform.parent = null;
 
                     throwPower = 50;
-                    caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);                  
-                   
-                    caughtRigidbody.SendMessage("RemoveForces");
+                    caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);
+
+                    if (caughtRigidbody.tag == "Movable")
+                    {
+                        caughtRigidbody.SendMessage("RemoveForces");
+                    }
+
                     caughtRigidbody = null;
                     isObjectPickedUp = false;
                     throwPower = 0;
@@ -194,7 +198,7 @@ public class GravityGunCatch : MonoBehaviour {
 
     private IEnumerator DisableObjectGoingToPlayer()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.5f);
 
         if (isObjectGoingToPlayer)
         {

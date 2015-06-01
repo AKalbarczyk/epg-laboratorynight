@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerHealthController : MonoBehaviour {
 
@@ -8,11 +9,16 @@ public class PlayerHealthController : MonoBehaviour {
     private bool shieldActive = false;
 
     public SoundsController sounds;
+    public Text endGameText;
+
+    private EndGameScreen endGameScreen;
 
 	void Start () 
     {
         health = 1;
         sounds = GameObject.FindObjectOfType<SoundsController>();
+        this.endGameText.text = "";
+        this.endGameScreen = GameObject.FindObjectOfType<EndGameScreen>();
 	}
 	
 	void Update () 
@@ -38,6 +44,13 @@ public class PlayerHealthController : MonoBehaviour {
             healthBarObj.SendMessage("SetNewValue", this.health);
             sounds.PlayerHit();
             Camera.main.SendMessage("CamShake");
+
+            if (this.health <= 0)
+            {
+                this.endGameText.text = "You're dead.";
+                this.endGameScreen.EndScene(0);
+            }
+
         }
     }
 

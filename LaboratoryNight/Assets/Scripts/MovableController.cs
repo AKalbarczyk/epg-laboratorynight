@@ -34,7 +34,7 @@ public class MovableController : MonoBehaviour {
 
                 if (col.gameObject.tag == "Enemy")
                 {
-                    col.gameObject.SendMessage("ReceiveHit");
+                    col.gameObject.SendMessage("TakeDamage", 1f);
                     sounds.MovableHit();
                 }
 
@@ -50,7 +50,7 @@ public class MovableController : MonoBehaviour {
                     r.enabled = false;
 
                     
-                    Destroy(shatter, 5f);
+                    Destroy(shatter, 3f);
                     Destroy(this.gameObject, 3f);
                 }
 

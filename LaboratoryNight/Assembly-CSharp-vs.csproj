@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\CaptureNormals.cs" />
      <Compile Include="Assets\Scripts\CollectWeapon.cs" />
      <Compile Include="Assets\Scripts\CursorController.cs" />
+     <Compile Include="Assets\Scripts\EndGameScreen.cs" />
      <Compile Include="Assets\Scripts\EndLevelController.cs" />
      <Compile Include="Assets\Scripts\GameCamera.cs" />
      <Compile Include="Assets\Scripts\GravityGunCatch.cs" />
