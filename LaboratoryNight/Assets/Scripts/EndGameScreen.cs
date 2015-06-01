@@ -13,8 +13,6 @@ public class EndGameScreen : MonoBehaviour {
     {
         FadeImg.uvRect = new Rect(0, 0, Screen.width, Screen.height);
         FadeImg.SetNativeSize();
-
-        Renderer.amb
     }
 
     void Update()

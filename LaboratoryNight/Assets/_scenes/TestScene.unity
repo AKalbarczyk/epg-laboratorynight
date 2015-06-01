@@ -17860,7 +17860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &364429898
 Transform:
   m_ObjectHideFlags: 0
@@ -22801,7 +22801,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 493708, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11493734, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: gravityCatchEffect
@@ -23203,6 +23203,14 @@ Prefab:
       propertyPath: endGameText
       value: 
       objectReference: {fileID: 240468940}
+    - target: {fileID: 13641722, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+      propertyPath: m_Center.y
+      value: .839999974
+      objectReference: {fileID: 0}
+    - target: {fileID: 14324958, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+      propertyPath: m_Center.y
+      value: 1.00999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
   m_IsPrefabParent: 0
@@ -40781,6 +40789,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11486018, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: gravityGunFail
+      value: 
+      objectReference: {fileID: 8300000, guid: 592df79a021d14c1f89701af35e4ad14, type: 3}
+    - target: {fileID: 11486018, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
+      propertyPath: noAmmo
+      value: 
+      objectReference: {fileID: 8300000, guid: 3535722c57175449695abd945d3df695, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a076b82259d82749ba7a0f8bca71dc3, type: 2}
   m_IsPrefabParent: 0

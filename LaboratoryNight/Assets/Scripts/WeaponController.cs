@@ -377,6 +377,10 @@ public class WeaponController : MonoBehaviour {
                 {
                     ShootGravityGun();
                 }
+                else
+                {
+                    sounds.NoAmmo();
+                }
             }
 
             else if (currWeaponMode == WeaponMode.SHOTGUN)
@@ -384,6 +388,10 @@ public class WeaponController : MonoBehaviour {
                 if (shotgunAmmo >= SHOTGUN_AMMO_CONSUMPTION)
                 {
                     ShootShotgun();
+                }
+                else
+                {
+                    sounds.NoAmmo();
                 }
             }
         }
@@ -393,6 +401,10 @@ public class WeaponController : MonoBehaviour {
             if (laserAmmo >= 3)
             {
                 ShootLaser();
+            }
+            else
+            {
+                sounds.NoAmmo();
             }
         }
 

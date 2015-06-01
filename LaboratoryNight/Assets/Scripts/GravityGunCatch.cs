@@ -87,6 +87,7 @@ public class GravityGunCatch : MonoBehaviour {
                     Destroy(failEfx, 0.4f);
                     throwPower = 0;
                     isIncreasingThrowPower = false;
+                    sounds.GravityGunFail();
                 }
 
 

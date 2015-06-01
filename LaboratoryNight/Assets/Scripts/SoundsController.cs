@@ -30,12 +30,16 @@ public class SoundsController : MonoBehaviour {
     public AudioClip switchWeapon;
 
     public AudioClip gravityGun;
+    public AudioClip gravityGunFail;
 
     public AudioClip hackComputer;
 
     public AudioClip movableHit;
 
     public AudioClip flaskHit;
+
+    public AudioClip noAmmo;
+  
 
 	void Start () {
 
@@ -155,5 +159,15 @@ public class SoundsController : MonoBehaviour {
     public void FlaskHit()
     {
         AudioSource.PlayClipAtPoint(flaskHit, Camera.main.transform.position);
+    }
+
+    public void GravityGunFail()
+    {
+        AudioSource.PlayClipAtPoint(gravityGunFail, Camera.main.transform.position);
+    }
+
+    public void NoAmmo()
+    {
+        AudioSource.PlayClipAtPoint(noAmmo, Camera.main.transform.position);
     }
 }
