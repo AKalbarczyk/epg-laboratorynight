@@ -60,7 +60,7 @@ public class RobotHealth : MonoBehaviour {
     {
         this.health -= damage;
 
-        sounds.EnemyHit();
+        //sounds.EnemyHit();
         
         if (this.health <= 0)
         {
