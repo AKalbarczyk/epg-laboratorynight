@@ -20,12 +20,12 @@ public class EndLevelController : MonoBehaviour {
         if (col.gameObject.tag == "Player")
         {
             GameObject obj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
-            Invoke("LoadNextLevel", 3f);
+            Invoke("LoadNextLevel", 0.6f);
         }
     }
 
     public void LoadNextLevel()
     {
-        Application.LoadLevel("Scene2");
+        Application.LoadLevel(Application.loadedLevel+1);
     }
 }
