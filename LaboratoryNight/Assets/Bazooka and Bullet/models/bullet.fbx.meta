@@ -3,8 +3,19 @@ guid: f97c5ff5b5abe4945b89f5b308677e27
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Shell_01_Low:pCylinder18
+    100004: Shell_02_Low:Shell_RoadKillOut
+    400000: //RootNode
+    400002: Shell_01_Low:pCylinder18
+    400004: Shell_02_Low:Shell_RoadKillOut
+    2300000: Shell_01_Low:pCylinder18
+    2300002: Shell_02_Low:Shell_RoadKillOut
+    3300000: Shell_01_Low:pCylinder18
+    3300002: Shell_02_Low:Shell_RoadKillOut
     4300000: Shell_01_Low:pCylinder18
     4300002: Shell_02_Low:Shell_RoadKillOut
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
