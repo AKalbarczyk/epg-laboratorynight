@@ -6,7 +6,7 @@ public class MoveTo : MonoBehaviour {
     Transform goal;
     NavMeshAgent agent;
     float dist;
-    bool noticePlayer = false;
+    public bool noticePlayer = false;
     Animator animator;
     public float minDist;
     

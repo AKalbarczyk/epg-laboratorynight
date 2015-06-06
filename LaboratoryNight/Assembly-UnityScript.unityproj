@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Unity 5/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Unity 5/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +72,7 @@
      <None Include="Assets\Help.txt" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Transparent\MK_Transparent-DiffuseBumpRim.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Sprites\MK_Sprite-Default.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Cutout\MK_Cutout-SoftEdgeUnlit.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\GlowConeTap.shader" />
@@ -157,6 +158,7 @@
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-DiffuseBumpSpec.shader" />
+     <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Sprites\MK_Sprite-Diffuse.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_Antialiasing\FXAAPreset2.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\Contrast Stretch\MinMaxReduction.shader" />
@@ -349,13 +351,16 @@
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-DiffuseBumped.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity 5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Destruction">
- <HintPath>C:/Users/Arek/GIT/epg-laboratorynight/LaboratoryNight/Assets/Fracture - Box Destruction - Standard/Scripts/Destruction.dll</HintPath>
+ <HintPath>D:/git/epg-laboratorynight/LaboratoryNight/Assets/Fracture - Box Destruction - Standard/Scripts/Destruction.dll</HintPath>
+ </Reference>
+ <Reference Include="MKGlowSystem 1">
+ <HintPath>D:/git/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem 1.dll</HintPath>
  </Reference>
  <Reference Include="MKGlowSystem">
- <HintPath>C:/Users/Arek/GIT/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem.dll</HintPath>
+ <HintPath>D:/git/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -84,6 +84,9 @@ public class WeaponController : MonoBehaviour {
 
 	void Start ()
     {
+
+        sounds = GameObject.FindObjectOfType<SoundsController>();
+
         rifleAmmoText.text = rifleAmmo.ToString();
         shotgunAmmoText.text = shotgunAmmo.ToString();
         laserAmmoText.text = laserAmmo.ToString();
