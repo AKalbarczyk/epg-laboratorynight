@@ -12,7 +12,7 @@ public class GravityGunCatch : MonoBehaviour {
     private Rigidbody caughtRigidbody;
     private GameObject caughtObject;
 
-    private const float OBJECT_HOLD_OFFSET = 2.5f;
+    private const float OBJECT_HOLD_OFFSET = 3.4f;
 
     public GameObject gravityCatchEffect; 
     private GameObject gravityCatchEffectObj;

@@ -9,12 +9,15 @@ public class BossGunController : MonoBehaviour {
     public GameObject smallRocket;
     private const float WEAPON_FORCE = 20;
     bool initFire = true;
+
+    private SoundsController sounds;
     // Use this for initialization
     void Start()
     {
         GameObject go = GameObject.FindGameObjectWithTag("Player");
         target = go.transform;
         myPosition = transform;
+        sounds = FindObjectOfType<SoundsController>();
     }
 
     // Update is called once per frame
@@ -44,8 +47,9 @@ public class BossGunController : MonoBehaviour {
         shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * WEAPON_FORCE, ForceMode.Impulse);
         //StartCoroutine("AccelerateRocket", shot);
 
-        //GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
-        //Destroy(flash, 0.3f);
+        sounds.TurretShot();
+        GameObject flash = Instantiate(weaponFlash, shotTranform.position, transform.rotation) as GameObject;
+        Destroy(flash, 0.3f);
 
     }
 

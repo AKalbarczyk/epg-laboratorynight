@@ -10,10 +10,12 @@ public class BossRocketController : MonoBehaviour {
     private bool isMovingToPlayer = true;
     private GameObject player;
     private Rigidbody rigidbody;
+    private SoundsController sounds;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rigidbody = GetComponent<Rigidbody>();
+        sounds = GameObject.FindObjectOfType<SoundsController>();
     }
 
     void Update()
@@ -48,7 +50,7 @@ public class BossRocketController : MonoBehaviour {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.2f);
 
-
+            sounds.RocketHit();
         }
 
 
@@ -87,6 +89,10 @@ public class BossRocketController : MonoBehaviour {
             Destroy(efx, 0.5f);
             Destroy(this.gameObject, 0.1f);
         }
+
+        
+
+        
 
     }
 

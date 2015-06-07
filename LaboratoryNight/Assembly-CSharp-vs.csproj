@@ -105,6 +105,7 @@
      <Compile Include="Assets\Scripts\AudioOffset.cs" />
      <Compile Include="Assets\Scripts\BossGunController.cs" />
      <Compile Include="Assets\Scripts\BossHealth.cs" />
+     <Compile Include="Assets\Scripts\BossRobotSpawn.cs" />
      <Compile Include="Assets\Scripts\BossRocketController.cs" />
      <Compile Include="Assets\Scripts\CameraShake.cs" />
      <Compile Include="Assets\Scripts\CaptureNormals.cs" />
