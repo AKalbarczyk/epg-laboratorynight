@@ -9,3 +9,7 @@ EditorBuildSettings:
     path: Assets/_scenes/TestScene.unity
   - enabled: 1
     path: Assets/_scenes/Scene2.unity
+  - enabled: 1
+    path: Assets/_scenes/Scene3-Boss.unity
+  - enabled: 1
+    path: Assets/_scenes/Secret.unity

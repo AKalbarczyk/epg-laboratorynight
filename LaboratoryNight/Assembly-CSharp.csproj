@@ -99,6 +99,7 @@
      <Compile Include="Assets\Pathfinding\Scripts\WaypointNode.cs" />
      <Compile Include="Assets\Pathfinding\Scripts\WaypointPathfinder.cs" />
      <Compile Include="Assets\PowerUpRotate.cs" />
+     <Compile Include="Assets\ReturnToLevel.cs" />
      <Compile Include="Assets\RobotGunController.cs" />
      <Compile Include="Assets\ScientistHealth.cs" />
      <Compile Include="Assets\Scripts\AmmoBoxController.cs" />
@@ -143,9 +144,11 @@
      <Compile Include="Assets\Scripts\WheelsRotation.cs" />
      <Compile Include="Assets\Scripts\spotPlayer.cs" />
      <Compile Include="Assets\SecondClosedDoor.cs" />
+     <Compile Include="Assets\SecretRoomActivator.cs" />
      <Compile Include="Assets\ShootAtPlayer.cs" />
      <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\SlidingDoorBlocked.cs" />
+     <Compile Include="Assets\TakeToSecretRoom.cs" />
      <Compile Include="Assets\ThirdClosedDoor.cs" />
      <Compile Include="Assets\TurretRocket.cs" />
      <Compile Include="Assets\UnlockFirstDoor.cs" />
