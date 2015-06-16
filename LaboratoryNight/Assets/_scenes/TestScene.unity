@@ -18099,6 +18099,34 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 22450702, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22449588, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 22443734, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22420184, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22427070, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407558, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 22402912, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
   m_IsPrefabParent: 0
@@ -23016,7 +23044,7 @@ Prefab:
     - target: {fileID: 11439532, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: healthBarObj
       value: 
-      objectReference: {fileID: 100000, guid: 401a6544193424cf087371c31a889924, type: 2}
+      objectReference: {fileID: 1405605308}
     - target: {fileID: 11469696, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: sounds
       value: 
@@ -23032,7 +23060,7 @@ Prefab:
     - target: {fileID: 11415234, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: gravGunBarObj
       value: 
-      objectReference: {fileID: 100000, guid: a81a51147ad4d41b9a2b19bf297701a7, type: 2}
+      objectReference: {fileID: 181165606}
     - target: {fileID: 11415234, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: rifleAmmoText
       value: 
@@ -53478,15 +53506,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 427282, guid: cfa2be89b3c367a4c8c4dc0c9043b633, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 71.738327
+      value: 71.7399979
       objectReference: {fileID: 0}
     - target: {fileID: 427282, guid: cfa2be89b3c367a4c8c4dc0c9043b633, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 8.88833904
+      value: 8.90999985
       objectReference: {fileID: 0}
     - target: {fileID: 427282, guid: cfa2be89b3c367a4c8c4dc0c9043b633, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 70.7632065
+      value: 70.7600021
       objectReference: {fileID: 0}
     - target: {fileID: 427282, guid: cfa2be89b3c367a4c8c4dc0c9043b633, type: 2}
       propertyPath: m_LocalRotation.x

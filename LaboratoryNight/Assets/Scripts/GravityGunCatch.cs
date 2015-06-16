@@ -209,6 +209,7 @@ public class GravityGunCatch : MonoBehaviour {
         if (isObjectGoingToPlayer)
         {
             isObjectGoingToPlayer = false;
+            caughtObject.transform.position = transform.position + transform.forward * OBJECT_HOLD_OFFSET;
         }
     }
 
