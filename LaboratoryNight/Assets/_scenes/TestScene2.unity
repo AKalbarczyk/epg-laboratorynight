@@ -146,7 +146,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
 --- !u!1 &14052484
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,6 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &89479608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,12 +1353,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 424512, guid: 61f5f50ffcc58d545aea9ad4b4751199, type: 2}
   m_PrefabInternal: {fileID: 239706862}
---- !u!114 &273388148
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11444694, guid: 2eda610e5cc908d4188b6f2728858ebb,
-    type: 2}
-  m_PrefabInternal: {fileID: 780206135}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &276658303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,12 +1791,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321150963}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &323119625
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11453128, guid: 2eda610e5cc908d4188b6f2728858ebb,
-    type: 2}
-  m_PrefabInternal: {fileID: 780206135}
-  m_Script: {fileID: 11500000, guid: 4c95a157734574f82b4e53cba5dae53b, type: 3}
 --- !u!1 &326419202
 GameObject:
   m_ObjectHideFlags: 0
@@ -2780,6 +2769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &434008983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3027,7 +3017,7 @@ Transform:
   - {fileID: 281905579}
   - {fileID: 277611055}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
 --- !u!1 &462117840
 GameObject:
   m_ObjectHideFlags: 0
@@ -3832,6 +3822,48 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: .5
+--- !u!1001 &577642492
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 200.714951
+      objectReference: {fileID: 0}
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 26.8154716
+      objectReference: {fileID: 0}
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -50.7217445
+      objectReference: {fileID: 0}
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 467546, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: bfbd9e7ac0a6211449304f51c5000e6f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &580800475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,7 +3996,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &595659612
 Prefab:
   m_ObjectHideFlags: 0
@@ -5123,34 +5155,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: .5
---- !u!1 &720027302
-GameObject:
-  m_PrefabParentObject: {fileID: 150014, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
-  m_PrefabInternal: {fileID: 1260504188}
---- !u!114 &720027304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 720027302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 572890063, guid: 3394a17a304cd044b8bf64135e58a2a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  noGarbageBlurShader: {fileID: 4800000, guid: 08541fc9424999e4e9c33f3abde31695, type: 3}
-  blurShader: {fileID: 4800000, guid: 1855d9636fad3914bacc4a543165c974, type: 3}
-  compositeShader: {fileID: 4800000, guid: 86db892f77f2e234fa73ba9c18757385, type: 3}
-  glowRenderShader: {fileID: 4800000, guid: c04b7cae8accdfb4e9c2648823ff39d7, type: 3}
-  fSDSShader: {fileID: 4800000, guid: 3faaa2f824924e74fb67bdff8dee90f5, type: 3}
-  glowType: 0
-  glowQuality: 1
-  fullScreenGlowTint: {r: 1, g: 1, b: 1, a: 0}
-  blurSpread: .209999993
-  blurIterations: 2
-  glowIntensity: .280000001
-  blurOffset: 0
-  samples: 4
 --- !u!1 &724698441
 GameObject:
   m_ObjectHideFlags: 0
@@ -5431,6 +5435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &750297882
 GameObject:
   m_ObjectHideFlags: 0
@@ -6329,6 +6334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &935618213
 GameObject:
   m_ObjectHideFlags: 0
@@ -6580,7 +6586,7 @@ Transform:
   - {fileID: 389079682}
   - {fileID: 239706863}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
 --- !u!1 &974316562
 GameObject:
   m_ObjectHideFlags: 0
@@ -6856,7 +6862,7 @@ Transform:
   - {fileID: 916368958}
   - {fileID: 749916217}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!1 &1010763446
 GameObject:
   m_ObjectHideFlags: 0
@@ -7348,6 +7354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1084722558
 GameObject:
   m_ObjectHideFlags: 0
@@ -7452,7 +7459,7 @@ Transform:
   - {fileID: 1736664894}
   - {fileID: 1352702432}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &1100851587
 GameObject:
   m_ObjectHideFlags: 0
@@ -8469,11 +8476,11 @@ Prefab:
     - target: {fileID: 11419788, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
       propertyPath: gravGunBar
       value: 
-      objectReference: {fileID: 1948535170}
+      objectReference: {fileID: 0}
     - target: {fileID: 11419788, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
       propertyPath: weaponModeText
       value: 
-      objectReference: {fileID: 273388148}
+      objectReference: {fileID: 0}
     - target: {fileID: 11419788, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
       propertyPath: bullet
       value: 
@@ -8497,7 +8504,7 @@ Prefab:
     - target: {fileID: 11456284, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
       propertyPath: healthBar
       value: 
-      objectReference: {fileID: 323119625}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da05c83d715f7034e9ca2ab18233bf50, type: 2}
   m_IsPrefabParent: 0
@@ -8629,7 +8636,7 @@ Transform:
   - {fileID: 1710833809}
   - {fileID: 1810567894}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
 --- !u!1 &1329038484
 GameObject:
   m_ObjectHideFlags: 0
@@ -8904,6 +8911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0619fb55aa6605945938d13208b03fbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: {fileID: 0}
 --- !u!135 &1352702438
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9788,6 +9796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1497523061
 GameObject:
   m_ObjectHideFlags: 0
@@ -10942,6 +10951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1614246555
 GameObject:
   m_ObjectHideFlags: 0
@@ -11133,6 +11143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1630715282
 GameObject:
   m_ObjectHideFlags: 0
@@ -11774,6 +11785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1736664893
 GameObject:
   m_ObjectHideFlags: 0
@@ -12000,6 +12012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1762305587
 GameObject:
   m_ObjectHideFlags: 0
@@ -12118,6 +12131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1782039395
 GameObject:
   m_ObjectHideFlags: 0
@@ -12336,7 +12350,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &1810567894
 Transform:
-  m_PrefabParentObject: {fileID: 426042, guid: dcf595393de53a5428e1b5a3dc267367, type: 2}
+  m_PrefabParentObject: {fileID: 455212, guid: dcf595393de53a5428e1b5a3dc267367, type: 2}
   m_PrefabInternal: {fileID: 1810567893}
 --- !u!1 &1815956424
 GameObject:
@@ -13000,12 +13014,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1919092775}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1948535170
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11493730, guid: 2eda610e5cc908d4188b6f2728858ebb,
-    type: 2}
-  m_PrefabInternal: {fileID: 780206135}
-  m_Script: {fileID: 11500000, guid: 4c95a157734574f82b4e53cba5dae53b, type: 3}
 --- !u!1 &1951531477
 GameObject:
   m_ObjectHideFlags: 0
@@ -13536,6 +13544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &1991010167
 GameObject:
   m_ObjectHideFlags: 0
@@ -14899,7 +14908,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
 --- !u!1 &2101067901
 GameObject:
   m_ObjectHideFlags: 0
@@ -15206,6 +15215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatteredCube: {fileID: 753253396}
+  sounds: {fileID: 0}
 --- !u!1 &2130481627
 GameObject:
   m_ObjectHideFlags: 0
@@ -15306,7 +15316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!114 &2145421243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15318,3 +15328,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535942392f703254a9577694e8d591d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorTexture: {fileID: 0}

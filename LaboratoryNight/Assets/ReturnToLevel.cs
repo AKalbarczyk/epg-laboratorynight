@@ -5,7 +5,7 @@ public class ReturnToLevel : MonoBehaviour {
 
     // Use this for initialization
     public GameObject efx;
-
+    GameObject player;
     void Start()
     {
 
@@ -21,8 +21,8 @@ public class ReturnToLevel : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            GameObject obj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
-            Invoke("LoadNextLevel", 0.6f);
+            player = GameObject.FindGameObjectWithTag("Player");
+            player.transform.position = new Vector3(80.4f, 0f, 258.2f);
         }
     }
 

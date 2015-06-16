@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class TakeToSecretRoom : MonoBehaviour {
-
+    GameObject player;
+        
 	// Use this for initialization
 	void Start () {
 	
@@ -16,14 +17,12 @@ public class TakeToSecretRoom : MonoBehaviour {
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == "Player")
-        {
-         //   GameObject obj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
-            Invoke("LoadNextLevel", 0.6f);
+        {       
+            GameObject tp = GameObject.FindGameObjectWithTag("tpSpot");            
+            player = GameObject.FindGameObjectWithTag("Player");           
+            player.transform.position = new Vector3(380.9f,0f,173f);
         }
     }
 
-    public void LoadNextLevel()
-    {
-        Application.LoadLevel(Application.loadedLevel + 2);
-    }
+   
 }
