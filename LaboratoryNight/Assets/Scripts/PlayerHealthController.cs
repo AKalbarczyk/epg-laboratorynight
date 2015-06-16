@@ -48,7 +48,7 @@ public class PlayerHealthController : MonoBehaviour {
             if (this.health <= 0)
             {
                 this.endGameText.text = "You're dead.";
-                this.endGameScreen.EndScene(0);
+                this.endGameScreen.EndScene(Application.loadedLevel);
             }
 
         }

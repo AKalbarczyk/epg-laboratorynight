@@ -17,17 +17,20 @@ public class BossHealth : MonoBehaviour {
 
     private float health = 1;
 
-    public MoveTo moveToScript;
+    public BossMoveTo moveToScript;
     public TurnAtPlayer turnAtPlayer;
     private NavMeshAgent navMeshAgent;
     public BossGunController bossGun;
 
     private SoundsController sounds;
 
+    private EndGameScreen endGame;
+
 	void Start () {
         onHit = Resources.Load("Explosion02") as GameObject;
         navMeshAgent = GetComponent<NavMeshAgent>();
         sounds = GameObject.FindObjectOfType<SoundsController>();
+        endGame = GameObject.FindObjectOfType<EndGameScreen>();
 	}
 	
 	// Update is called once per frame
@@ -86,6 +89,9 @@ public class BossHealth : MonoBehaviour {
         if (this.health <= 0)
         {
             GameObject e = Instantiate(onHit, transform.position + (transform.up * 2), transform.rotation) as GameObject;
+
+            endGame.Invoke("EndSceneFinal", 1.5f);
+
             Destroy(e, 0.4f);
             Destroy(this.gameObject);
         }

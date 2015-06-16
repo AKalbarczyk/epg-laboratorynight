@@ -69,12 +69,16 @@ public class BossRocketController : MonoBehaviour {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
             Destroy(this.gameObject, 0.1f);
+
+            sounds.RocketHit();
         }
         else if (col.gameObject.name.Contains("Cube"))
         {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
             Destroy(this.gameObject, 0.1f);
+
+            sounds.RocketHit();
         }
 
         else if (col.gameObject.tag == "Wall")
@@ -82,12 +86,16 @@ public class BossRocketController : MonoBehaviour {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.3f);
             Destroy(this.gameObject, 0.1f);
+
+            sounds.RocketHit();
         }
         else if (col.gameObject.name.Contains("Plane"))
         {
             GameObject efx = Instantiate(explosion, transform.position, Quaternion.identity) as GameObject;
             Destroy(efx, 0.5f);
             Destroy(this.gameObject, 0.1f);
+
+            sounds.RocketHit();
         }
 
         

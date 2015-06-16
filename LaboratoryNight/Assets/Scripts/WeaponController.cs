@@ -561,7 +561,12 @@ public class WeaponController : MonoBehaviour {
         GameObject shot = Instantiate(gravityGunShot, shotTranform.position, transform.rotation) as GameObject;
         shot.GetComponent<Rigidbody>().AddForce(shotTranform.forward * WEAPON_FORCE, ForceMode.Impulse);
 
+        GameObject flash = Instantiate(weaponFlash, transform.position, transform.rotation) as GameObject;
+        Destroy(flash, 0.1f);
+        UpdateShotgunAmmo(-SHOTGUN_AMMO_CONSUMPTION);
+
         Destroy(shot, 1.2f);
+
 
         UpdateRifleAmmo(-1);
    }

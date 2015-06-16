@@ -120,6 +120,11 @@ public class GravityGunCatch : MonoBehaviour {
                     throwPower = 50;
                     caughtRigidbody.AddForce(transform.forward * throwPower, ForceMode.Impulse);
 
+                    if (caughtRigidbody.name.Contains("flask"))
+                    {
+                        throwPower = 120;
+                    }
+
                     if (caughtRigidbody.tag == "Movable")
                     {
                         caughtRigidbody.SendMessage("RemoveForces");

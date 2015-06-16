@@ -87,4 +87,17 @@ public class EndGameScreen : MonoBehaviour {
             Application.LoadLevel(SceneNumber);
     }
 
+    public void EndSceneFinal()
+    {
+        // Make sure the RawImage is enabled.
+        sceneEnding = true;
+        FadeImg.enabled = true;
+
+        // Start fading towards black.
+        FadeToBlack();
+
+        // If the screen is almost black...
+        
+    }
+
 }
