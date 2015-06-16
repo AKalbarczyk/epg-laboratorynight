@@ -70,6 +70,7 @@
      <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoreButtonScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoveCameraScript.cs" />
+     <Compile Include="Assets\MenuButtonController.cs" />
      <Compile Include="Assets\MiniMapFollow.cs" />
      <Compile Include="Assets\MiniMapScript.cs" />
      <Compile Include="Assets\MoveTo.cs" />
