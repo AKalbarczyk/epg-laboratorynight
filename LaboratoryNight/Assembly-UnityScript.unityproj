@@ -54,6 +54,7 @@
      <Compile Include="Assets\Pathfinding\Scenes\Scripts\JSGridPlayer.js" />
      <Compile Include="Assets\Pathfinding\Scenes\Scripts\JSGridPlayer2D.js" />
      <Compile Include="Assets\Pathfinding\Scripts\JSPath.js" />
+     <Compile Include="Assets\Pause Menu\PauseMenu.js" />
      <Compile Include="Assets\Point.js" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
