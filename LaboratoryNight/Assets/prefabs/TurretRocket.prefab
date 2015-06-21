@@ -26,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119528}
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: -1.62920685e-07}
+  m_LocalRotation: {x: -.0087265363, y: 0, z: 0, w: .999961913}
   m_LocalPosition: {x: -4.44560909, y: .843341172, z: 49.3640099}
-  m_LocalScale: {x: .00300000003, y: .00300000003, z: .00300000003}
+  m_LocalScale: {x: .00319999992, y: .00319999992, z: .00319999992}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -42,7 +42,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 3a275c7608e76f045ad44be97857de83, type: 2}
+  - {fileID: 2100000, guid: 7bd99ec74d6b5b24c96b4433dc86dd3d, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 100000, guid: 8e02e06584f51ab42986fd44c73d976e, type: 2}
+  sounds: {fileID: 0}
 --- !u!136 &13630326
 CapsuleCollider:
   m_ObjectHideFlags: 1

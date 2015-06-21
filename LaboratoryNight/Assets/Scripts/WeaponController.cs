@@ -53,6 +53,7 @@ public class WeaponController : MonoBehaviour {
     private Collider[] colsTrappedInPull;
 
     private const float WEAPON_FORCE = 120;
+    //private const float WEAPON_FORCE = 10;
     private bool isShooting = false;
 
     private int gravityGunShootCount = 0;
@@ -104,6 +105,27 @@ public class WeaponController : MonoBehaviour {
 
         gravGunBarObj.SendMessage("SetNewValue", GRAVGUN_INIT_VALUE);
         InvokeRepeating("RegenerateGravGun", 0.5f, 0.5f);
+
+        if (Application.loadedLevelName == "TestScene-WeaponsEnabled")
+        {
+            EnableShotgun();
+            UpdateShotgunAmmo(10);
+
+            EnableLaser();
+            UpdateLaserAmmo(15);
+
+            GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (GameObject enemy in allEnemies)
+            {
+                if (enemy)
+                {
+                    enemy.SendMessage("CanDropShotgunAmmo");
+                    enemy.SendMessage("CanDropLaserAmmo");
+                }
+            }
+
+        }
 	}
 	
 	void Update () 
@@ -563,7 +585,6 @@ public class WeaponController : MonoBehaviour {
 
         GameObject flash = Instantiate(weaponFlash, transform.position, transform.rotation) as GameObject;
         Destroy(flash, 0.1f);
-        UpdateShotgunAmmo(-SHOTGUN_AMMO_CONSUMPTION);
 
         Destroy(shot, 1.2f);
 

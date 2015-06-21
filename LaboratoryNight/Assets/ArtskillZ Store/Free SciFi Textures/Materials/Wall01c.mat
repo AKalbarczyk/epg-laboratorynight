@@ -18,7 +18,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: 600753e422bc1774ca89af0e8489c3c2, type: 3}
+          m_Texture: {fileID: 2800000, guid: e33eae3eaf4c96d4cac1dc6ec00e4146, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -37,9 +37,23 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _ToonShade
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _ParallaxMap
         second:
           m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Cube
+        second:
+          m_Texture: {fileID: 8900000, guid: b995d4bd9d11078d11005b9844295342, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -84,6 +98,10 @@ Material:
         second: .5
       data:
         first:
+          name: _Shininess
+        second: .254000008
+      data:
+        first:
           name: _SrcBlend
         second: 1
       data:
@@ -96,12 +114,16 @@ Material:
         second: .0199999996
       data:
         first:
+          name: _InvFade
+        second: 1.34000003
+      data:
+        first:
           name: _ZWrite
         second: 1
       data:
         first:
           name: _Glossiness
-        second: .5
+        second: .411000013
       data:
         first:
           name: _BumpScale
@@ -130,15 +152,35 @@ Material:
         first:
           name: _Metallic
         second: 0
+      data:
+        first:
+          name: _LineWidth
+        second: 1
+      data:
+        first:
+          name: _LightSaberFactor
+        second: .899999976
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: 0, g: 0, b: 0, a: 0}
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: .517028928, g: .522058845, b: .157385379, a: 1}
+      data:
+        first:
+          name: _SpecColor
+        second: {r: 1, g: 0, b: 0, a: 0}
+      data:
+        first:
+          name: _ReflectColor
+        second: {r: 1, g: .517241359, b: 0, a: .501960814}
+      data:
+        first:
+          name: _TintColor
+        second: {r: 1, g: 1, b: 1, a: .501960814}
       data:
         first:
           name: _EmissionColorUI

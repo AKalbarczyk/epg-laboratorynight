@@ -28,12 +28,13 @@ public class RobotBulletController : MonoBehaviour {
         }
         if (col.gameObject.tag == "NotWalkable" || col.gameObject.tag == "Wall")
         {
-            Destroy(this.gameObject, 0.01f);
+            Destroy(this.gameObject);
         }
 
         else if (col.gameObject.tag == "Player")
         {
             Destroy(this.gameObject, 0.1f);
         }
+      
     }
 }

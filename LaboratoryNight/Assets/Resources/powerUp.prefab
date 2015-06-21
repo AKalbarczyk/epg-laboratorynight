@@ -39,11 +39,10 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 129396}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_Materials:
   - {fileID: 2100000, guid: 5bbf6d6b22249714db6a0483ae425df3, type: 2}
-  - {fileID: 2100000, guid: 62731ab35455a5042b492e2a0f3ce0d4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -99,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectEfx: {fileID: 100002, guid: 75369bb81385f4904842bf20a51c14a2, type: 2}
+  sounds: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

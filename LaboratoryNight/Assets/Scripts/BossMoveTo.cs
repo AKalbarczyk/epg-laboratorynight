@@ -47,7 +47,8 @@ public class BossMoveTo : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         while (true)
         {
-            agent.destination = goal.position;
+            if (agent)
+                agent.destination = goal.position;
             yield return new WaitForSeconds(0.25f);
         }
     }

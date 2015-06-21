@@ -8441,7 +8441,7 @@ Transform:
   - {fileID: 1244915611}
   - {fileID: 1286655808}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 15
 --- !u!1 &162577488
 GameObject:
   m_ObjectHideFlags: 0
@@ -24594,11 +24594,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489294, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 148.800003
+      value: 155.899994
       objectReference: {fileID: 0}
     - target: {fileID: 489294, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -140.5
+      value: -147.5
       objectReference: {fileID: 0}
     - target: {fileID: 11439532, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: endGameText
@@ -24676,6 +24676,18 @@ Prefab:
       propertyPath: laserSelector
       value: 
       objectReference: {fileID: 1519276949}
+    - target: {fileID: 11415234, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 113530, guid: ef20011811008694893c953210c4783a, type: 2}
+    - target: {fileID: 11415234, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+      propertyPath: gravityGunShot
+      value: 
+      objectReference: {fileID: 113530, guid: ef20011811008694893c953210c4783a, type: 2}
+    - target: {fileID: 11415234, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+      propertyPath: shotgunShot
+      value: 
+      objectReference: {fileID: 175650, guid: 89fd4db7e54d2754faf29257f2581715, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
   m_IsPrefabParent: 0
@@ -46979,7 +46991,7 @@ Transform:
   m_PrefabParentObject: {fileID: 481058, guid: c92e4a86a4df0cd44a088a6f1a7e15c6, type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 871092458}
-  m_LocalRotation: {x: .653281629, y: .270598024, z: -.270597994, w: .65328151}
+  m_LocalRotation: {x: .653281569, y: .270597994, z: -.270597965, w: .65328145}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -82159,6 +82171,10 @@ Prefab:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 11418558, guid: c97c4a195f9aa854986658e7137b445b, type: 2}
+      propertyPath: rocket
+      value: 
+      objectReference: {fileID: 128050, guid: 103893cf093b0a541b13c6f99429853b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c97c4a195f9aa854986658e7137b445b, type: 2}
   m_IsPrefabParent: 0
@@ -122772,7 +122788,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!114 &2145421243
 MonoBehaviour:
   m_ObjectHideFlags: 0

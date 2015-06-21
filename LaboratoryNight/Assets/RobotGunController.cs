@@ -16,6 +16,7 @@ public class RobotGunController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         dist = 100F;
         sounds = GameObject.FindObjectOfType<SoundsController>();
+        rocket = Resources.Load("robot_bullet") as GameObject;
     }
 
     // Update is called once per frame

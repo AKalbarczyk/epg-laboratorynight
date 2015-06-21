@@ -10,8 +10,9 @@ public class BossHealth : MonoBehaviour {
     public GameObject weakBossEffect;
     private GameObject efx;
     private bool canDamageBoss = false;
+    public GameObject shield;
 
-    public GUIBarScript bossHealthBar;
+    public UIBarScript bossHealthBar;
 
     private int rocketHitCount = 0;
 
@@ -47,6 +48,7 @@ public class BossHealth : MonoBehaviour {
         navMeshAgent.enabled = true;
         turnAtPlayer.enabled = true;
         bossGun.enabled = true;
+        shield.SetActive(true);
     }
 
     void OnTriggerEnter(Collider col)
@@ -58,19 +60,20 @@ public class BossHealth : MonoBehaviour {
             rocketHitCount++;
             GameObject e = Instantiate(onRocketHit, transform.position + (transform.up * 2), transform.rotation) as GameObject;
             Destroy(e, 0.4f);
-            if (rocketHitCount == 3)
+            if (rocketHitCount == 1)
             {
                 canDamageBoss = true;
                 efx = Instantiate(weakBossEffect, transform.position + (transform.up * 3), Quaternion.identity) as GameObject;
                 moveToScript.enabled = false;
                 navMeshAgent.enabled = false;
                 turnAtPlayer.enabled = false;
+                shield.SetActive(false);
                 bossGun.enabled = false;
                 Invoke("ResetHitCount", 2f);
             }
         }
 
-        if (col.gameObject.name.Contains("bullet"))
+        if (col.gameObject.name.Contains("shot_prefab"))
         {
             if (canDamageBoss)
             {
@@ -96,11 +99,13 @@ public class BossHealth : MonoBehaviour {
             Destroy(this.gameObject);
         }
 
-        this.bossHealthBar.SetNewValue(this.health);
+        Debug.Log("BOSS HEALTH: " + this.health);
+
+        this.bossHealthBar.UpdateValue(this.health);
     }
 
     private void TakeDamage()
     {
-        UpdateHealth(-0.05f);
+        UpdateHealth(-0.04f);
     }
 }

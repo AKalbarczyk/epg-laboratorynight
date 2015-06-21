@@ -39,7 +39,7 @@ public class TurretFrontController : MonoBehaviour {
         
         while (startShooting)
         {
-            GameObject obj = Instantiate(rocket, transform.position, transform.rotation) as GameObject;
+            GameObject obj = Instantiate(rocket, transform.position, new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z, transform.rotation.w)) as GameObject;
             GameObject efxObj = Instantiate(efx, transform.position, Quaternion.identity) as GameObject;
             Destroy(efxObj, 0.3f);
 
@@ -56,7 +56,7 @@ public class TurretFrontController : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.4f);
         if (obj)
-            obj.GetComponent<Rigidbody>().AddForce(transform.forward * 40f, ForceMode.Impulse);
+            obj.GetComponent<Rigidbody>().AddForce(transform.forward * 10f, ForceMode.Impulse);
     }
 
 }

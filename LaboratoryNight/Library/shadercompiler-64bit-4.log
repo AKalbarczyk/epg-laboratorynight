@@ -1,106 +1,30 @@
 Base path: D:/Unity 5/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-4-7028
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-4-9084
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=0 type=0 insize=977 outsize=10500 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+  api=4 type=0 insize=2080 outsize=2802 kw= ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=977 outsize=3660 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=934 outsize=5949 kw=SPOT SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=934 outsize=5695 kw=DIRECTIONAL_COOKIE SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=934 outsize=1051 kw=DIRECTIONAL_COOKIE SHADOWS_SCREEN ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=934 outsize=5068 kw=DIRECTIONAL_COOKIE SHADOWS_SCREEN ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=934 outsize=6667 kw=POINT_COOKIE SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=934 outsize=7601 kw=POINT_COOKIE SHADOWS_CUBE SHADOWS_SOFT ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=934 outsize=6003 kw=POINT_COOKIE SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=934 outsize=6905 kw=SPOT SHADOWS_DEPTH SHADOWS_NATIVE ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=934 outsize=6 kw=POINT SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=934 outsize=2214 kw=POINT_COOKIE SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=934 outsize=7343 kw=POINT SHADOWS_CUBE SHADOWS_SOFT ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=751 outsize=6 kw=SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=1148 outsize=8171 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=1148 outsize=6 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=1148 outsize=2301 kw=LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF UNITY_HDR_ON ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=903 outsize=4297 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=903 outsize=5283 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=903 outsize=1473 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
-Cmd: compileSnippet
-  api=8 type=0 insize=903 outsize=7386 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=903 outsize=3809 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=812 outsize=871 kw=POINT SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=812 outsize=4302 kw=DIRECTIONAL SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=812 outsize=5020 kw=POINT_COOKIE SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=812 outsize=4536 kw=DIRECTIONAL_COOKIE SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=0 insize=812 outsize=929 kw=DIRECTIONAL SHADOWS_SCREEN ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=812 outsize=4975 kw=DIRECTIONAL_COOKIE SHADOWS_SCREEN ok=1
-Cmd: compileSnippet
-  api=8 type=0 insize=812 outsize=7451 kw=POINT_COOKIE SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=8 type=0 insize=812 outsize=7687 kw=DIRECTIONAL_COOKIE SHADOWS_SCREEN SHADOWS_NATIVE ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=812 outsize=6 kw=POINT SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=812 outsize=6 kw=DIRECTIONAL SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=812 outsize=642 kw=DIRECTIONAL SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=812 outsize=6 kw=SPOT SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=812 outsize=845 kw=SPOT SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=812 outsize=6 kw=POINT_COOKIE SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=812 outsize=2858 kw=POINT_COOKIE SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=8 type=1 insize=812 outsize=3908 kw=DIRECTIONAL_COOKIE SHADOWS_OFF ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=812 outsize=2672 kw=DIRECTIONAL SHADOWS_SCREEN ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=812 outsize=6 kw=POINT SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=812 outsize=933 kw=POINT SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=812 outsize=3541 kw=POINT_COOKIE SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=8 type=1 insize=812 outsize=4599 kw=DIRECTIONAL_COOKIE SHADOWS_SCREEN SHADOWS_NATIVE ok=1
-Cmd: compileSnippet
-  api=0 type=0 insize=600 outsize=1880 kw=SHADOWS_DEPTH ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=600 outsize=6 kw=SHADOWS_DEPTH ok=1
-Cmd: compileSnippet
-  api=0 type=1 insize=600 outsize=6 kw=SHADOWS_CUBE ok=1
-Cmd: compileSnippet
-  api=1 type=1 insize=600 outsize=103 kw=SHADOWS_CUBE ok=1
+  api=4 type=1 insize=2080 outsize=941 kw= ok=1
 Cmd: compileSnippet
   error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Vertex program
   api=4 type=0 insize=1623 outsize=0 kw= ok=0
 Cmd: compileSnippet
-  error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Fragment program
-  api=4 type=1 insize=1623 outsize=0 kw= ok=0
+  error: 2 plat 1 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Fragment program
+  api=1 type=1 insize=1623 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  api=0 type=0 insize=1325 outsize=1078 kw= ok=1
+Cmd: compileSnippet
+  error: 2 plat 1 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Vertex program
+  api=1 type=0 insize=1623 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 8 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Fragment program
+  api=8 type=1 insize=1623 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 8 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Vertex program
+  api=8 type=0 insize=1623 outsize=0 kw= ok=0
+Cmd: compileSnippet
+  error: 2 plat 1 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Fragment program
+  api=1 type=1 insize=1623 outsize=0 kw= ok=0
 Unhandled exception: Readfile from pipe failed. GLE=The pipe has been ended.
 
 

@@ -92,12 +92,12 @@ Material:
         second: 0
       data:
         first:
-          name: _InvFade
-        second: 1
-      data:
-        first:
           name: _Parallax
         second: .0199999996
+      data:
+        first:
+          name: _InvFade
+        second: 1
       data:
         first:
           name: _ZWrite

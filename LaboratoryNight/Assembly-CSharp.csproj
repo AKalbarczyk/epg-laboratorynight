@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Unity 5/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Unity 5/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +68,7 @@
      <Compile Include="Assets\FirstClosedDoorScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\ControlGUIScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript.cs" />
+     <Compile Include="Assets\GradientGUIBars\Script\GUIBarScript2.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoreButtonScript.cs" />
      <Compile Include="Assets\GradientGUIBars\Script\MoveCameraScript.cs" />
      <Compile Include="Assets\MenuButtonController.cs" />
@@ -153,9 +154,19 @@
      <Compile Include="Assets\TakeToSecretRoom.cs" />
      <Compile Include="Assets\ThirdClosedDoor.cs" />
      <Compile Include="Assets\TurretRocket.cs" />
+     <Compile Include="Assets\UIBars\Scripts\ControlBar.cs" />
+     <Compile Include="Assets\UIBars\Scripts\CriteriaRule.cs" />
+     <Compile Include="Assets\UIBars\Scripts\UIBarScript.cs" />
+     <Compile Include="Assets\UIBars\Scripts\UpdateAnimationRule.cs" />
      <Compile Include="Assets\UnlockFirstDoor.cs" />
      <Compile Include="Assets\UnlockSecondDoor.cs" />
      <Compile Include="Assets\UnlockThirdDoor.cs" />
+     <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
+     <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+     <Compile Include="Assets\VolumetricLines\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
+     <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
+     <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
+     <Compile Include="Assets\VolumetricLines\Scripts\VolumetricMultiLineBehavior.cs" />
      <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_DemoControl.cs" />
      <Compile Include="Assets\_MKGlowSystem\_Demo\Code\MK_RotateObject.cs" />
      <Compile Include="Assets\test_PlayerController.cs" />
@@ -206,6 +217,7 @@
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseBumped.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\VignettingShader.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\ColorCorrection3DLut.shader" />
+     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlended.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseBumpSpec.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
@@ -237,6 +249,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditive.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\NoiseEffectShaderYUV.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\MotionBlurClear.shader" />
@@ -332,6 +345,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\frag_ao.cginc" />
+     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditiveFast.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKGlowEffect\MKGlowFastBlur.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\ChromaticAberrationShader.shader" />
@@ -388,6 +402,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseBumpRim.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\_BloomAndFlares\Blend.shader" />
+     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAdditive.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Mobile\MK_Mobile-DiffuseBumpSpec-1DirectionalLight.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Particles\MK_Particles-AdditiveBlend.shader" />
@@ -399,6 +414,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Image Effects\_Sources\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
+     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAlphaBlended.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-Diffuse.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\MK_StandardSpecular.shader" />
@@ -408,6 +424,7 @@
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Normal\MK_Normal-DiffuseRim.shader" />
      <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlendedFast.shader" />
      <None Include="Assets\GradientGUIBars\Image Effects\_Sources\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Illumin\MK_Illumin-ParallaxSpec.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
@@ -455,16 +472,16 @@
      <None Include="Assets\_MKGlowSystem\_Shader\_MKBase\Reflective\MK_Reflective-DiffuseBumped.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Unity 5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Destruction">
- <HintPath>C:/Users/Arek/GIT/epg-laboratorynight/LaboratoryNight/Assets/Fracture - Box Destruction - Standard/Scripts/Destruction.dll</HintPath>
+ <HintPath>D:/git/epg-laboratorynight/LaboratoryNight/Assets/Fracture - Box Destruction - Standard/Scripts/Destruction.dll</HintPath>
  </Reference>
  <Reference Include="MKGlowSystem 1">
- <HintPath>C:/Users/Arek/GIT/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem 1.dll</HintPath>
+ <HintPath>D:/git/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem 1.dll</HintPath>
  </Reference>
  <Reference Include="MKGlowSystem">
- <HintPath>C:/Users/Arek/GIT/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem.dll</HintPath>
+ <HintPath>D:/git/epg-laboratorynight/LaboratoryNight/Assets/_MKGlowSystem/_Internal/MKGlowSystem.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
