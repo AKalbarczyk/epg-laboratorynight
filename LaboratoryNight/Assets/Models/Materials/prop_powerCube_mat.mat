@@ -30,7 +30,7 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _ToonShade
+          name: _DetailNormalMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -44,7 +44,56 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
+          name: _OcclusionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _EmissionMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailMask
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DetailAlbedoMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _MetallicGlossMap
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
           name: _Cube
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ToonShade
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -58,7 +107,7 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Illum
+          name: _SpecGlossMap
         second:
           m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
@@ -81,23 +130,51 @@ Material:
         second: .18934226
       data:
         first:
-          name: _Outline
-        second: .00499999989
+          name: _SrcBlend
+        second: 1
+      data:
+        first:
+          name: _DstBlend
+        second: 0
       data:
         first:
           name: _Parallax
         second: .0199999996
       data:
         first:
-          name: _MKGlowPower
-        second: 2.5
+          name: _ZWrite
+        second: 1
       data:
         first:
-          name: _MKGlowTexStrength
+          name: _Glossiness
+        second: .5
+      data:
+        first:
+          name: _BumpScale
+        second: 1
+      data:
+        first:
+          name: _OcclusionStrength
+        second: 1
+      data:
+        first:
+          name: _DetailNormalMapScale
+        second: 1
+      data:
+        first:
+          name: _UVSec
         second: 0
       data:
         first:
-          name: _MKGlowOffSet
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
+          name: _Mode
+        second: 0
+      data:
+        first:
+          name: _Metallic
         second: 0
       data:
         first:
@@ -109,9 +186,37 @@ Material:
         second: 0
       data:
         first:
+          name: _Outline
+        second: .00499999989
+      data:
+        first:
+          name: _MKGlowPower
+        second: 1.44000006
+      data:
+        first:
+          name: _MKGlowTexStrength
+        second: 0
+      data:
+        first:
+          name: _MKGlowOffSet
+        second: 0
+      data:
+        first:
+          name: _LineWidth
+        second: 1
+      data:
+        first:
+          name: _LightSaberFactor
+        second: .899999976
+      data:
+        first:
           name: _RimPower
         second: 3
     m_Colors:
+      data:
+        first:
+          name: _EmissionColor
+        second: {r: 0, g: 0, b: 0, a: 1}
       data:
         first:
           name: _Color
@@ -122,12 +227,20 @@ Material:
         second: {r: .805970132, g: .805970132, b: .805970132, a: 1}
       data:
         first:
-          name: _OutlineColor
-        second: {r: .977941155, g: .10067039, b: .10067039, a: 1}
+          name: _EmissionColorUI
+        second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
           name: _ReflectColor
         second: {r: 0, g: 0, b: 0, a: .501960814}
+      data:
+        first:
+          name: _TintColor
+        second: {r: .5, g: .5, b: .5, a: .5}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: .977941155, g: .10067039, b: .10067039, a: 1}
       data:
         first:
           name: _MKGlowColor
@@ -136,10 +249,6 @@ Material:
         first:
           name: _MKGlowTexColor
         second: {r: .227681533, g: .111807942, b: .691176474, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
       data:
         first:
           name: _RimColor

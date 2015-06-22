@@ -24639,11 +24639,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489294, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 155.899994
+      value: 154.800003
       objectReference: {fileID: 0}
     - target: {fileID: 489294, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -147.5
+      value: -149
       objectReference: {fileID: 0}
     - target: {fileID: 11439532, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: endGameText
@@ -24735,7 +24735,7 @@ Prefab:
       objectReference: {fileID: 175650, guid: 89fd4db7e54d2754faf29257f2581715, type: 2}
     - target: {fileID: 489294, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
