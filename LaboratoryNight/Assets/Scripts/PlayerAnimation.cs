@@ -55,7 +55,7 @@ public class PlayerAnimation : MonoBehaviour {
             animation.Play("Idle Firing");
         }
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             animation.Play("Jump");
         }
