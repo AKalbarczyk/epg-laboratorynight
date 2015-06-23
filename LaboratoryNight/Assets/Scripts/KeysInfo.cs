@@ -19,6 +19,7 @@ public class KeysInfo : MonoBehaviour {
         {
             img.enabled = false;
             text.enabled = false;
+            
             Destroy(this.gameObject);
         }
 	

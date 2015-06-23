@@ -101,6 +101,7 @@
      <Compile Include="Assets\Pathfinding\Scripts\WaypointNode.cs" />
      <Compile Include="Assets\Pathfinding\Scripts\WaypointPathfinder.cs" />
      <Compile Include="Assets\PowerUpRotate.cs" />
+     <Compile Include="Assets\QuickLevelLoad.cs" />
      <Compile Include="Assets\ReturnToLevel.cs" />
      <Compile Include="Assets\RobotGunController.cs" />
      <Compile Include="Assets\ScientistHealth.cs" />

@@ -49006,6 +49006,21 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 420640, guid: a2004d6ef3f59694581bdb9db6ae65b3, type: 2}
   m_PrefabInternal: {fileID: 1319528341}
+--- !u!1 &1321799944
+GameObject:
+  m_PrefabParentObject: {fileID: 152992, guid: bcaf40a93d377a8419c60a7a99a3761a, type: 2}
+  m_PrefabInternal: {fileID: 864663276}
+--- !u!114 &1321799945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1321799944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e90acad169707848b903b96bbbe3075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1322463537
 Prefab:
   m_ObjectHideFlags: 0
@@ -67327,7 +67342,55 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 116412, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 134574, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 126106, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 188054, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 148376, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 197030, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 103182, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483768, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483768, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_Color.r
+      value: .745098054
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483768, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_Color.g
+      value: .745098054
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483768, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_Color.b
+      value: .745098054
+      objectReference: {fileID: 0}
+    - target: {fileID: 11483768, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472754, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 236.929993
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2eda610e5cc908d4188b6f2728858ebb, type: 2}
