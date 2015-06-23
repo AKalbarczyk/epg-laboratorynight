@@ -83,6 +83,11 @@ public class WeaponController : MonoBehaviour {
 
     public LineRenderer laserTrace;
 
+    public static bool shotGunCollected = false;
+    private bool shotGunDone = false;
+    public static bool laserCollected = false;
+    private bool laserDone = false;
+    
 	void Start ()
     {
 
@@ -154,6 +159,34 @@ public class WeaponController : MonoBehaviour {
         CheckWeaponMode();
         CheckWeapon();
         CheckSkills();
+
+        if (shotGunCollected == true && !shotGunDone)
+        {
+            EnableShotgun();            
+            
+            GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in allEnemies)
+            {
+                if (enemy)
+                {
+                    enemy.SendMessage("CanDropShotgunAmmo");                    
+                }
+            }
+            shotGunDone = true;
+        }
+        if (laserCollected== true && !laserDone)
+        {
+            EnableLaser();
+            GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (GameObject enemy in allEnemies)
+            {
+                if (enemy)
+                {                   
+                    enemy.SendMessage("CanDropLaserAmmo");
+                }
+            }
+            laserDone = true;
+        }
 	}
 
     public void EnableShotgun()

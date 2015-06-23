@@ -13,14 +13,20 @@ public class QuickLevelLoad : MonoBehaviour {
         if (Input.GetKey(KeyCode.F1))
         {
             Application.LoadLevel(1);
+            WeaponController.shotGunCollected = true;
+            WeaponController.laserCollected = false;
         }
         else if (Input.GetKey(KeyCode.F2))
         {
             Application.LoadLevel(2);
+            WeaponController.shotGunCollected = true;
+            WeaponController.laserCollected = true;
         }
         else if (Input.GetKey(KeyCode.F3))
         {
             Application.LoadLevel(3);
+            WeaponController.shotGunCollected = true;
+            WeaponController.laserCollected = true;
         }
 	}
 }

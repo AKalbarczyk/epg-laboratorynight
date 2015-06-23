@@ -25,6 +25,7 @@ public class CollectWeapon : MonoBehaviour {
         if (col.gameObject.name == "Shotgun")
         {
             thisWeapon.EnableShotgun();
+            WeaponController.shotGunCollected = true;
             SendShotgunAmmoDropInfo();
             thisWeapon.UpdateShotgunAmmo(10);
 
@@ -38,6 +39,7 @@ public class CollectWeapon : MonoBehaviour {
 
         else if (col.gameObject.name == "Laser")
         {
+            WeaponController.shotGunCollected = true;
             thisWeapon.EnableLaser();
             SendLaserAmmoDropInfo();
             thisWeapon.UpdateLaserAmmo(15);
@@ -51,7 +53,7 @@ public class CollectWeapon : MonoBehaviour {
         }
     }
 
-    private void SendShotgunAmmoDropInfo()
+    public void SendShotgunAmmoDropInfo()
     {
         foreach (GameObject enemy in allEnemies)
         {
@@ -61,7 +63,7 @@ public class CollectWeapon : MonoBehaviour {
             }
         }
     }
-    private void SendLaserAmmoDropInfo()
+    public void SendLaserAmmoDropInfo()
     {
         foreach (GameObject enemy in allEnemies)
         {
