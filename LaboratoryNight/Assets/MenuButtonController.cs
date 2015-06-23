@@ -37,7 +37,7 @@ public class MenuButtonController : MonoBehaviour {
     {
         if (this.gameObject.name == "Start")
         {
-            Application.LoadLevel(0);
+            Application.LoadLevel(1);
         }
 
         else if (this.gameObject.name == "Exit")

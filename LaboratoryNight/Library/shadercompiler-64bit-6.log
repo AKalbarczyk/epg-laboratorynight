@@ -1,5 +1,5 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-6-1096
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-6-8284
 Cmd: getPlatforms
 Cmd: compileSnippet
   error: 2 plat 4 at (37): 'tex2Dproj': no matching 2 parameter intrinsic function; Possible intrinsic functions are: tex2Dproj(sampler2D, float4|half4|min10float4|min16float4)\nCompiling Fragment program

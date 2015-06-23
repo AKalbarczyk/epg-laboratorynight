@@ -48,8 +48,10 @@ public class PlayerHealthController : MonoBehaviour {
             if (this.health <= 0)
             {
                 this.endGameText.text = "You're dead.";
-               // this.endGameScreen.EndScene(Application.loadedLevel);
-                Application.LoadLevel(Application.loadedLevel);
+                ResetDoor();
+                this.endGameScreen.EndScene(Application.loadedLevel);
+                
+               // Application.LoadLevel(Application.loadedLevel);
             }
 
         }
@@ -66,5 +68,12 @@ public class PlayerHealthController : MonoBehaviour {
             this.health += health;
         }
         healthBarObj.SendMessage("SetNewValue", this.health);
+    }
+
+    void ResetDoor()
+    {
+        FirstClosedDoorScript.isAllowed = false;
+        SecondClosedDoor.isAllowed = false;
+        ThirdClosedDoor.isAllowed = false;
     }
 }

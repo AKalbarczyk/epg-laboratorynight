@@ -4,7 +4,7 @@ using System.Collections;
 public class TurretRocket : MonoBehaviour {
 
     public GameObject explosion;
-    private const float DAMAGE = 0.8f;
+    private const float DAMAGE = 0.5f;
 
     private bool canBeDestroyed = true;
 
